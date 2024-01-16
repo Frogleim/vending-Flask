@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+    .card-img-top {
+        width: 200px;
+        height: 200px;
+        object-fit: contain; /* or use 'contain' depending on your design preference */
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+
+    .close-icon {
+        position: fixed;
+        top: 10px; /* Adjust the top position as needed */
+        right: 10px; /* Adjust the right position as needed */
+        font-size: 40px;
+        cursor: pointer;
+        color: red; /* Adjust the color as needed */
+    }
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+        z-index: 9998; /* Set z-index lower than the popup to ensure it's behind it */
+    }
+
+    #popup1 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 200px;
+        background-color: white;
+        z-index: 9999;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #popup1 button {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+
+<div class="container text-center">
+    <div id="productMessage"></div>
+    <div class="close-icon" onclick="PopUpHide()">&times;</div> <!-- Add an X icon -->
+    {% for product in data %}
+        <table class="table" onclick="checkAndPopUpShow(this)">
+                <tbody>
+                    <tr>
+                        <td>
+                            {% if product.goods_image %}
+                                <img src="{{ product.goods_image }}" class="card-img-top" alt="...">
+                            {% else %}
+                                <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="rounded float-start" alt="..." height="200">
+                            {% endif %}
+                        </td>
+                        {% if product.goods %}
+                            <td><strong>{{ product.goods }}</strong>
+                                    </td>
+                        {% else %}
+                            <td><strong>Cell is Empty</strong></td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+        </table>
+    {% endfor %}
+
+ <div id="overlay"></div>
+    <!-- Pop-up container -->
+    <div id="popup1">
+        <button class="btn btn-success" onclick="PopUpHide()">Finish</button>
+        <!-- Add your pop-up content here -->
+        <strong id="popupMessage"></strong>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+ <script>
+        function redirectToSubmit(cell_id, device_id) {
+            // Redirect to the submit HTML page with the product ID
+            console.log(cell_id);
+            console.log(device_id);
+            window.location.href = "/submit/" + cell_id + "/" + device_id + "/";
+        }
+
+        $(document).ready(function () {
+            // Скрыть PopUp при загрузке страницы
+            PopUpHide();
+        });
+
+        // Функция отображения PopUp
+        function PopUpShow(message) {
+            $("#popupMessage").text(message);
+            $("#popup1, #overlay").show();
+
+        }
+
+        // Функция скрытия PopUp
+        function PopUpHide() {
+        $("#popup1, #overlay").hide();
+
+        }
+
+        // Функция проверки и отображения PopUp
+        function checkAndPopUpShow(cell) {
+            var cellText = $(cell).find("td").text().trim();
+            console.log(cellText);
+            if (cellText == "Cell is Empty" || cellText == "Goods is None") {
+                PopUpShow("This cell is empty.");
+            } else {
+                PopUpShow("This cell is not empty.");
+            }
+        }
+    </script>
+</div>
+
+
+</body>
+</html>
