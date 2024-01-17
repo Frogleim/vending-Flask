@@ -8,6 +8,12 @@ def check_user(user_number, ip):
     return r.json()
 
 
+def check_machine_status(ip):
+    url = f'http://127.0.0.1:8000/vending_status/?ip_address={ip}'
+    r = requests.get(url)
+    return r.json()
+
+
 def get_ip_address():
     try:
         # Create a socket object
@@ -27,8 +33,6 @@ def get_ip_address():
     except socket.error as e:
         print(f"Error: {e}")
         return None
-
-
 
 
 if __name__ == '__main__':
