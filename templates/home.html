@@ -52,11 +52,19 @@
     #popup1 button {
         position: absolute;
         bottom: 30px;
-        left: 50%;
+        left: 10%;
         transform: translateX(-50%);
         font-size: 16px;
         cursor: pointer;
     }
+
+    #popup1 button:nth-child(2) {
+    position: absolute;
+    bottom: 30px;
+    left: 90%; /* Set to 0 to place it on the right bottom corner */
+    font-size: 16px;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -64,8 +72,8 @@
 
 <div class="container text-center">
     <div id="productMessage"></div>
-    <div class="close-icon" onclick="PopUpHide()">&times;</div> <!-- Add an X icon -->
-    {% for product in data %}
+    <div class="close-icon" onclick="PopUpHide()">&times;</div>
+    {% for product in data.master_system %}
         <table class="table" onclick="checkAndPopUpShow(this)">
                 <tbody>
                     <tr>
@@ -88,51 +96,79 @@
     {% endfor %}
 
  <div id="overlay"></div>
-    <!-- Pop-up container -->
     <div id="popup1">
-        <button class="btn btn-success" onclick="PopUpHide()">Finish</button>
-        <!-- Add your pop-up content here -->
+    <button class="btn btn-danger" onclick="cancelButtonClick()">Cancel</button>
+    <button class="btn btn-success" onclick="finishButtonClick()">Take it</button>
         <strong id="popupMessage"></strong>
-    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
- <script>
-        function redirectToSubmit(cell_id, device_id) {
-            // Redirect to the submit HTML page with the product ID
-            console.log(cell_id);
-            console.log(device_id);
-            window.location.href = "/submit/" + cell_id + "/" + device_id + "/";
-        }
+<script>
+    function redirectToSubmit(cell_id, device_id) {
+        // Redirect to the submit HTML page with the product ID
+        console.log(cell_id);
+        console.log(device_id);
+        window.location.href = "/submit/" + cell_id + "/" + device_id + "/";
+    }
 
-        $(document).ready(function () {
-            // Скрыть PopUp при загрузке страницы
-            PopUpHide();
-        });
+    $(document).ready(function () {
+        PopUpHide();
+    });
+    function finishButtonClick() {
+        // Handle the logic when the "Finish" button is clicked
+        console.log("Finish button clicked");
+        // You can add your logic here
+        var snipe_id = $("#popup1 strong").text().trim();
+        var user_id = {{ user_id|tojson|safe }};
+        console.log(user_id);
+<!--         $.ajax({-->
+<!--            type: "POST",-->
+<!--            url: "{{ url_for('takeout_goods') }}",-->
+<!--            data: {-->
+<!--                snipe_id: snipe_id,-->
+<!--                user_id: user_id-->
+<!--            },-->
+<!--            success: function (response) {-->
+<!--                console.log(response); // Log the response from the server-->
+<!--                // Handle the response as needed (e.g., redirect to /takeout)-->
+<!--                window.location.href = "/takeout";-->
+<!--            },-->
+<!--            error: function (error) {-->
+<!--                console.error("Error:", error);-->
+<!--            }-->
+<!--        });-->
+<!--        PopUpHide(); // Close the popup if needed-->
+<!--        window.location.href = "/takeout";-->
 
-        // Функция отображения PopUp
-        function PopUpShow(message) {
-            $("#popupMessage").text(message);
-            $("#popup1, #overlay").show();
+    }
 
-        }
+    function cancelButtonClick() {
+        // Handle the logic when the "Cancel" button is clicked
+        console.log("Cancel button clicked");
+        // You can add your logic here
+        PopUpHide(); // Close the popup if needed
+    }
 
-        // Функция скрытия PopUp
-        function PopUpHide() {
+    function PopUpShow(message) {
+        $("#popupMessage").text(message);
+        $("#popup1, #overlay").show();
+    }
+
+    function PopUpHide() {
         $("#popup1, #overlay").hide();
+    }
 
+    function checkAndPopUpShow(cell) {
+        var cellText = $(cell).find("td").text().trim();
+        var title = $(cell).find("td strong").text().trim(); // Extracting the title
+        console.log(cellText);
+        if (cellText == "Cell is Empty" || cellText == "Goods is None") {
+            PopUpShow("This cell is empty.");
+        } else {
+            PopUpShow("Title: " + title); // Displaying the title in the popup
         }
-
-        // Функция проверки и отображения PopUp
-        function checkAndPopUpShow(cell) {
-            var cellText = $(cell).find("td").text().trim();
-            console.log(cellText);
-            if (cellText == "Cell is Empty" || cellText == "Goods is None") {
-                PopUpShow("This cell is empty.");
-            } else {
-                PopUpShow("This cell is not empty.");
-            }
-        }
-    </script>
+    }
+</script>
 </div>
 
 
