@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from api_connect import master_system
 from datetime import datetime, timedelta
 
@@ -21,10 +21,13 @@ def home():
     user_id = request.form.get('user_id')
     print(user_id)
     print(ip)
-    machine_status = master_system.check_machine_status(ip=ip)
-    if 'success' in machine_status['status']:
-        return render_template('index.html')
-    else:
+    try:
+        machine_status = master_system.check_machine_status(ip=ip)
+        if 'success' in machine_status['status']:
+            return render_template('index.html')
+        else:
+            return render_template('error.html')
+    except Exception as e:
         return render_template('error.html')
 
 
@@ -47,12 +50,19 @@ def process_form():
     return redirect(url_for('home'))
 
 
-@app.route('/takeout', methods=['POST'])
+@app.route('/takeout_goods', methods=['POST'])
 def takeout_goods():
-    user_id = request.form.get('user_id')
-    product_id = request.form.get('product_id')
-    print(user_id, product_id)
-    return render_template('takeout.html')
+    try:
+        snipe_id = request.form.get('snipe_id')
+        user_id = request.form.get('user_id')
+        print(snipe_id, user_id)
+        master_system.checkout(user_id, snipe_id)
+        response_data = {'message': 'Successfully processed the takeout request'}
+        return render_template('takeout.html')
+    except Exception as e:
+        # Log any errors that occur
+        print(f"Error processing takeout request: {str(e)}")
+        return render_template('error.html')
 
 
 if __name__ == '__main__':
