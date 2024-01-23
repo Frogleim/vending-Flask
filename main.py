@@ -23,11 +23,13 @@ def home():
     print(ip)
     try:
         machine_status = master_system.check_machine_status(ip=ip)
+        print(machine_status)
         if 'success' in machine_status['status']:
             return render_template('index.html')
         else:
             return render_template('error.html')
     except Exception as e:
+        print(e)
         return render_template('error.html')
 
 
@@ -41,6 +43,7 @@ def process_form():
         ip_address = master_system.get_ip_address()
         status = master_system.check_user(int(user_id), ip_address)
         data = {"master_system": status['data'], 'user_id': user_id}
+        print(status['data'])
         if 'success' in status['status']:
             # Do something with user_id, e.g., save it to a database
             session['user_id'] = user_id

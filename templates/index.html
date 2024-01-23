@@ -3,33 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <title>Vending</title>
 </head>
 <body>
-<div class="container px-1 text-center d-flex justify-content-center align-items-center vh-100">
-        <div>
-            <div class="card" style="width: 18rem;">
-                <img src="https://i.pinimg.com/564x/c2/2b/78/c22b78127817e2bed1aef5abf7237f98.jpg" class="card-img-top" width="400" height="300" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text"></p>
+<div class="cover-container">
+    <img class="cover-image" src="{{ url_for('static', filename='images/2NF 1.png') }}" alt="My image">
+    <img class="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+    <h1 class="welcome-text">Приложите пропуск, чтобы начать</h1>
+    <img class="badge-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="pt-logo">
+    <form action="{{ url_for('process_form') }}" method="post">
 
+    <input type="text" name="user_id" class="test-input" placeholder="User ID" aria-label="User ID">
 
-                    <br>
-                   <form action="{{ url_for('process_form') }}" method="post">
-                    <p>Приложите Карту</p>
-                    <input type="text" name="user_id" class="form-control" placeholder="User ID" aria-label="User ID" aria-describedby="basic-addon1">
+    <button type="submit" class="btn btn-primary">Primary</button>
+    </form>
 
-                    <br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
 </script>
