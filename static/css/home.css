@@ -1,12 +1,10 @@
 .card-img-top {
-    width: 200px;
-    height: 200px;
+    width: 251px;
+    height: 251px;
     object-fit: contain; /* or use 'contain' depending on your design preference */
 }
 
-.row {
-    margin-bottom: 20px;
-}
+
 
 .close-icon {
     position: fixed;
@@ -59,10 +57,19 @@ cursor: pointer;
 }
 
 .row {
-    display: grid;
-    height: 100px;
-    grid-template-rows: 30px 1fr;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
 
+.column {
+    flex: 0 0 calc(50% - 20px);
+    box-sizing: border-box;
+    cursor: pointer;
+}
 
+.card {
+    width: 100%;
+}
   
