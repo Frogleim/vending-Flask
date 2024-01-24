@@ -67,6 +67,10 @@ def takeout_goods():
         print(f"Error processing takeout request: {str(e)}")
         return render_template('error.html')
 
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('error.html', error_message='Internal Server Error'), 500
+
 
 if __name__ == '__main__':
     ip = get_ipv4_address()

@@ -12,7 +12,7 @@
 <body>
 <div class="cover-container">
     <img class="cover-image" src="{{ url_for('static', filename='images/2NF 1.png') }}" alt="My image">
-    <img class="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+    <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
     <h1 class="welcome-text">Приложите пропуск, чтобы начать</h1>
     <img class="badge-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="pt-logo">
     <form action="{{ url_for('process_form') }}" method="post">

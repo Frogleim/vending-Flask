@@ -11,38 +11,51 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <img class="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-      </nav>
+            <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+            <div class="btn-container">
+                <button type="button" class="btn btn-outline-secondary logout-button">Выйти
+                    <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
+
+                </button>
+                <div class="x-logo"></div> <!-- You can replace "X" with your actual X logo -->
+            </div> <!-- Corrected the closing tag here -->
+        </div>
+    </nav>
 
     <div class="container">
         <div class="row">
             {% for product in data.master_system %}
-                <div class="column" onclick="redirectToSubmit({{ product.cell }}, {{ product.device_id }})">
-                    <div class="card" >
+                <div class="column"
+                >
+                    <div class="card" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
+                        <div class="card-body">
+                            <p class="card-text">{{ product.goods }}</p>
+                        </div>
                         {% if product.goods_image %}
+                        
                             <img src="{{ product.goods_image }}" class="card-img" alt="...">
                         {% else %}
                             <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
                         {% endif %}
-                        <div class="card-body">
-                            <p class="card-text">{{ product.goods }}</p>
-                        </div>
+                        
                     </div>
                 </div>
             {% endfor %}
         </div>
     </div>
-    
+    <!-- Group 625551.svg -->
  <div id="overlay"></div>
     <div id="popup1">
-    <button class="btn btn-danger" onclick="cancelButtonClick()">Cancel</button>
-    <button class="btn btn-success" onclick="finishButtonClick()">Take it</button>
+        <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-close" onclick="cancelButtonClick()">
+        <button class="btn btn-dark custom-button" onclick="cancelButtonClick()">СДЕЛАТЬ ДРУГОЙ ВЫБОР
+            <img src="{{ url_for('static', filename='images/Group 625551.svg') }}" alt="SVG Icon" class="icon">
+    
+        </button>
+    <button class="btn btn-dark" onclick="finishButtonClick()">ДА</button>
+    
+    <h1 id="question">Вы уверены в своем выборе?</h1>
         <strong id="popupMessage"></strong>
 </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -61,21 +74,24 @@
         console.log(snipe_id);
 
         $.ajax({
-            type: "POST",
-            url: "{{ url_for('takeout_goods') }}",
-            data: {
-                snipe_id: snipe_id,
-                user_id: user_id
-            },
-            success: function (response) {
-                console.log(response); // Log the response from the server
-                // Handle the response as needed (e.g., redirect to /takeout)
-                window.location.href = "/takeout";
-            },
-            error: function (error) {
-                console.error("Error:", error);
-            }
-        });
+    type: "POST",
+    url: "{{ url_for('takeout_goods') }}",
+    data: {
+        snipe_id: snipe_id,
+        user_id: user_id
+    },
+    success: function (response) {
+        console.log(response);
+        // Handle the response as needed (e.g., redirect to /takeout)
+        window.location.href = "/takeout";
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+        console.error("Error:", errorThrown);
+        
+        // Redirect to the Flask error route
+        window.location.href = "/error";
+    }
+});
 
         PopUpHide(); // Close the popup if needed
     }
@@ -100,12 +116,13 @@
     function checkAndPopUpShow(cell) {
         var cellText = $(cell).find("td").text().trim();
         var snipe_id = $(cell).data("snipe_id");  // Retrieve snipe_id from the data attribute
-        var title = $(cell).find("td strong").text().trim();
+        console.log(snipe_id);
+        var title = $(cell).find(".card-text").text().trim();
 
         if (cellText == "Cell is Empty" || cellText == "Goods is None") {
             PopUpShow(null, "This cell is empty.");
         } else {
-            PopUpShow(snipe_id, "Title: " + title);
+            PopUpShow(snipe_id, title);
         }
     }
 

@@ -4,7 +4,33 @@
     object-fit: contain; /* or use 'contain' depending on your design preference */
 }
 
+.logout-button {
+    display: inline-flex;
+    height: 52px;
+    padding: var(--16, 16px) var(--20, 20px);
+    align-items: center;
+    gap: var(--16, 16px);
+    flex-shrink: 0;
+    border-radius: var(--6, 6px);
+    border: 1px solid var(--border-general-2-x, rgba(0, 0, 0, 0.20));
+    background: var(--Background-background, #FFF);
+    color: var(--Foreground-text, #19252F);
+    font-family: "TT Positive";
+    font-size: 21.781px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 34.849px */
+    text-transform: uppercase;
+}
 
+.icon-logout {
+    display: inline-flex;
+    height: 32px;
+    padding: 0; /* Set padding to 0 to minimize space */
+    align-items: center;
+    /* gap: 5px;  */
+    flex-shrink: 0;
+}
 
 .close-icon {
     position: fixed;
@@ -26,6 +52,8 @@
 }
 
 #popup1 {
+        border-radius: 10px; /* Adjust the border-radius as needed */
+        /* Other styles for your popup container */
     display: none;
     position: fixed;
     top: 50%;
@@ -40,7 +68,18 @@
 }
 
 #popup1 button {
+    color: var(--white, #FFF);
+    font-family: "TT Positive";
+    font-size: 21.781px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 34.849px */
+    text-transform: uppercase;
     position: absolute;
+    display: inline-flex;
+    padding: var(--16, 16px) var(--20, 20px);
+    align-items: center;
+    gap: var(--16, 16px);
     bottom: 30px;
     left: 10%;
     transform: translateX(-50%);
@@ -49,11 +88,30 @@
 }
 
 #popup1 button:nth-child(2) {
-position: absolute;
-bottom: 30px;
-left: 90%; /* Set to 0 to place it on the right bottom corner */
-font-size: 16px;
-cursor: pointer;
+    color: var(--white, #FFF);
+    font-family: "TT Positive";
+    font-size: 21.781px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 34.849px */
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 30px;
+    left: 80%; /* Set to 0 to place it on the right bottom corner */
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 6px;
+    background: #282828;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .row {
@@ -72,4 +130,49 @@ cursor: pointer;
 .card {
     width: 100%;
 }
+
+
+.container {
+    margin: 40px;
+    padding: 0%;
+}
+
+#popup1 #question {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    margin-top: 20px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+}
+
+#popup1 #popupMessage {
+    position: absolute;
+    top: 50px;
+    left: 45px;
+    margin-top: 20px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+}
+
+
+.icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    /* Additional styles for the close icon */
+}
+
+
   
+/* .card-text {
+    font-family: 'Biform', Arial, sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+} */
