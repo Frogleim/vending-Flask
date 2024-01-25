@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 
     <style>
-        /* Additional styles if needed */
     </style>
 </head>
 <body>
@@ -19,8 +18,8 @@
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
 
                 </button>
-                <div class="x-logo"></div> <!-- You can replace "X" with your actual X logo -->
-            </div> <!-- Corrected the closing tag here -->
+                <div class="x-logo"></div> 
+            </div>
         </div>
     </nav>
 
@@ -45,7 +44,6 @@
             {% endfor %}
         </div>
     </div>
-    <!-- Group 625551.svg -->
  <div id="overlay"></div>
     <div id="popup1">
         <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-close" onclick="cancelButtonClick()">
@@ -59,9 +57,7 @@
         <strong id="popupMessage"></strong>
 </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
 <script>
-    // ... your existing JavaScript ...
 
     $(document).ready(function () {
         PopUpHide();
@@ -69,7 +65,7 @@
 
     function finishButtonClick() {
         var user_id = {{ user_id|tojson|safe }};
-        var snipe_id = $("#popup1").data("snipe_id");  // Retrieve snipe_id from the data attribute
+        var snipe_id = $("#popup1").data("snipe_id");  
         console.log(user_id);
         console.log(snipe_id);
 
@@ -82,30 +78,35 @@
     },
     success: function (response) {
         console.log(response);
-        // Handle the response as needed (e.g., redirect to /takeout)
-        window.location.href = "/takeout";
+
+        // Check if the processing was successful
+        if ('message' in response && response.message === 'Successfully processed the takeout request') {
+            // Redirect to done.html if successful
+            window.location.href = "/takeout_processing";
+        } else {
+            // Redirect to error.html if not successful
+            window.location.href = "/error";
+        }
     },
     error: function (jqXHR, textStatus, errorThrown) {
         console.error("Error:", errorThrown);
-        
-        // Redirect to the Flask error route
+
+        // Redirect to error.html in case of an AJAX error
         window.location.href = "/error";
     }
 });
 
-        PopUpHide(); // Close the popup if needed
+        PopUpHide(); 
     }
 
     function cancelButtonClick() {
-        // Handle the logic when the "Cancel" button is clicked
         console.log("Cancel button clicked");
-        // You can add your logic here
-        PopUpHide(); // Close the popup if needed
+        PopUpHide(); 
     }
 
     function PopUpShow(snipe_id, message) {
         $("#popupMessage").text(message);
-        $("#popup1").data("snipe_id", snipe_id);  // Store snipe_id in the data attribute
+        $("#popup1").data("snipe_id", snipe_id); 
         $("#popup1, #overlay").show();
     }
 
@@ -115,7 +116,7 @@
 
     function checkAndPopUpShow(cell) {
         var cellText = $(cell).find("td").text().trim();
-        var snipe_id = $(cell).data("snipe_id");  // Retrieve snipe_id from the data attribute
+        var snipe_id = $(cell).data("snipe_id");  
         console.log(snipe_id);
         var title = $(cell).find(".card-text").text().trim();
 
@@ -128,7 +129,5 @@
 
 </script>
 </div>
-
-
 </body>
 </html>

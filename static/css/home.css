@@ -1,7 +1,11 @@
 .card-img-top {
     width: 251px;
     height: 251px;
-    object-fit: contain; /* or use 'contain' depending on your design preference */
+    object-fit: contain;
+}
+
+.navbar {
+    background-color: #FFF;
 }
 
 .logout-button {
@@ -19,26 +23,25 @@
     font-size: 21.781px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 34.849px */
+    line-height: 100%; 
     text-transform: uppercase;
 }
 
 .icon-logout {
     display: inline-flex;
     height: 32px;
-    padding: 0; /* Set padding to 0 to minimize space */
+    padding: 0;
     align-items: center;
-    /* gap: 5px;  */
     flex-shrink: 0;
 }
 
 .close-icon {
     position: fixed;
-    top: 10px; /* Adjust the top position as needed */
-    right: 10px; /* Adjust the right position as needed */
+    top: 10px;
+    right: 10px;
     font-size: 40px;
     cursor: pointer;
-    color: red; /* Adjust the color as needed */
+    color: red; 
 }
 #overlay {
     display: none;
@@ -47,13 +50,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
-    z-index: 9998; /* Set z-index lower than the popup to ensure it's behind it */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998; 
 }
 
 #popup1 {
-        border-radius: 10px; /* Adjust the border-radius as needed */
-        /* Other styles for your popup container */
+        border-radius: 10px; 
     display: none;
     position: fixed;
     top: 50%;
@@ -73,7 +75,7 @@
     font-size: 21.781px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%; /* 34.849px */
+    line-height: 160%; 
     text-transform: uppercase;
     position: absolute;
     display: inline-flex;
@@ -93,11 +95,11 @@
     font-size: 21.781px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%; /* 34.849px */
+    line-height: 160%; 
     text-transform: uppercase;
     position: absolute;
     bottom: 30px;
-    left: 80%; /* Set to 0 to place it on the right bottom corner */
+    left: 80%; 
     font-size: 16px;
     cursor: pointer;
     display: inline-flex;
@@ -141,16 +143,16 @@
     position: absolute;
     top: 0;
     left: 45px;
-    margin-top: 20px; /* Adjust as needed */
-    margin-right: 20px; /* Adjust as needed */
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 #popup1 #popupMessage {
     position: absolute;
     top: 50px;
     left: 45px;
-    margin-top: 20px; /* Adjust as needed */
-    margin-right: 20px; /* Adjust as needed */
+    margin-top: 20px;
+    margin-right: 20px; 
 }
 
 

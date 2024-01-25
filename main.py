@@ -52,20 +52,36 @@ def process_form():
     # If user_id is not in session or the check_user fails, redirect to the home page
     return redirect(url_for('home'))
 
+@app.route('/takeout_processing')
+def takeout():
+    return render_template('success.html')
 
-@app.route('/takeout_goods', methods=['POST'])
+
+@app.route('/takeout', methods=['POST'])
 def takeout_goods():
     try:
+        # Get data from the POST request
         snipe_id = request.form.get('snipe_id')
         user_id = request.form.get('user_id')
-        print(snipe_id, user_id)
-        master_system.checkout(user_id, snipe_id)
+
+        # Uncomment and modify the following lines based on your processing logic
+        # For example, assuming you have a function checkout in master_system
+        # master_system.checkout(user_id, snipe_id)
+
+        # Log the received data (you can remove this line in production)
+        print(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+
+        # You can customize the response message as needed
         response_data = {'message': 'Successfully processed the takeout request'}
-        return render_template('takeout.html')
+
+        # Return a JSON response
+        return jsonify(response_data)
+
     except Exception as e:
         # Log any errors that occur
         print(f"Error processing takeout request: {str(e)}")
-        return render_template('error.html')
+        return jsonify({'error': str(e)})
+
 
 @app.errorhandler(500)
 def internal_server_error(error):
