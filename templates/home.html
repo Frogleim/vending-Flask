@@ -12,9 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <div class="logo-container">
                 <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
-            </div>
             <div class="btn-container">
                 <button type="button" class="btn btn-outline-secondary logout-button">Выйти
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
@@ -85,19 +83,14 @@
     success: function (response) {
         console.log(response);
 
-        // Check if the processing was successful
         if ('message' in response && response.message === 'Successfully processed the takeout request') {
-            // Redirect to done.html if successful
             window.location.href = "/takeout_processing";
         } else {
-            // Redirect to error.html if not successful
             window.location.href = "/error";
         }
     },
     error: function (jqXHR, textStatus, errorThrown) {
         console.error("Error:", errorThrown);
-
-        // Redirect to error.html in case of an AJAX error
         window.location.href = "/error";
     }
 });

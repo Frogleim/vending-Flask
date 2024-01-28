@@ -30,7 +30,7 @@ def home():
             return render_template('service.html')
     except Exception as e:
         print(e)
-        return render_template('serivce.html')
+        return render_template('service.html')
 
 
 @app.route('/process_form', methods=['POST'])
