@@ -12,11 +12,12 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+            <div class="logo-container">
+                <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+            </div>
             <div class="btn-container">
                 <button type="button" class="btn btn-outline-secondary logout-button">Выйти
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
-
                 </button>
                 <div class="x-logo"></div> 
             </div>
@@ -28,15 +29,17 @@
             {% for product in data.master_system %}
                 <div class="column"
                 >
+                <p class="fio">{{ fio[0] }}</p>
+
                     <div class="card" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
                         <div class="card-body">
                             <p class="card-text">{{ product.goods }}</p>
                         </div>
                         {% if product.goods_image %}
                         
-                            <img src="{{ product.goods_image }}" class="card-img" alt="...">
+                            <img src="{{ product.goods_image }}" class="card-img" width="370px" height="381px" alt="...">
                         {% else %}
-                            <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
+                            <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" width="370px" height="381px" alt="...">
                         {% endif %}
                         
                     </div>
@@ -57,6 +60,9 @@
         <strong id="popupMessage"></strong>
 </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="{{ url_for('static', filename='js/close.js') }}"></script>
+
+
 <script>
 
     $(document).ready(function () {

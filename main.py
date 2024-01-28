@@ -27,10 +27,10 @@ def home():
         if 'success' in machine_status['status']:
             return render_template('index.html')
         else:
-            return render_template('error.html')
+            return render_template('service.html')
     except Exception as e:
         print(e)
-        return render_template('error.html')
+        return render_template('serivce.html')
 
 
 @app.route('/process_form', methods=['POST'])
@@ -41,14 +41,22 @@ def process_form():
     # Check if user_id is in session, indicating an active session
     if 'user_id' in session:
         ip_address = master_system.get_ip_address()
-        status = master_system.check_user(int(user_id), ip_address)
-        data = {"master_system": status['data'], 'user_id': user_id}
-        print(status['data'])
-        if 'success' in status['status']:
-            # Do something with user_id, e.g., save it to a database
-            session['user_id'] = user_id
-            return render_template('home.html', data=data, user_id=user_id)
-
+        try:
+            status = master_system.check_user(int(user_id), ip_address)
+            print(status)
+            data = {"master_system": status['data'], 'user_id': user_id}
+            print(status['status'])
+            if 'success' in status['status']:
+                # Do something with user_id, e.g., save it to a database
+                session['user_id'] = user_id
+                return render_template('home.html', data=data, user_id=user_id, fio=status['user_data'])
+            if status['status'] == 'operator':
+                # Do something with user_id, e.g., save it to a database
+                session['user_id'] = user_id
+                return render_template('service_status.html')
+        except Exception as e:
+            print(f"Exception: {str(e)}")
+            return render_template('login_error.html')
     # If user_id is not in session or the check_user fails, redirect to the home page
     return redirect(url_for('home'))
 

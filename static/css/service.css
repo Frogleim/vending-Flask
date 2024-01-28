@@ -46,14 +46,33 @@
 
 .welcome-text {
     position: absolute;
-    top: 20%;
-    color: black;
-    font-size: 72px;
-    font-family: Biform;
-    font-weight: 400;
-    line-height: 100.80px;
-    word-wrap: break-word;
+    top: 50%;
+    color: #000;
+
+text-align: center;
+/* desktop/H-1 */
+font-family: Biform;
+font-size: 72px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 100.8px */
+}
+
+.message {
+    position: absolute;
+    top: 65%;
+    width: 604px;
+    left: 10%;
+    color: #000;
     text-align: center;
+    /* mobile/H-2 mobile */
+    font-family: Biform;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+
+
 }
 
 .btn {
@@ -64,11 +83,11 @@
     right: inherit;
 }
 
-.badge-logo {
+.setting-logo {
     position: absolute;
-    top: 60%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: auto;
+    width: 80px;
+    height: 80px;
 }

@@ -1,6 +1,51 @@
-.card-img-top {
-    width: 251px;
-    height: 251px;
+.navbar-expand-lg.bg-body-tertiary {
+    height: 130px; /* Adjust this value based on your design */
+}
+
+
+.row {
+    display: flex;
+    padding: 40px; /* Adjust this value based on your design */
+    align-items: flex-start;
+    gap: var(--24, 24px);
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: flex-end;
+    position: relative; /* Enable relative positioning for the container */
+}
+
+#pt-logo {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.user-name {
+    top: 80px;
+}
+
+.fio {
+    position: absolute;
+    top: 40px; /* Adjust the distance from the bottom */
+    margin: 0; /* Remove default margin for the paragraph */
+    overflow: hidden;
+color: var(--Typography-Primary, #1B1B1B);
+text-overflow: ellipsis;
+/* mobile/H-1 mobile */
+font-family: Biform;
+font-size: 38px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 53.2px */
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+align-self: stretch;
+}
+
+
+.card-img {
     object-fit: contain;
 }
 
@@ -116,12 +161,12 @@
     overflow: hidden;
 }
 
-.row {
+/* .row {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
-}
+} */
 
 .column {
     flex: 0 0 calc(50% - 20px);
@@ -131,13 +176,14 @@
 
 .card {
     width: 100%;
+    background: #F6F6F6;
 }
 
 
-.container {
+/* .container {
     margin: 40px;
     padding: 0%;
-}
+} */
 
 #popup1 #question {
     position: absolute;
@@ -166,7 +212,7 @@
 
 
   
-/* .card-text {
+.card-text {
     font-family: 'Biform', Arial, sans-serif;
 font-size: 30px;
 font-style: normal;
@@ -177,4 +223,4 @@ color: #000;
 text-overflow: ellipsis;
 white-space: nowrap;
 
-} */
+}
