@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from api_connect import master_system
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone  # Add timezone
 
 import socket
 
@@ -14,7 +14,23 @@ def get_ipv4_address():
     s.connect(("8.8.8.8", 80))
     return s.getsockname()[0]
 
+@app.before_request
+def check_session_timeout():
+    if 'user_id' in session and 'last_activity' in session:
+        # Check if the session has expired
+        last_activity_time = session['last_activity']
+        expiration_time = last_activity_time + app.permanent_session_lifetime
+        current_time = datetime.now(timezone.utc)  # Make current time aware of timezone
+        print(current_time)
+        print(expiration_time)
+        print(current_time > expiration_time)
+        if current_time > expiration_time:
+            # Session has expired, remove user_id from session and redirect to home
+            session.pop('user_id', None)
+            return redirect(url_for('home'))
 
+    # Update last_activity time for every valid request
+    session['last_activity'] = datetime.now(timezone.utc)
 @app.route('/')
 def home():
     ip = get_ipv4_address()
@@ -40,15 +56,15 @@ def process_form():
 
     # Check if user_id is in session, indicating an active session
     if 'user_id' in session:
+        print(session)
         ip_address = master_system.get_ip_address()
         try:
             status = master_system.check_user(int(user_id), ip_address)
-            print(status)
             data = {"master_system": status['data'], 'user_id': user_id}
-            print(status['status'])
             if 'success' in status['status']:
                 # Do something with user_id, e.g., save it to a database
                 session['user_id'] = user_id
+
                 return render_template('home.html', data=data, user_id=user_id, fio=status['user_data'])
             if status['status'] == 'operator':
                 # Do something with user_id, e.g., save it to a database
