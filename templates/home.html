@@ -12,32 +12,32 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-                <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+            <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
             <div class="btn-container">
                 <button type="button" class="btn btn-outline-secondary logout-button">Выйти
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
+
                 </button>
-                <div class="x-logo"></div> 
+                <div class="x-logo"></div>
             </div>
         </div>
     </nav>
+
 
     <div class="container">
         <div class="row">
             {% for product in data.master_system %}
                 <div class="column"
                 >
-                <p class="fio">{{ fio[0] }}</p>
-
                     <div class="card" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
                         <div class="card-body">
                             <p class="card-text">{{ product.goods }}</p>
                         </div>
                         {% if product.goods_image %}
                         
-                            <img src="{{ product.goods_image }}" class="card-img" width="370px" height="381px" alt="...">
+                            <img src="{{ product.goods_image }}" class="card-img" alt="...">
                         {% else %}
-                            <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" width="370px" height="381px" alt="...">
+                            <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
                         {% endif %}
                         
                     </div>
@@ -58,10 +58,32 @@
         <strong id="popupMessage"></strong>
 </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="{{ url_for('static', filename='js/close.js') }}"></script>
-
 
 <script>
+    function checkSessionExpiration() {
+        // Make an AJAX request to the server to check session status
+        $.ajax({
+            type: "GET",
+            url: "{{ url_for('check_session_status') }}",
+            success: function (response) {
+                console.log(response.status);
+
+                if (response.status === 'expired') {
+                    // Session has expired, redirect to home
+                    window.location.href = "{{ url_for('home') }}";
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Error checking session status:", errorThrown);
+            }
+        });
+    }
+
+    // Check session status immediately on page load
+    checkSessionExpiration();
+
+    // Check session status every 5 seconds (adjust the interval as needed)
+    setInterval(checkSessionExpiration, 5000);
 
     $(document).ready(function () {
         PopUpHide();
@@ -69,7 +91,7 @@
 
     function finishButtonClick() {
         var user_id = {{ user_id|tojson|safe }};
-        var snipe_id = $("#popup1").data("snipe_id");  
+        var snipe_id = $("#popup1").data("snipe_id");  // Retrieve snipe_id from the data attribute
         console.log(user_id);
         console.log(snipe_id);
 
@@ -82,30 +104,30 @@
     },
     success: function (response) {
         console.log(response);
-
-        if ('message' in response && response.message === 'Successfully processed the takeout request') {
-            window.location.href = "/takeout_processing";
-        } else {
-            window.location.href = "/error";
-        }
+        // Handle the response as needed (e.g., redirect to /takeout)
+        window.location.href = "/success";
     },
     error: function (jqXHR, textStatus, errorThrown) {
         console.error("Error:", errorThrown);
+
+        // Redirect to the Flask error route
         window.location.href = "/error";
     }
 });
 
-        PopUpHide(); 
+        PopUpHide(); // Close the popup if needed
     }
 
     function cancelButtonClick() {
+        // Handle the logic when the "Cancel" button is clicked
         console.log("Cancel button clicked");
-        PopUpHide(); 
+        // You can add your logic here
+        PopUpHide(); // Close the popup if needed
     }
 
     function PopUpShow(snipe_id, message) {
         $("#popupMessage").text(message);
-        $("#popup1").data("snipe_id", snipe_id); 
+        $("#popup1").data("snipe_id", snipe_id);  // Store snipe_id in the data attribute
         $("#popup1, #overlay").show();
     }
 
@@ -115,7 +137,8 @@
 
     function checkAndPopUpShow(cell) {
         var cellText = $(cell).find("td").text().trim();
-        var snipe_id = $(cell).data("snipe_id");  
+        var snipe_id = $(cell).data("snipe_id");  // Retrieve snipe_id from the data attribute
+        console.log(snipe_id);
         var title = $(cell).find(".card-text").text().trim();
 
         if (cellText == "Cell is Empty" || cellText == "Goods is None") {
@@ -127,5 +150,7 @@
 
 </script>
 </div>
+
+
 </body>
 </html>

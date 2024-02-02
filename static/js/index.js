@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         hiddenInput.addEventListener("input", function () {
             const inputValue = this.value;
+            console.log(inputValue);
 
             if (inputValue.length === 10) {
                 console.log("ok");

@@ -31,5 +31,31 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
+    <script>
+        function checkSessionExpiration() {
+        // Make an AJAX request to the server to check session status
+        $.ajax({
+            type: "GET",
+            url: "{{ url_for('check_session_status_operator') }}",
+            success: function (response) {
+                console.log(response.status);
+
+                if (response.status === 'expired') {
+                    // Session has expired, redirect to home
+                    window.location.href = "{{ url_for('home') }}";
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Error checking session status:", errorThrown);
+            }
+        });
+    }
+
+    // Check session status immediately on page load
+    checkSessionExpiration();
+
+    // Check session status every 5 seconds (adjust the interval as needed)
+    setInterval(checkSessionExpiration, 5000);
+    </script>
 </body>
 </html>
