@@ -1,3 +1,5 @@
+import time
+
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify, flash
 from api_connect import master_system
 from datetime import datetime, timedelta, timezone
@@ -42,8 +44,7 @@ def check_session_status():
 
 @app.route('/check_session_status_operator')
 def check_session_status_operator():
-    expire_time = timedelta(seconds=get_timeouts()['users_timeout'])
-
+    expire_time = timedelta(seconds=get_timeouts()['operator_timeout'])
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
         expiration_time = last_activity_time + expire_time
@@ -61,17 +62,14 @@ def home():
     ip = get_ipv4_address()
     user_id = request.args.get('user_id')
     print(user_id)
-
     print(ip)
     try:
         machine_status = master_system.check_machine_status(ip=ip)
         print(machine_status)
-
         if 'success' in machine_status['status']:
             print(session)
             session['user_id'] = user_id
             session['last_activity'] = datetime.now(timezone.utc)
-
             return render_template('index.html')
         else:
             session['user_id'] = user_id
@@ -89,9 +87,7 @@ def service():
 
 @app.route('/process_form', methods=['POST'])
 def process_form():
-    user_id = request.form.get('user_id')
-    # session['user_id'] = user_id
-
+    user_id = request.form.get('user_id') or session.get('user_id')
     print('User id', user_id)
     if 'user_id' in session:
         print(f'Session: {session}')
@@ -116,26 +112,14 @@ def process_form():
 @app.route('/takeout', methods=['POST'])
 def takeout_goods():
     try:
-        # Get data from the POST request
         snipe_id = request.form.get('snipe_id')
         user_id = request.form.get('user_id')
         print(user_id)
-
-        # Uncomment and modify the following lines based on your processing logic
-        # For example, assuming you have a function checkout in master_system
         master_system.checkout(user_id, snipe_id)
-
-        # Log the received data (you can remove this line in production)
         print(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
-
-        # You can customize the response message as needed
         response_data = {'message': 'Successfully processed the takeout request'}
-
-        # Return a JSON response
         return jsonify(response_data)
-
     except Exception as e:
-        # Log any errors that occur
         print(f"Error processing takeout request: {str(e)}")
         return jsonify({'error': str(e)})
 
@@ -148,6 +132,20 @@ def success():
 @app.errorhandler(500)
 def internal_server_error(error):
     return render_template('error.html', error_message='Internal Server Error'), 500
+
+
+@app.route('/change_machine_status', methods=['GET'])
+def change_machine_status():
+    try:
+        ip = get_ipv4_address()
+        result = master_system.change_machine_status(ip)
+        if result['status'] == 'success':
+            return jsonify({'status': 'success'})
+        else:
+            return jsonify({'status': 'failed', 'message': result.get('message', 'Unknown error')})
+    except Exception as e:
+        print(f"Error changing machine status: {str(e)}")
+        return jsonify({'status': 'failed', 'message': str(e)})
 
 
 if __name__ == '__main__':

@@ -14,6 +14,11 @@ def check_machine_status(ip):
     return r.json()
 
 
+def change_machine_status(ip):
+    url = f'http://192.168.1.4:8000/change_status/?ip_address={ip}'
+    r = requests.get(url)
+    return r.json()
+
 def get_timeouts(ip):
     url = f'http://192.168.1.4:8000/timeouts/?ip_address={ip}'
     r = requests.get(url)

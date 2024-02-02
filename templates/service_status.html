@@ -50,12 +50,38 @@
             }
         });
     }
+    function returnToWork() {
+            // Make an AJAX request to the server to change machine status
+            $.ajax({
+                type: "GET",
+                url: "{{ url_for('change_machine_status') }}",
+                success: function (response) {
+                    console.log(response.status);
+
+                    if (response.status === 'success') {
+                        // Machine status changed successfully, redirect to home
+                        window.location.href = "{{ url_for('home') }}";
+                    } else {
+                        // Handle failure (optional)
+                        console.error("Error changing machine status:", response.message);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error("Error changing machine status:", errorThrown);
+                }
+            });
+        }
 
     // Check session status immediately on page load
     checkSessionExpiration();
 
     // Check session status every 5 seconds (adjust the interval as needed)
     setInterval(checkSessionExpiration, 5000);
+    $(document).ready(function () {
+        $(".custom-button").on("click", function () {
+            returnToWork();
+        });
+    });
     </script>
 </body>
 </html>

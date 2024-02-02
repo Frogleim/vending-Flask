@@ -6,5 +6,7 @@ function cancelButtonClick() {
 
 function continueButton() {
     console.log("Button clicked");
-    window.location.href = "/";
+    window.location.href = "/process_form";
 }
+
+

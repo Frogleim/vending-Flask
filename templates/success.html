@@ -22,15 +22,20 @@
     <div class="cover-container">
         <img id="pt-logo" src="{{ url_for('static', filename='images/takeaway-box.svg') }}" alt="pt-logo">
         <h1 class="success-text">Заберите оборудование в окне выдачи</h1>
-        <button class="btn btn-dark custom-button" onclick="cancelButtonClick()">СЛЕДУЮЩАЯ ВЫДАЧА
-            <img src="{{ url_for('static', filename='images/Group 625551.svg') }}" alt="SVG Icon" class="icon">
-    
-        </button>
+        <form action="{{ url_for('process_form') }}" method="post" id="myForm">
+
+            <button type="submit" class="btn btn-dark custom-button">СЛЕДУЮЩАЯ ВЫДАЧА
+                <img src="{{ url_for('static', filename='images/Group 625551.svg') }}" alt="SVG Icon" class="icon">
+        
+            </button>
+        </form>
+
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
     <script>
+      
         function checkSessionExpiration() {
     // Make an AJAX request to the server to check session status
     $.ajax({
