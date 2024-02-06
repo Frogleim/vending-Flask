@@ -1,7 +1,7 @@
 import time
 
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify, flash
-from api_connect import master_system
+from api_connect import master_system, logs_setting
 from datetime import datetime, timedelta, timezone
 
 import socket
@@ -76,7 +76,7 @@ def home():
             session['last_activity'] = datetime.now(timezone.utc)
             return render_template('serivce.html')
     except Exception as e:
-        print(e)
+        logs_setting.error_logs_logger.error(e)
         return render_template('serivce.html')
 
 
@@ -104,7 +104,8 @@ def process_form():
                 session['user_id'] = user_id
                 return render_template('service_status.html')
         except Exception as e:
-            print(f"Exception: {str(e)}")
+
+            logs_setting.error_logs_logger.error(f"Exception: {str(e)}")
             return render_template('login_error.html')
     return redirect(url_for('home'))
 
@@ -116,11 +117,13 @@ def takeout_goods():
         user_id = request.form.get('user_id')
         print(user_id)
         master_system.checkout(user_id, snipe_id)
-        print(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+        logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+        logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
+
         response_data = {'message': 'Successfully processed the takeout request'}
         return jsonify(response_data)
     except Exception as e:
-        print(f"Error processing takeout request: {str(e)}")
+        logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
         return jsonify({'error': str(e)})
 
 
@@ -144,11 +147,12 @@ def change_machine_status():
         else:
             return jsonify({'status': 'failed', 'message': result.get('message', 'Unknown error')})
     except Exception as e:
-        print(f"Error changing machine status: {str(e)}")
+        logs_setting.error_logs_logger.error(f"Error changing machine status: {str(e)}")
         return jsonify({'status': 'failed', 'message': str(e)})
 
 
 if __name__ == '__main__':
     ip = get_ipv4_address()
+    print(ip)
     # Run the app on host 0.0.0.0 and port 5000
     app.run(host=f'{ip}', port=5000, debug=True)

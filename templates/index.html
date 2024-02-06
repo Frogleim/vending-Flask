@@ -13,8 +13,9 @@
 <div class="cover-container">
     <img class="cover-image" src="{{ url_for('static', filename='images/2NF 1.png') }}" alt="My image">
     <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
-    <h1 class="welcome-text">Приложите пропуск, чтобы начать</h1>
-    <img class="badge-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="pt-logo">
+    <h1 class="hello">Привет!</h1>
+    <h2 class="welcome-text">Приложи пропуск, чтобы получить устройство</h2>
+    <img class="badge-logo" src="{{ url_for('static', filename='images/Vector 3626.svg') }}" alt="pt-logo">
     <form action="{{ url_for('process_form') }}" method="post" id="myForm">
 
         <input  name="user_id" id="user_id" class="test-input" placeholder="User ID" aria-label="User ID">

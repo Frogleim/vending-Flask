@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <img id="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+            <p id="fio">{{fio[0]}}</p>
             <div class="btn-container">
                 <button type="button" class="btn btn-outline-secondary logout-button">Выйти
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
@@ -52,7 +52,7 @@
             <img src="{{ url_for('static', filename='images/Group 625551.svg') }}" alt="SVG Icon" class="icon">
     
         </button>
-    <button class="btn btn-dark" onclick="finishButtonClick()">ДА</button>
+    <button class="accept-button" onclick="finishButtonClick()">НЕТ</button>
     
     <h1 id="question">Вы уверены в своем выборе?</h1>
         <strong id="popupMessage"></strong>
@@ -138,6 +138,7 @@
     function checkAndPopUpShow(cell) {
         var cellText = $(cell).find("td").text().trim();
         var snipe_id = $(cell).data("snipe_id");  // Retrieve snipe_id from the data attribute
+
         console.log(snipe_id);
         var title = $(cell).find(".card-text").text().trim();
 
