@@ -20,7 +20,7 @@
         </div>
     </nav>
     <div class="cover-container">
-        <img id="pt-logo" src="{{ url_for('static', filename='images/takeaway-box.svg') }}" alt="pt-logo">
+        <img src="{{ data['image_url'] }}" alt="Selected Image">
         <h1 class="success-text">Заберите оборудование в окне выдачи</h1>
         <form action="{{ url_for('process_form') }}" method="post" id="myForm">
 

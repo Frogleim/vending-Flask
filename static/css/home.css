@@ -1,14 +1,75 @@
+@font-face {
+    font-family: 'Biform';
+    src: url('/static/fonts/web/biform_regular.woff2') format('woff2'), /* Modern Browsers */
+         url('/static/fonts/web/biform_regular.woff') format('woff'); /* Legacy Browsers */
+    /* Add more src declarations for other font formats if needed */
+}
+
+
 .navbar-expand-lg.bg-body-tertiary {
     height: 150px; 
 }
 
 
 .row {
+    width: 800px;
     display: flex;
-    padding: 40px; 
-    align-items: flex-start;
-    gap: var(--24, 24px);
+    margin: 0;
+    gap: var(--32, 32px);
+
+
     
+}
+
+
+.column {
+    width: 800px;
+    flex: 1 0 0; /* Allow columns to grow to fill the available space */
+    box-sizing: border-box;
+    cursor: pointer;
+    
+}
+
+.container {
+    margin-top: 200px;
+    margin-right: 150px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+
+.card {
+    display: flex;
+    width: 356px;
+    height: 413px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: var(--8, 8px);
+    background: var(--Card-background, #F6F6F6);
+}
+
+
+.card-img {
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+#good-title {
+    font-size: 26px;
+    overflow: hidden;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 140%; 
+    font-family: 'Biform';
+    flex-shrink: 0;
+    text-align: left;
 }
 
 
@@ -32,8 +93,16 @@
 
 
 .card-img {
-    object-fit: contain;
+    object-fit: cover;
+    height: auto;
 }
+
+
+
+.navbar {
+    background-color: #FFF;
+}
+
 
 #fio {
     display: -webkit-box;
@@ -50,40 +119,44 @@
     font-style: normal;
     font-weight: 600;
     line-height: 140%; /* 44.8px */
-}
-
-.navbar {
-    background-color: #FFF;
+    padding-left: 40px; /* Add left padding */
 }
 
 .logout-button {
     display: flex;
     width: 262px;
     height: 90px;
+    padding: 19.912px var(--20, 20px);
     justify-content: center;
     align-items: center;
+    gap: var(--16, 16px);
     flex-shrink: 0;
     border-radius: 12px;
     border: 2px solid var(--border-general-2-x, rgba(0, 0, 0, 0.20));
     background: #FFF;
+
+    
+}
+
+#close-text {
     color: var(--Typography-Primary, #1B1B1B);
     font-family: "TT Positive";
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%;
+    line-height: 160%; /* 57.6px */
     text-transform: uppercase;
-    overflow: visible;
+    margin: 0;
 }
 
 
-.x-logo {
+.icon-logout {
     display: flex;
-width: 40.625px;
-height: 40.625px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
+    width: 40.625px;
+    height: 40.625px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .close-icon {
@@ -105,55 +178,86 @@ flex-shrink: 0;
     z-index: 9998; 
 }
 
+
+.popup-container {
+    background-color: #ffffff; /* Background color */
+    border-radius: 10px; /* Border radius */
+    padding: 20px; /* Padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
 #popup1 {
-        border-radius: 10px; 
+    border-radius: 10px; 
     display: none;
     position: fixed;
+    flex-direction: column;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 720px;
     height: 1030px;
-    background-color: white;
+    background: var(--Background-Content-general, #F3F4F5);
+
     z-index: 9999;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-#popup1 button {
-    color: var(--white, #FFF);
-    width: 296px;
-    height: 82.2;
-    font-family: "TT Positive";
-    font-size: 21.781px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-    line-height: 160%; 
-    text-transform: uppercase;
+
+.popup-image {
+    width: 100%; /* Set the width of the image to 100% of its container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners to the image */
+}
+
+
+
+
+#popup1 .cancel-button {
+    width: 336px;
+    height: 122px;
     position: absolute;
-    display: inline-flex;
     padding: var(--16, 16px) var(--20, 20px);
     border: 2px solid var(--border-general-2-x, rgba(0, 0, 0, 0.20));
-    align-items: center;
     gap: var(--16, 16px);
     bottom: 30px;
     left: 25%;
     transform: translateX(-50%);
-    font-size: 16px;
-    cursor: pointer;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.btn-dark {
-    background-color: #333; /* Example color */
-    color: white; /* Example color */
-    border: none;
-    padding: 16px 20px; /* Changed padding to fit the button */
-    border-radius: 5px; /* Example border-radius */
+#popup1 #cancel-text {
+    color: var(--Typography-Primary, #1B1B1B);
+    /* Button M */
+    font-family: "TT Positive";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 64px */
+    text-transform: uppercase;
 }
 
-#popup1 button:nth-child(2) {
+
+#popup1 #finish-text {
+    color: var(--white, #FFF);
+    /* Button M */
+    font-family: "TT Positive";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 64px */
+    text-transform: uppercase;
+}
+
+
+
+#popup1 .finish-button {
     color: var(--white, #FFF);
     font-family: "TT Positive";
     font-size: 21.781px;
@@ -163,14 +267,15 @@ flex-shrink: 0;
     text-transform: uppercase;
     position: absolute;
     bottom: 30px;
-    left: 80%; 
+    left: 50%; 
     font-size: 16px;
     cursor: pointer;
-    display: inline-flex;
     padding: 16px 20px;
     align-items: center;
     gap: 16px;
-    border-radius: 6px;
+    border-radius: 12px;
+    height: 122px;
+    width: 336px;
     background: #282828;
     color: #fff;
     font-size: 14px;
@@ -182,26 +287,36 @@ flex-shrink: 0;
 
 
 
-.column {
-    flex: 0 0 calc(50% - 20px);
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-.card {
-    width: 100%;
-    background: #F6F6F6;
-}
 
 
 
 
 #popup1 #question {
-    position: absolute;
-    top: 0;
-    left: 45px;
-    margin-top: 20px;
-    margin-right: 20px;
+    position: relative;
+    top: 1%;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-align: center;
+    font-family: "Biform";
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+
+
+
+}
+
+
+#popup1 #device-title {
+    color: var(--Typography-Primary, #1B1B1B);
+text-align: center;
+/* P Regular */
+font-family: "TT Positive";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 44.8px */
 }
 
 #popup1 #popupMessage {
@@ -221,16 +336,3 @@ flex-shrink: 0;
 }
 
 
-  
-.card-text {
-    font-family: 'Biform', Arial, sans-serif;
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%;
-overflow: hidden;
-color: #000;
-text-overflow: ellipsis;
-white-space: nowrap;
-
-}

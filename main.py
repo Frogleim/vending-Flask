@@ -29,12 +29,10 @@ def get_ipv4_address():
 @app.route('/check_session_status')
 def check_session_status():
     expire_time = timedelta(seconds=get_timeouts()['users_timeout'])
-    print(expire_time)
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
         expiration_time = last_activity_time + expire_time
         current_time = datetime.now(timezone.utc)
-        print(current_time > expiration_time)
         if current_time > expiration_time:
             session.pop('user_id', None)
             return jsonify({'status': 'expired'})
@@ -49,7 +47,6 @@ def check_session_status_operator():
         last_activity_time = session['last_activity']
         expiration_time = last_activity_time + expire_time
         current_time = datetime.now(timezone.utc)
-        print(current_time > expiration_time)
         if current_time > expiration_time:
             session.pop('user_id', None)
             return jsonify({'status': 'expired'})
@@ -61,11 +58,8 @@ def check_session_status_operator():
 def home():
     ip = get_ipv4_address()
     user_id = request.args.get('user_id')
-    print(user_id)
-    print(ip)
     try:
         machine_status = master_system.check_machine_status(ip=ip)
-        print(machine_status)
         if 'success' in machine_status['status']:
             print(session)
             session['user_id'] = user_id
@@ -88,13 +82,10 @@ def service():
 @app.route('/process_form', methods=['POST'])
 def process_form():
     user_id = request.form.get('user_id') or session.get('user_id')
-    print('User id', user_id)
     if 'user_id' in session:
-        print(f'Session: {session}')
         ip_address = master_system.get_ip_address()
         try:
             status = master_system.check_user(int(user_id), ip_address)
-            print(status)
             data = {"master_system": status['data'], 'user_id': user_id}
             if 'success' in status['status']:
                 session['user_id'] = user_id
@@ -115,16 +106,20 @@ def takeout_goods():
     try:
         snipe_id = request.form.get('snipe_id')
         user_id = request.form.get('user_id')
+        image_url = request.form.get('image')
+        print(image_url)
         print(user_id)
-        master_system.checkout(user_id, snipe_id)
+        # master_system.checkout(user_id, snipe_id)
         logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
         logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
-
+        data = {
+            'image_url': image_url
+        }
         response_data = {'message': 'Successfully processed the takeout request'}
-        return jsonify(response_data)
+        return render_template('success.html', data=data)
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
-        return jsonify({'error': str(e)})
+        return render_template('takeout_error.html')
 
 
 @app.route('/success')
@@ -153,6 +148,5 @@ def change_machine_status():
 
 if __name__ == '__main__':
     ip = get_ipv4_address()
-    print(ip)
     # Run the app on host 0.0.0.0 and port 5000
     app.run(host=f'{ip}', port=5000, debug=True)

@@ -3,24 +3,25 @@ import socket
 
 
 def check_user(user_number, ip):
-    url = f'http://192.168.18.110:8000/check_user/?user_id={user_number}&ip_address={ip}'
+    url = f'http://192.168.1.4:8000/check_user/?user_id={user_number}&ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
 
 def check_machine_status(ip):
-    url = f'http://192.168.18.110:8000/vending_status/?ip_address={ip}'
+    url = f'http://192.168.1.4:8000/vending_status/?ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
 
 def change_machine_status(ip):
-    url = f'http://192.168.18.110:8000/change_status/?ip_address={ip}'
+    url = f'http://192.168.1.4:8000/change_status/?ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
+
 def get_timeouts(ip):
-    url = f'http://192.168.18.110:8000/timeouts/?ip_address={ip}'
+    url = f'http://192.168.1.4:8000/timeouts/?ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
@@ -47,7 +48,7 @@ def checkout(user_id, product_id):
 if __name__ == '__main__':
     import pandas as pd
 
-# Read the DataFrame from the Excel file
+    # Read the DataFrame from the Excel file
     excel_file_path = './grid-export (1).xlsx'
     df = pd.read_excel(excel_file_path)
 

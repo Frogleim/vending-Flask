@@ -14,7 +14,8 @@
         <div class="container-fluid">
             <p id="fio">{{fio[0]}}</p>
             <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary logout-button">Выйти
+                <button type="button" class="btn btn-outline-secondary logout-button">
+                    <p id="close-text">Выйти</p>
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
 
                 </button>
@@ -24,134 +25,111 @@
     </nav>
 
 
-    <div class="container">
+    <div class="container justify-content-center">
         <div class="row">
             {% for product in data.master_system %}
-                <div class="column"
-                >
-                    <div class="card" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
-                        <div class="card-body">
-                            <p class="card-text">{{ product.goods }}</p>
+                {% if product.goods %}
+                    <div class="column">
+                        <div class="card" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
+                            <div class="card-body">
+                                <p id="good-title">{{ product.goods }}</p>
+                            </div>
+                            {% if product.goods_image %}
+                                <img src="{{ product.goods_image }}" class="card-img" alt="...">
+                            {% else %}
+                                <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
+                            {% endif %}
                         </div>
-                        {% if product.goods_image %}
-                        
-                            <img src="{{ product.goods_image }}" class="card-img" alt="...">
-                        {% else %}
-                            <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
-                        {% endif %}
-                        
                     </div>
-                </div>
+                {% endif %}
+            {% endfor %}
+            {% for product in data.master_system %}
+                {% if not product.goods %}
+                    <div class="column">
+                        <div class="card" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
+                            <div class="card-body">
+                                <p id="good-title"></p>
+                            </div>
+                            {% if product.goods_image %}
+                                <img src="{{ product.goods_image }}" class="card-img" alt="...">
+                            {% else %}
+                                <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
- <div id="overlay"></div>
+    <div id="overlay"></div>
     <div id="popup1">
-        <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-close" onclick="cancelButtonClick()">
-        <button class="btn btn-dark custom-button" onclick="cancelButtonClick()">СДЕЛАТЬ ДРУГОЙ ВЫБОР
-            <img src="{{ url_for('static', filename='images/Group 625551.svg') }}" alt="SVG Icon" class="icon">
-    
+        <div class="popup-container">
+            <img src="" class="popup-image" alt="Selected Image"> <!-- This will display the selected image -->
+        </div>
+        <h1 id="question">
+            Выдать это устройство?
+        </h1>
+        <p id="device-title"></p>
+        <button class="btn btn-dark finish-button" onclick="finishButtonClick()">
+            <p id="finish-text">
+                ДА
+            </p>
         </button>
-    <button class="accept-button" onclick="finishButtonClick()">НЕТ</button>
-    
-    <h1 id="question">Вы уверены в своем выборе?</h1>
-        <strong id="popupMessage"></strong>
-</div>
+        <button class="cancel-button" onclick="cancelButtonClick()">
+        <p id="cancel-text">НЕТ</p>
+        </button>
+      
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-<script>
-    function checkSessionExpiration() {
-        // Make an AJAX request to the server to check session status
-        $.ajax({
-            type: "GET",
-            url: "{{ url_for('check_session_status') }}",
-            success: function (response) {
-                console.log(response.status);
-
-                if (response.status === 'expired') {
-                    // Session has expired, redirect to home
-                    window.location.href = "{{ url_for('home') }}";
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    <script>
+        function checkSessionExpiration() {
+            // Make an AJAX request to the server to check session status
+            $.ajax({
+                type: "GET",
+                url: "{{ url_for('check_session_status') }}",
+                success: function (response) {
+                    console.log(response.status);
+                    if (response.status === 'expired') {
+                        // Session has expired, redirect to home
+                        window.location.href = "{{ url_for('home') }}";
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error("Error checking session status:", errorThrown);
                 }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error("Error checking session status:", errorThrown);
-            }
-        });
-    }
-
-    // Check session status immediately on page load
-    checkSessionExpiration();
-
-    // Check session status every 5 seconds (adjust the interval as needed)
-    setInterval(checkSessionExpiration, 5000);
-
-    $(document).ready(function () {
-        PopUpHide();
-    });
-
-    function finishButtonClick() {
-        var user_id = {{ user_id|tojson|safe }};
-        var snipe_id = $("#popup1").data("snipe_id");  // Retrieve snipe_id from the data attribute
-        console.log(user_id);
-        console.log(snipe_id);
-
-        $.ajax({
-    type: "POST",
-    url: "{{ url_for('takeout_goods') }}",
-    data: {
-        snipe_id: snipe_id,
-        user_id: user_id
-    },
-    success: function (response) {
-        console.log(response);
-        // Handle the response as needed (e.g., redirect to /takeout)
-        window.location.href = "/success";
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-        console.error("Error:", errorThrown);
-
-        // Redirect to the Flask error route
-        window.location.href = "/error";
-    }
-});
-
-        PopUpHide(); // Close the popup if needed
-    }
-
-    function cancelButtonClick() {
-        // Handle the logic when the "Cancel" button is clicked
-        console.log("Cancel button clicked");
-        // You can add your logic here
-        PopUpHide(); // Close the popup if needed
-    }
-
-    function PopUpShow(snipe_id, message) {
-        $("#popupMessage").text(message);
-        $("#popup1").data("snipe_id", snipe_id);  // Store snipe_id in the data attribute
-        $("#popup1, #overlay").show();
-    }
-
-    function PopUpHide() {
-        $("#popup1, #overlay").hide();
-    }
-
-    function checkAndPopUpShow(cell) {
-        var cellText = $(cell).find("td").text().trim();
-        var snipe_id = $(cell).data("snipe_id");  // Retrieve snipe_id from the data attribute
-
-        console.log(snipe_id);
-        var title = $(cell).find(".card-text").text().trim();
-
-        if (cellText == "Cell is Empty" || cellText == "Goods is None") {
-            PopUpShow(null, "This cell is empty.");
-        } else {
-            PopUpShow(snipe_id, title);
+            });
         }
-    }
+        checkSessionExpiration();
+        setInterval(checkSessionExpiration, 5000);
+        function finishButtonClick() {
+            var user_id = {{ user_id|tojson|safe }};
+            var snipe_id = $("#popup1").data("snipe_id");  // Retrieve snipe_id from the data attribute
+            var imgSrc = $('#popup1').find(".popup-image").attr("src"); // Retrieve the src attribute of the image
 
-</script>
-</div>
-
-
+            console.log(imgSrc);
+            console.log(snipe_id);
+            $.ajax({
+                type: "POST",
+                url: "{{ url_for('takeout_goods') }}",
+                data: {
+                    snipe_id: snipe_id,
+                    user_id: user_id,
+                    image: imgSrc
+                },
+                success: function (response) {
+                    console.log(response);
+                    // Handle the response as needed (e.g., redirect to /takeout)
+                    window.location.href = "/success";
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error("Error:", errorThrown);
+                    // Redirect to the Flask error route
+                    window.location.href = "/error";
+                }
+            });
+            PopUpHide(); // Close the popup if needed
+        }
+    </script>
 </body>
 </html>
