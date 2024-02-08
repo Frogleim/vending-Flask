@@ -1,66 +1,53 @@
-
-.navbar {
-    height: 100px; /* Adjust this value based on your design */
+@font-face {
+    font-family: 'Biform';
+    src: url('/static/fonts/web/biform_regular.woff2') format('woff2'), /* Modern Browsers */
+         url('/static/fonts/web/biform_regular.woff') format('woff'); /* Legacy Browsers */
+    /* Add more src declarations for other font formats if needed */
 }
-
-#pt-logo {
-    position: absolute;
-    top: 235px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px; 
-    height: auto;
+.navbar-expand-lg.bg-body-tertiary {
+    display: flex;
+width: 800px;
+padding: 40px;
+align-items: flex-start;
+gap: 32px;
 }
-
-.icon-logout {
-    display: inline-flex;
-    height: 32px;
-    padding: 0;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.takeout-logo {
-    width: 106px;
-    height: 106px;
-    align-self: center; /* Add this line for vertical centering */
-    top: 235px; /* You can adjust this value based on your design */
-}
-
-.success-text {
-    position: absolute;
-    top: 371px;
-    color: black;
-    font-size: 72px;
-    font-family: Biform;
-    font-weight: 400;
-    line-height: 100.80px;
-    word-wrap: break-word;
-    text-align: center;
-}
-
 
 .logout-button {
-    display: inline-flex;
-    height: 52px;
-    padding: var(--16, 16px) var(--20, 20px);
+    display: inline-block;
+    width: 262px;
+    height: 90px;
+    padding: 19.912px var(--20, 20px);
+    justify-content: center;
     align-items: center;
     gap: var(--16, 16px);
     flex-shrink: 0;
-    border-radius: var(--6, 6px);
-    border: 1px solid var(--border-general-2-x, rgba(0, 0, 0, 0.20));
-    background: var(--Background-background, #FFF);
-    color: var(--Foreground-text, #19252F);
-    font-family: "TT Positive";
-    font-size: 21.781px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; 
-    text-transform: uppercase;
+    border-radius: 12px;
+    border: 2px solid var(--border-general-2-x, rgba(0, 0, 0, 0.20));
+    background: #FFF;
+
+    
 }
 
+#close-text {
+    color: var(--Typography-Primary, #1B1B1B);
+    font-family: "TT Positive";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 57.6px */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+.icon-logout {
+    width: 40.625px;
+    height: 40.625px;
+    flex-shrink: 0;
+}
+
+
 .cover-container {
-    /* display: flex; */
     top: 80px;
     width: 713px;
     height: 1197px;
@@ -74,23 +61,101 @@
     background: #F6F6F6;
 }
 
+.success-text {
+    position: absolute;
+    top: 630px;
+    color: black;
+    font-size: 72px;
+    font-family: Biform;
+    font-weight: 400;
+    line-height: 100.80px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+#device-title {
+    position: absolute;
+    top: 750px;
+    padding-left: 100px;
+    padding-right: 40px;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-align: center;
+    /* P Regular */
+    font-family: "TT Positive";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 44.8px */
+}
+
+
+
+#timer-text {
+    position: absolute;
+    bottom: 220px;
+    color: var(--Typography-Ghost, rgba(0, 0, 0, 0.80));
+    text-align: center;
+    /* P Tag */
+    align-self: stretch;
+    left: 125px;
+    font-family: "TT Positive";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 127%; /* 27.94px */
+    text-transform: uppercase;
+}
+
+
+#timer {
+    position: absolute;
+    bottom: 150px;
+    left: 270px;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-align: center;
+    font-family: Biform;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 53.2px */
+    letter-spacing: 3.8px;
+}
+
 
 .custom-button {
     position: absolute;
-    top: 849.46px; /* Adjust this value based on your design */
-    left: 197px;
-    right: 178.54px;
+    bottom: 30.46px; /* Adjust this value based on your design */
+    right: 12.54px;
     display: flex;
     padding: var(--16, 16px) var(--20, 20px);
     align-items: center;
     gap: var(--16, 16px);
-    height: 78.56px;
-    width: 337.45px;
+    width: 688px;
+    height: 122px;
+
+    border-radius: 12px;
+    background: var(--gray-8x, #282828);
+    
+}
+
+#button-text {
     color: var(--white, #FFF);
     font-family: "TT Positive";
-    font-size: 21.781px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%; /* 34.849px */
+    line-height: 160%; /* 64px */
     text-transform: uppercase;
+    margin: 0;
+}
+
+
+#product-image {
+        position: absolute;
+        left: 15px;
+        top: 120px;
+        width: 680px;
+        height: 482px;
+        flex-shrink: 0;
+    
 }

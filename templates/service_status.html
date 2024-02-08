@@ -8,23 +8,14 @@
     <title>Vending</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
-        <div class="container-fluid">
-            <img class="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
-            <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary logout-button">Выйти
-                    <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
-                </button>
-                <div class="x-logo"></div> 
-            </div>
-        </div>
-    </nav>
     <div class="cover-container">
-        <img id="pt-logo" src="{{ url_for('static', filename='images/refresh.svg') }}" alt="pt-logo">
-        <h1 class="success-text">Сервисный режим</h1>
-        <p class="message">Оборудование поплняется...</p>
-        <button class="btn btn-dark custom-button" onclick="cancelButtonClick()">ВернутЬ В РАБОТУ
-            <img src="{{ url_for('static', filename='images/Group 625551.svg') }}" alt="SVG Icon" class="icon">
+    <img id="wait-gif" src="{{ url_for('static', filename='images/wait_gif.gif') }}">
+
+        <img id="refresh-logo" src="{{ url_for('static', filename='images/refresh_mini.svg') }}" alt="pt-logo">
+        <h1 class="service-text">Сервисный режим</h1>
+        <p class="message">Идет пополнение вендинга.</p>
+        <button class="btn btn-dark custom-button" onclick="cancelButtonClick()">
+            <p id="button-text">ВернутЬ В РАБОТУ</p>
     
         </button>
 

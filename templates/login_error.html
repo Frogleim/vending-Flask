@@ -8,25 +8,21 @@
     <title>Vending</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
-        <div class="container-fluid">
-            <img class="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
-            <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary logout-button">Выйти
-                    <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
-                </button>
-                <div class="x-logo"></div> 
-            </div>
-        </div>
-    </nav>
+   
     <div class="cover-container">
-        <img id="pt-logo" src="{{ url_for('static', filename='images/warning.svg') }}" alt="pt-logo">
-        <h1 class="error-text">Ошибка авторизации</h1>
-        <p class="message-error">Этот пропуск не знаком. Обратитесь на стойку регистрации а затем попробуйте еще раз.</p>
-        
+        <img class="error-image" src="{{ url_for('static', filename='images/error.jpg') }}" alt="pt-logo">
 
+        <h1 class="error-text">Проблема с авторизацией</h1>
+        <p class="message-error">Не можем найти твой пропуск в базе. Обратись на ресепшн: там помогут</p>
+        <p id="timer-text">Начальный экран откроется через:</p>
+        <p id="timer">00:10</p>
+        <button class="btn btn-dark custom-button" onclick="cancelButtonClick()">
+            <p id="button-text">Попробовать еще раз</p>
+    
+        </button>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
 </body>
 </html>

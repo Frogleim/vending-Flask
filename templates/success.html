@@ -8,24 +8,28 @@
     <title>Vending</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <img class="pt-logo" src="{{ url_for('static', filename='images/pt_logo.svg') }}" alt="pt-logo">
+            <p id="fio">{{data.fio}}</p>
             <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary logout-button">Выйти
+                <button type="button" class="btn btn-outline-secondary logout-button">
+                    <p id="close-text">Выйти</p>
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
                 </button>
-                <div class="x-logo"></div> 
             </div>
         </div>
     </nav>
+
     <div class="cover-container">
-        <img src="{{ data['image_url'] }}" alt="Selected Image">
-        <h1 class="success-text">Заберите оборудование в окне выдачи</h1>
+    <img id="product-image" src=" {{ data.image_url }}" alt="Selected Image">
+        <h1 class="success-text">Можешь забирать</h1>
+        <p id="device-title">{{ data.product_name }}</p>
+        <p id="timer-text">Начальный экран откроется через:</p>
+        <p id="timer">00:10</p>
         <form action="{{ url_for('process_form') }}" method="post" id="myForm">
 
-            <button type="submit" class="btn btn-dark custom-button">СЛЕДУЮЩАЯ ВЫДАЧА
-                <img src="{{ url_for('static', filename='images/Group 625551.svg') }}" alt="SVG Icon" class="icon">
+            <button class="btn btn-dark custom-button" onclick="cancelButtonClick()">
+                <p id="button-text">следующая выдача</p>
         
             </button>
         </form>

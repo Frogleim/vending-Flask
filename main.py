@@ -107,24 +107,24 @@ def takeout_goods():
         snipe_id = request.form.get('snipe_id')
         user_id = request.form.get('user_id')
         image_url = request.form.get('image')
-        print(image_url)
-        print(user_id)
+        fio = request.form.get('fio')  # Get the value of 'fio' from the form
+        product_name = request.form.get('goods')  # Get the value of 'goods' from the form
+
+        print(fio)
+        print(product_name)
         # master_system.checkout(user_id, snipe_id)
         logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
         logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
-        data = {
-            'image_url': image_url
-        }
-        response_data = {'message': 'Successfully processed the takeout request'}
-        return render_template('success.html', data=data)
+        success_data = {'image_url': image_url, 'fio': fio[3], 'product_name': product_name}
+        success(success_data)
+        return render_template('success.html', data=success_data)
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
         return render_template('takeout_error.html')
 
-
 @app.route('/success')
-def success():
-    return render_template('success.html')
+def success(data):
+    return render_template('success.html', data=data)
 
 
 @app.errorhandler(500)

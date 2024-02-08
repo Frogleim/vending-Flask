@@ -70,11 +70,16 @@
             Выдать это устройство?
         </h1>
         <p id="device-title"></p>
-        <button class="btn btn-dark finish-button" onclick="finishButtonClick()">
-            <p id="finish-text">
-                ДА
-            </p>
-        </button>
+        <form id="takeoutForm" action="{{ url_for('takeout_goods') }}" method="post">
+            <input type="hidden" name="snipe_id" id="snipe_id_input">
+            <input type="hidden" name="user_id" value="{{ user_id }}">
+            <input type="hidden" name="image" id="image_input">
+            <input type="hidden" name="fio" value="{{ fio }}">
+            <input type="hidden" name="goods" id="goods_input">
+            <button type="submit" class="btn btn-dark finish-button" onclick="submitTakeoutForm()">
+                <p id="finish-text">ДА</p>
+            </button>
+        </form>
         <button class="cancel-button" onclick="cancelButtonClick()">
         <p id="cancel-text">НЕТ</p>
         </button>
@@ -102,34 +107,22 @@
         }
         checkSessionExpiration();
         setInterval(checkSessionExpiration, 5000);
-        function finishButtonClick() {
-            var user_id = {{ user_id|tojson|safe }};
-            var snipe_id = $("#popup1").data("snipe_id");  // Retrieve snipe_id from the data attribute
-            var imgSrc = $('#popup1').find(".popup-image").attr("src"); // Retrieve the src attribute of the image
-
-            console.log(imgSrc);
-            console.log(snipe_id);
-            $.ajax({
-                type: "POST",
-                url: "{{ url_for('takeout_goods') }}",
-                data: {
-                    snipe_id: snipe_id,
-                    user_id: user_id,
-                    image: imgSrc
-                },
-                success: function (response) {
-                    console.log(response);
-                    // Handle the response as needed (e.g., redirect to /takeout)
-                    window.location.href = "/success";
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.error("Error:", errorThrown);
-                    // Redirect to the Flask error route
-                    window.location.href = "/error";
-                }
-            });
-            PopUpHide(); // Close the popup if needed
-        }
+        function submitTakeoutForm() {
+    var snipe_id = $("#popup1").data("snipe_id");
+    var imgSrc = $('#popup1').find(".popup-image").attr("src");
+    var goods = $('#popup1').find("#device-title").text().trim();
+        
+    
+    $('#snipe_id_input').val(snipe_id);
+    $('#image_input').val(imgSrc);
+    $('#goods_input').val(goods);
+    
+    // Submit the form
+    $('#takeoutForm').submit();
+    
+    // Optionally, you can hide the popup
+    PopUpHide();
+}
     </script>
 </body>
 </html>
