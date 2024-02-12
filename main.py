@@ -106,40 +106,28 @@ def takeout_goods():
     try:
         snipe_id = request.form.get('snipe_id')
         user_id = request.form.get('user_id')
+        print(user_id)
         image_url = request.form.get('image')
         fio = request.form.get('fio')  # Get the value of 'fio' from the form
         product_name = request.form.get('goods')  # Get the value of 'goods' from the form
-        
-        # Redirect to wait.html
-        flash('Your request is being processed. Please wait...')
-        return redirect(url_for('wait'))
-        
-    except Exception as e:
-        print(e)
-        logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
-        return jsonify({'status': 'failed', 'message': str(e)})
 
-
-@app.route('/wait')
-def wait():
-    snipe_id = request.form.get('snipe_id')
-    user_id = request.form.get('user_id')
-    image_url = request.form.get('image')
-    fio = request.form.get('fio')
-    product_name = request.form.get('goods')
-    success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
-    ip_address = master_system.get_ip_address()
-    status = master_system.check_user(int(user_id), ip_address)
-    if 'success' in status['status']:
+        print(type(fio))
+        print(product_name)
+        # master_system.checkout(user_id, snipe_id)
+        logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+        logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
+        success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
+        success(success_data)
         return render_template('success.html', data=success_data)
-
-
-    
-    return render_template('wait.html', snipe_id=snipe_id, user_id=user_id, image_url=image_url, fio=fio, product_name=product_name)
+    except Exception as e:
+        logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
+        return render_template('takeout_error.html')
 
 @app.route('/success')
 def success(data):
     return render_template('success.html', data=data)
+
+
 
 
 @app.errorhandler(500)
