@@ -10,13 +10,15 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <p id="fio">{{data.fio}}</p>
+             <p id="fio">{{data.fio}}</p>
             <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary logout-button">
-                    <p id="close-text">Выйти</p>
-                    <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
-                </button>
-            </div>
+    <button type="submit" class="btn btn-outline-secondary logout-button">
+        <div class="button-content">
+            <p id="close-text">Выйти</p>
+            <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
+        </div>
+    </button>
+</div>
         </div>
     </nav>
 
@@ -38,6 +40,9 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/success.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
+
     <script>
       
         function checkSessionExpiration() {

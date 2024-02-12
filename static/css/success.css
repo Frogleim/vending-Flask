@@ -6,10 +6,10 @@
 }
 .navbar-expand-lg.bg-body-tertiary {
     display: flex;
-width: 800px;
-padding: 40px;
-align-items: flex-start;
-gap: 32px;
+    width: 800px;
+    padding: 40px;
+    align-items: flex-start;
+    gap: 32px;
 }
 
 .logout-button {
@@ -28,7 +28,35 @@ gap: 32px;
     
 }
 
+
+#fio {
+    display: -webkit-box;
+    min-height: 84px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    flex: 1 0 0;
+    overflow: hidden;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-overflow: ellipsis;
+    /* P Accent */
+    font-family: "TT Positive";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 44.8px */
+    padding-left: 40px; /* Add left padding */
+}
+
+
+.button-content {
+    display: flex;
+    align-items: center; /* Vertically center content */
+}
+
+
 #close-text {
+    padding-left: 20px;
+    padding-right: 16px;
     color: var(--Typography-Primary, #1B1B1B);
     font-family: "TT Positive";
     font-size: 36px;
@@ -37,14 +65,14 @@ gap: 32px;
     line-height: 160%; /* 57.6px */
     text-transform: uppercase;
     margin: 0;
-}
+}  
 
-
+ 
 .icon-logout {
     width: 40.625px;
     height: 40.625px;
     flex-shrink: 0;
-}
+} 
 
 
 .cover-container {
