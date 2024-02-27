@@ -1,0 +1,137 @@
+{
+    "cells":
+    [
+        {
+            "ndeck": 1,
+            "spiral": 1,
+            "rotate": 1,
+            "cell": 1 
+        },
+        {
+            "ndeck": 1,
+            "spiral": 2,
+            "rotate": 1,
+            "cell": 2 
+        },
+        {
+            "ndeck": 1,
+            "spiral": 3,
+            "rotate": 1,
+            "cell": 3 
+        },
+        {
+            "ndeck": 1,
+            "spiral": 4,
+            "rotate": 1,
+            "cell": 4 
+        },
+        {
+            "ndeck": 1,
+            "spiral": 5,
+            "rotate": 1,
+            "cell": 5 
+        },
+        {
+            "ndeck": 1,
+            "spiral": 6,
+            "rotate": 1,
+            "cell": 6 
+        },
+        {
+            "ndeck": 1,
+            "spiral": 7,
+            "rotate": 1,
+            "cell": 7 
+        },
+        {
+            "ndeck": 2,
+            "spiral": 1,
+            "rotate": 1,
+            "cell": 8 
+        },
+        {
+            "ndeck": 2,
+            "spiral": 2,
+            "rotate": 1,
+            "cell": 9 
+        },
+        {
+            "ndeck": 2,
+            "spiral": 3,
+            "rotate": 1,
+            "cell": 10 
+        },
+        {
+            "ndeck": 2,
+            "spiral": 4,
+            "rotate": 1,
+            "cell": 11 
+        },
+        {
+            "ndeck": 3,
+            "spiral": 1,
+            "rotate": 1,
+            "cell": 12 
+        },
+        {
+            "ndeck": 3,
+            "spiral": 2,
+            "rotate": 1,
+            "cell": 13 
+        },
+        {
+            "ndeck": 3,
+            "spiral": 3,
+            "rotate": 1,
+            "cell": 14 
+        },
+        {
+            "ndeck": 3,
+            "spiral": 4,
+            "rotate": 1,
+            "cell": 15 
+        },
+        {
+            "ndeck": 4,
+            "spiral": 1,
+            "rotate": 1,
+            "cell": 16 
+        },
+        {
+            "ndeck": 4,
+            "spiral": 2,
+            "rotate": 1,
+            "cell": 17 
+        },
+        {
+            "ndeck": 4,
+            "spiral": 3,
+            "rotate": 1,
+            "cell": 18 
+        },
+        {
+            "ndeck": 4,
+            "spiral": 4,
+            "rotate": 1,
+            "cell": 18 
+        },
+        {
+            "ndeck": 5,
+            "spiral": 1,
+            "rotate": 1,
+            "cell": 19 
+        },
+        {
+            "ndeck": 5,
+            "spiral": 2,
+            "rotate": 1,
+            "cell": 20 
+        },
+        {
+            "ndeck": 5,
+            "spiral": 3,
+            "rotate": 1,
+            "cell": 21 
+        }
+    ]
+}

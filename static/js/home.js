@@ -6,7 +6,7 @@ window.onload = function() {
 };
 
 
-function cancelButtonClick() {
+function deniedButtonClick() {
     // Handle the logic when the "Cancel" button is clicked
     console.log("Cancel button clicked");
     // You can add your logic here
@@ -38,17 +38,15 @@ function checkAndPopUpShow(cell) {
     var cellNumber = $(cell).find(".cell_number").val();
     console.log(cellNumber);
 
-
-    console.log(imgSrc);
     var title = $(cell).find("#good-title").text().trim();
-    console.log(title);
-    if (cellText == "Cell is Empty" || cellText == "Goods is None") {
-        PopUpShow(null, "This cell is empty.");
+
+    // Check if cellText is "Cell is Empty" or "Goods is None" or title is undefined
+    if (cellText === "Cell is Empty" || cellText === "Goods is None" || title === undefined || title.trim() === "") {
+        console.log('No goods or undefined title');
     } else {
         PopUpShow(snipe_id, title, imgSrc, cellNumber);
     }
 }
-
 
 
 function addLineBreak() {

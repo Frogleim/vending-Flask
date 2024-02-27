@@ -5,17 +5,33 @@ from api_connect import master_system, logs_setting
 from datetime import datetime, timedelta, timezone
 import requests
 import socket
+import json
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 
+
+def read_config():
+    with open('./api_connect/settings.json', 'r') as conf:
+        data = json.load(conf)
+    return data
+
 def send_command(cell_number):
+    shelf_number = None
+    spiral_number = None
+    cells_data = read_config()
+    for items in cells_data['cells']:
+        print(items)
+        if items['cell'] == int(cell_number):
+            shelf_number = items['ndeck']
+            spiral_number = items['spiral']
     data = {
-    "shelf_number": 1,
-    "spiral_number": cell_number
+    "shelf_number": shelf_number,
+    "spiral_number": spiral_number
     }
-    r = requests.post('http://192.168.9.94:8000/get_goods/', json=data)
+    print(data)
+    r = requests.post('http://192.168.9.94:8080/get_goods/', json=data)
     if r.status_code == 200:
         return True
     else:
@@ -98,7 +114,6 @@ def process_form():
         try:
             status = master_system.check_user(int(user_id), ip_address)
             data = {"master_system": status['data'], 'user_id': user_id}
-            print(data)
             if 'success' in status['status']:
                 session['user_id'] = user_id
                 return render_template('home.html', data=data, user_id=user_id, fio=status['user_data'])
@@ -124,7 +139,14 @@ def proccessing():
     cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
     success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
 
-    # status = send_command(cell_number=cell_number)
+    status = send_command(cell_number=cell_number)
+    if status:
+        logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+        logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
+        master_system.checkout(user_id, snipe_id)
+        return render_template('success.html', data=success_data)
+    elif not status:
+        return render_template('takeout_error.html')
 
 
     return render_template('wait.html', data=success_data)
@@ -146,7 +168,7 @@ def takeout_goods():
         if status:
             print(type(fio))
             print(product_name)
-            # master_system.checkout(user_id, snipe_id)
+            master_system.checkout(user_id, snipe_id)
             logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
             logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
             success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}

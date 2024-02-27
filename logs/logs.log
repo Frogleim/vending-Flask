@@ -19569,3 +19569,940 @@ Image URL: https://snipeit-lab.ptsecurity.com/uploads/accessories/accessory-imag
 2024-02-27 09:49:35,282 - INFO - 192.168.1.4 - - [27/Feb/2024 09:49:35] "GET /check_session_status HTTP/1.1" 200 -
 2024-02-27 09:49:40,291 - INFO - 192.168.1.4 - - [27/Feb/2024 09:49:40] "GET /check_session_status HTTP/1.1" 200 -
 2024-02-27 09:49:45,276 - INFO - 192.168.1.4 - - [27/Feb/2024 09:49:45] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 08:59:45,825 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.9.96:5000
+2024-02-27 08:59:45,825 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-27 08:59:45,829 - INFO -  * Restarting with stat
+2024-02-27 08:59:46,224 - WARNING -  * Debugger is active!
+2024-02-27 08:59:46,230 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 09:00:24,316 - ERROR - HTTPConnectionPool(host='192.168.1.4', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.9.96 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001DCCDAA8A50>, 'Connection to 192.168.1.4 timed out. (connect timeout=None)'))
+2024-02-27 09:00:24,335 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:24] "GET / HTTP/1.1" 200 -
+2024-02-27 09:00:24,504 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:24] "GET /static/css/service.css HTTP/1.1" 200 -
+2024-02-27 09:00:24,505 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:24] "GET /static/images/2NF%201.png HTTP/1.1" 200 -
+2024-02-27 09:00:24,519 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:24] "GET /static/images/pt_logo.svg HTTP/1.1" 200 -
+2024-02-27 09:00:24,527 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:24] "GET /static/js/index.js HTTP/1.1" 200 -
+2024-02-27 09:00:24,532 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:24] "GET /static/images/Icons.svg HTTP/1.1" 200 -
+2024-02-27 09:00:24,555 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:24] "GET /static/fonts/web/biform_regular.woff2 HTTP/1.1" 200 -
+2024-02-27 09:00:29,612 - INFO - 192.168.9.96 - - [27/Feb/2024 09:00:29] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-02-27 09:00:39,758 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.9.96:5000
+2024-02-27 09:00:39,759 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-27 09:00:39,762 - INFO -  * Restarting with stat
+2024-02-27 09:00:40,193 - WARNING -  * Debugger is active!
+2024-02-27 09:00:40,199 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 09:01:01,276 - ERROR - HTTPConnectionPool(host='192.168.1.4', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.9.96 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000014320FF7690>, 'Connection to 192.168.1.4 timed out. (connect timeout=None)'))
+2024-02-27 09:01:01,283 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:01] "GET / HTTP/1.1" 200 -
+2024-02-27 09:01:05,872 - ERROR - HTTPConnectionPool(host='192.168.1.4', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.9.96 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000014321B6C350>, 'Connection to 192.168.1.4 timed out. (connect timeout=None)'))
+2024-02-27 09:01:05,872 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:05] "GET / HTTP/1.1" 200 -
+2024-02-27 09:01:06,348 - ERROR - HTTPConnectionPool(host='192.168.1.4', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.9.96 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000014321B6F190>, 'Connection to 192.168.1.4 timed out. (connect timeout=None)'))
+2024-02-27 09:01:06,350 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:06] "GET / HTTP/1.1" 200 -
+2024-02-27 09:01:06,512 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:06] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 09:01:06,517 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:06] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-02-27 09:01:06,518 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:06] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 09:01:06,543 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:06] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-02-27 09:01:06,552 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:06] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 09:01:06,596 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:06] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 09:01:48,818 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 09:01:48,857 - INFO -  * Restarting with stat
+2024-02-27 09:01:49,327 - WARNING -  * Debugger is active!
+2024-02-27 09:01:49,334 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 09:01:51,688 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:51] "GET / HTTP/1.1" 200 -
+2024-02-27 09:01:51,883 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:51] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 09:01:51,887 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:51] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 09:01:51,888 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:51] "GET /static/css/index.css HTTP/1.1" 200 -
+2024-02-27 09:01:51,890 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:51] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 09:01:51,894 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:51] "GET /static/images/Vector%203626.svg HTTP/1.1" 200 -
+2024-02-27 09:01:51,907 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:51] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 09:01:55,512 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:55] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 09:01:55,537 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:55] "GET /static/images/close.svg HTTP/1.1" 200 -
+2024-02-27 09:01:55,545 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:55] "GET /static/css/home.css HTTP/1.1" 200 -
+2024-02-27 09:01:55,564 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:55] "GET /static/js/home.js HTTP/1.1" 200 -
+2024-02-27 09:01:55,618 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:55] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 09:01:55,763 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:55] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:01:59,052 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 09:01:59,068 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 09:01:59,079 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "GET /static/css/proccessing.css HTTP/1.1" 200 -
+2024-02-27 09:01:59,084 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "GET /static/images/Group%20625544.svg HTTP/1.1" 200 -
+2024-02-27 09:01:59,090 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "GET /static/js/close.js HTTP/1.1" 200 -
+2024-02-27 09:01:59,095 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "GET /static/js/success.js HTTP/1.1" 200 -
+2024-02-27 09:01:59,106 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 09:01:59,251 - INFO - 192.168.9.96 - - [27/Feb/2024 09:01:59] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:04,216 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:04] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:09,234 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:09] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:14,558 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:14] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:19,537 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:19] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:24,557 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:24] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:29,527 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:29] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:34,550 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:34] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:39,551 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:39] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:44,541 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:44] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:49,541 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:49] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:54,527 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:54] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:02:59,533 - INFO - 192.168.9.96 - - [27/Feb/2024 09:02:59] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:03:04,542 - INFO - 192.168.9.96 - - [27/Feb/2024 09:03:04] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:03:09,537 - INFO - 192.168.9.96 - - [27/Feb/2024 09:03:09] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:03:22,548 - INFO - 192.168.9.96 - - [27/Feb/2024 09:03:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:03:51,276 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 09:03:51,325 - INFO -  * Restarting with stat
+2024-02-27 09:03:51,907 - WARNING -  * Debugger is active!
+2024-02-27 09:03:51,917 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 09:03:56,537 - INFO - 192.168.9.96 - - [27/Feb/2024 09:03:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:03:59,535 - INFO - 192.168.9.96 - - [27/Feb/2024 09:03:59] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:04,558 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:04] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:09,570 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:09] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:14,556 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:14] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:19,541 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:19] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:24,527 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:24] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:29,538 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:29] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:34,536 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:34] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:39,232 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:39] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:44,652 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:44] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:49,567 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:49] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:54,534 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:54] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:04:59,525 - INFO - 192.168.9.96 - - [27/Feb/2024 09:04:59] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:04,530 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:04] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:09,537 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:09] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:14,533 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:14] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:19,530 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:19] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:24,551 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:24] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:29,673 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:29] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:34,602 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:34] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:05:39,532 - INFO - 192.168.9.96 - - [27/Feb/2024 09:05:39] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:06:22,557 - INFO - 192.168.9.96 - - [27/Feb/2024 09:06:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:07:22,528 - INFO - 192.168.9.96 - - [27/Feb/2024 09:07:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:08:22,643 - INFO - 192.168.9.96 - - [27/Feb/2024 09:08:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:09:22,549 - INFO - 192.168.9.96 - - [27/Feb/2024 09:09:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:10:22,553 - INFO - 192.168.9.96 - - [27/Feb/2024 09:10:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:11:22,539 - INFO - 192.168.9.96 - - [27/Feb/2024 09:11:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:12:22,538 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 09:12:22,623 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "GET / HTTP/1.1" 200 -
+2024-02-27 09:12:22,800 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 09:12:22,810 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 09:12:22,811 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 09:12:22,814 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 09:12:22,817 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 09:12:22,825 - INFO - 192.168.9.96 - - [27/Feb/2024 09:12:22] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 09:43:33,021 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 09:43:33,067 - INFO -  * Restarting with stat
+2024-02-27 09:43:33,517 - WARNING -  * Debugger is active!
+2024-02-27 09:43:33,523 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 10:11:01,126 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 10:11:01,172 - INFO -  * Restarting with stat
+2024-02-27 10:11:01,713 - WARNING -  * Debugger is active!
+2024-02-27 10:11:01,718 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 10:11:47,449 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:47] "GET / HTTP/1.1" 200 -
+2024-02-27 10:11:47,659 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:47] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 10:11:47,671 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:47] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:11:47,672 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:47] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 10:11:47,673 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:47] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:11:47,679 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:47] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 10:11:47,690 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:47] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 10:11:51,719 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:51] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 10:11:51,747 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:51] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:11:51,749 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:51] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 10:11:51,768 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:51] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 10:11:51,808 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:51] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 10:11:51,973 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:11:56,940 - INFO - 192.168.9.96 - - [27/Feb/2024 10:11:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:01,931 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:06,940 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:06] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:11,346 - INFO - Processing takeout request for snipe_id: 101, user_id: 1234567891
+2024-02-27 10:12:11,346 - INFO - User: 1234567891, product id: 101
+2024-02-27 10:12:11,374 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 10:12:11,390 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:12:11,398 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "GET /static/css/success.css HTTP/1.1" 200 -
+2024-02-27 10:12:11,412 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 10:12:11,423 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "[36mGET /static/js/success.js HTTP/1.1[0m" 304 -
+2024-02-27 10:12:11,424 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "GET /static/js/timer.js HTTP/1.1" 200 -
+2024-02-27 10:12:11,425 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 10:12:11,593 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:15,975 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:15] "GET / HTTP/1.1" 200 -
+2024-02-27 10:12:15,996 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:15] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 10:12:16,009 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:16] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 10:12:16,017 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:16] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:12:16,019 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:16] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 10:12:16,162 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:21,115 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:26,116 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:31,115 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:31] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:36,115 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:36] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:41,122 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:41] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:46,136 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:51,146 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:12:56,538 - INFO - 192.168.9.96 - - [27/Feb/2024 10:12:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:01,539 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:06,645 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:06] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:11,534 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:16,542 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:21,534 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:26,541 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:31,540 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:31] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:36,533 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:36] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:41,547 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:41] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:46,552 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:13:51,537 - INFO - 192.168.9.96 - - [27/Feb/2024 10:13:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:14:22,548 - INFO - 192.168.9.96 - - [27/Feb/2024 10:14:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:15,398 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:15] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:16,115 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:21,114 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:26,134 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:31,119 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:31] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:36,113 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:36] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:41,125 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:41] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:46,245 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:51,542 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:15:56,549 - INFO - 192.168.9.96 - - [27/Feb/2024 10:15:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:01,538 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:06,543 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:06] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:11,541 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:16,539 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:21,656 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:26,536 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:31,534 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:31] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:36,532 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:36] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:41,534 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:41] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:16:46,663 - INFO - 192.168.9.96 - - [27/Feb/2024 10:16:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:17:22,547 - INFO - 192.168.9.96 - - [27/Feb/2024 10:17:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:18,055 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:18] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:21,552 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:26,530 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:31,527 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:31] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:36,550 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:36] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:41,543 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:41] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:46,539 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:51,543 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:18:56,645 - INFO - 192.168.9.96 - - [27/Feb/2024 10:18:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:19:01,535 - INFO - 192.168.9.96 - - [27/Feb/2024 10:19:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:19:06,539 - INFO - 192.168.9.96 - - [27/Feb/2024 10:19:06] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:19:11,544 - INFO - 192.168.9.96 - - [27/Feb/2024 10:19:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:19:16,551 - INFO - 192.168.9.96 - - [27/Feb/2024 10:19:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:19:22,533 - INFO - 192.168.9.96 - - [27/Feb/2024 10:19:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:20:22,597 - INFO - 192.168.9.96 - - [27/Feb/2024 10:20:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:21:22,547 - INFO - 192.168.9.96 - - [27/Feb/2024 10:21:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:22:22,538 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 10:22:22,618 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "GET / HTTP/1.1" 200 -
+2024-02-27 10:22:22,632 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 10:22:22,636 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 10:22:22,638 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:22:22,644 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:22:22,656 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 10:22:22,671 - INFO - 192.168.9.96 - - [27/Feb/2024 10:22:22] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 10:58:48,645 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:48] "GET / HTTP/1.1" 200 -
+2024-02-27 10:58:48,662 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:48] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 10:58:48,666 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:48] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 10:58:48,669 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:48] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:58:48,671 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:48] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:58:48,675 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:48] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 10:58:48,696 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:48] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 10:58:52,299 - ERROR - Exception: 'data'
+2024-02-27 10:58:52,316 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:52] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 10:58:52,337 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:52] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-02-27 10:58:52,338 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:52] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 10:58:52,344 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:52] "GET /static/css/login_error.css HTTP/1.1" 200 -
+2024-02-27 10:58:52,345 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:52] "GET /static/images/error.jpg HTTP/1.1" 200 -
+2024-02-27 10:58:52,426 - INFO - 192.168.9.96 - - [27/Feb/2024 10:58:52] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 10:59:02,507 - INFO - 192.168.9.96 - - [27/Feb/2024 10:59:02] "GET / HTTP/1.1" 200 -
+2024-02-27 10:59:02,527 - INFO - 192.168.9.96 - - [27/Feb/2024 10:59:02] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 10:59:02,532 - INFO - 192.168.9.96 - - [27/Feb/2024 10:59:02] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:59:02,535 - INFO - 192.168.9.96 - - [27/Feb/2024 10:59:02] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 10:59:02,541 - INFO - 192.168.9.96 - - [27/Feb/2024 10:59:02] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 10:59:02,542 - INFO - 192.168.9.96 - - [27/Feb/2024 10:59:02] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 10:59:02,554 - INFO - 192.168.9.96 - - [27/Feb/2024 10:59:02] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:13:21,580 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 11:13:21,640 - INFO -  * Restarting with stat
+2024-02-27 11:13:22,169 - WARNING -  * Debugger is active!
+2024-02-27 11:13:22,175 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:13:35,288 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 11:13:35,351 - INFO -  * Restarting with stat
+2024-02-27 11:13:35,904 - WARNING -  * Debugger is active!
+2024-02-27 11:13:35,912 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:13:59,160 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 11:13:59,208 - INFO -  * Restarting with stat
+2024-02-27 11:13:59,674 - WARNING -  * Debugger is active!
+2024-02-27 11:13:59,680 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:14:09,781 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 11:14:09,824 - INFO -  * Restarting with stat
+2024-02-27 11:14:10,280 - WARNING -  * Debugger is active!
+2024-02-27 11:14:10,286 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:18:40,064 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:18:40,110 - INFO -  * Restarting with stat
+2024-02-27 11:18:40,586 - WARNING -  * Debugger is active!
+2024-02-27 11:18:40,592 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:19:27,081 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 11:19:27,133 - INFO -  * Restarting with stat
+2024-02-27 11:19:27,603 - WARNING -  * Debugger is active!
+2024-02-27 11:19:27,612 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:20:12,055 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 11:20:12,102 - INFO -  * Restarting with stat
+2024-02-27 11:20:12,602 - WARNING -  * Debugger is active!
+2024-02-27 11:20:12,652 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:22:12,831 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\api_connect\\master_system.py', reloading
+2024-02-27 11:22:12,874 - INFO -  * Restarting with stat
+2024-02-27 11:22:13,402 - WARNING -  * Debugger is active!
+2024-02-27 11:22:13,407 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:23:35,191 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:23:35,239 - INFO -  * Restarting with stat
+2024-02-27 11:23:35,686 - WARNING -  * Debugger is active!
+2024-02-27 11:23:35,691 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:24:11,817 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:11] "GET / HTTP/1.1" 200 -
+2024-02-27 11:24:12,020 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:12] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:24:12,022 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:12] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:24:12,027 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:12] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:24:12,028 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:12] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:24:12,030 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:12] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:24:12,047 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:12] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:24:15,202 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:15] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:24:15,219 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:15] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:24:15,220 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:15] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:24:15,228 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:15] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:24:15,290 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:15] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:24:15,411 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:15] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:20,419 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:20] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:25,538 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:25] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:30,546 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:30] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:35,541 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:35] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:40,543 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:40] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:45,404 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:45] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:50,532 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:50] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:24:55,541 - INFO - 192.168.9.96 - - [27/Feb/2024 11:24:55] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:00,542 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:00] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:05,533 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:05] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:10,403 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:10] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:10,791 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:10] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:25:10,807 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:10] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:25:10,808 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:10] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:25:10,812 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:10] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:25:10,830 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:10] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:25:11,018 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:15,974 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:15] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:21,121 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:25,989 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:25] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:30,991 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:30] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:35,977 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:35] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:40,985 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:40] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:45,992 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:45] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:51,550 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:25:56,535 - INFO - 192.168.9.96 - - [27/Feb/2024 11:25:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:26:01,526 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:26:06,555 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:06] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:26:11,546 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:26:16,533 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:26:21,552 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:26:25,977 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:25] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:26:28,302 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:28] "[35m[1mPOST /proccessing HTTP/1.1[0m" 500 -
+2024-02-27 11:26:28,334 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:28] "GET /proccessing?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-02-27 11:26:28,344 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:28] "GET /proccessing?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-02-27 11:26:28,423 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:28] "GET /proccessing?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-02-27 11:26:28,459 - INFO - 192.168.9.96 - - [27/Feb/2024 11:26:28] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-27 11:27:00,552 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:27:00,599 - INFO -  * Restarting with stat
+2024-02-27 11:27:01,124 - WARNING -  * Debugger is active!
+2024-02-27 11:27:01,133 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:27:09,664 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:09] "GET / HTTP/1.1" 200 -
+2024-02-27 11:27:09,846 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:09] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:27:09,863 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:09] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:27:09,875 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:09] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:27:09,896 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:09] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:27:09,901 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:09] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:27:09,902 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:09] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:27:13,754 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:13] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:27:13,771 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:13] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:27:13,772 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:13] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:27:13,780 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:13] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:27:13,899 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:13] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:27:13,998 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:13] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:27:18,943 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:18] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:27:23,301 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:23] "[35m[1mPOST /proccessing HTTP/1.1[0m" 500 -
+2024-02-27 11:27:23,320 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:23] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-02-27 11:27:23,321 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:23] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-02-27 11:27:23,387 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:23] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-27 11:27:41,459 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:27:41,517 - INFO -  * Restarting with stat
+2024-02-27 11:27:42,200 - WARNING -  * Debugger is active!
+2024-02-27 11:27:42,206 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:27:46,184 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:46] "GET / HTTP/1.1" 200 -
+2024-02-27 11:27:46,380 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:46] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:27:46,384 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:46] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:27:46,389 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:46] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:27:46,391 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:46] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:27:46,399 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:46] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:27:46,412 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:46] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:27:50,130 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:50] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:27:50,149 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:50] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:27:50,150 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:50] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:27:50,159 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:50] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:27:50,248 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:50] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:27:50,303 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:50] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:27:55,265 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:55] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:27:56,678 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:56] "[35m[1mPOST /proccessing HTTP/1.1[0m" 500 -
+2024-02-27 11:27:56,693 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:56] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-02-27 11:27:56,694 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:56] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-02-27 11:27:56,716 - INFO - 192.168.9.96 - - [27/Feb/2024 11:27:56] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-27 11:34:31,511 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:34:31,557 - INFO -  * Restarting with stat
+2024-02-27 11:34:32,002 - WARNING -  * Debugger is active!
+2024-02-27 11:34:32,008 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:34:44,231 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:44] "GET / HTTP/1.1" 200 -
+2024-02-27 11:34:44,422 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:44] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:34:44,427 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:44] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:34:44,434 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:44] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:34:44,437 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:44] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:34:44,439 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:44] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:34:44,445 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:44] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:34:47,704 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:47] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:34:47,722 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:47] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:34:47,723 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:47] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:34:47,732 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:47] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:34:47,785 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:47] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:34:47,972 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:47] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:34:52,886 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:52] "[35m[1mPOST /proccessing HTTP/1.1[0m" 500 -
+2024-02-27 11:34:52,906 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:52] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-02-27 11:34:52,908 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:52] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-02-27 11:34:52,927 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:52] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-27 11:34:52,961 - INFO - 192.168.9.96 - - [27/Feb/2024 11:34:52] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:35:45,675 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:35:45,718 - INFO -  * Restarting with stat
+2024-02-27 11:35:46,154 - WARNING -  * Debugger is active!
+2024-02-27 11:35:46,160 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:36:02,317 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:36:02,368 - INFO -  * Restarting with stat
+2024-02-27 11:36:02,784 - WARNING -  * Debugger is active!
+2024-02-27 11:36:02,789 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:36:22,744 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:22] "GET / HTTP/1.1" 200 -
+2024-02-27 11:36:22,915 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:22] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:36:22,934 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:22] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:36:22,940 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:22] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:36:22,945 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:22] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:36:22,947 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:22] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:36:22,948 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:36:26,273 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:26] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:36:26,290 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:26] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:36:26,292 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:26] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:36:26,300 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:26] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:36:26,356 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:26] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:36:26,514 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:36:30,964 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:30] "[35m[1mPOST /proccessing HTTP/1.1[0m" 500 -
+2024-02-27 11:36:30,979 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:30] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-02-27 11:36:30,980 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:30] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-02-27 11:36:31,000 - INFO - 192.168.9.96 - - [27/Feb/2024 11:36:31] "[36mGET /proccessing?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-02-27 11:37:52,820 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:37:52,859 - INFO -  * Restarting with stat
+2024-02-27 11:37:53,328 - WARNING -  * Debugger is active!
+2024-02-27 11:37:53,333 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:37:58,830 - INFO - 192.168.9.96 - - [27/Feb/2024 11:37:58] "GET / HTTP/1.1" 200 -
+2024-02-27 11:37:59,014 - INFO - 192.168.9.96 - - [27/Feb/2024 11:37:59] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:37:59,014 - INFO - 192.168.9.96 - - [27/Feb/2024 11:37:59] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:37:59,023 - INFO - 192.168.9.96 - - [27/Feb/2024 11:37:59] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:37:59,024 - INFO - 192.168.9.96 - - [27/Feb/2024 11:37:59] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:37:59,026 - INFO - 192.168.9.96 - - [27/Feb/2024 11:37:59] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:37:59,039 - INFO - 192.168.9.96 - - [27/Feb/2024 11:37:59] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:38:02,244 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:02] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:38:02,260 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:02] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:38:02,261 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:02] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:38:02,271 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:02] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:38:02,316 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:02] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:38:02,507 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:02] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:38:07,151 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:07] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:38:07,165 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:07] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:38:07,166 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:07] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:38:07,171 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:07] "GET /static/css/error.css HTTP/1.1" 200 -
+2024-02-27 11:38:07,183 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:07] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:38:37,755 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:38:37,793 - INFO -  * Restarting with stat
+2024-02-27 11:38:38,262 - WARNING -  * Debugger is active!
+2024-02-27 11:38:38,268 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:38:45,711 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:45] "GET / HTTP/1.1" 200 -
+2024-02-27 11:38:45,890 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:45] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:38:45,894 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:45] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:38:45,897 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:45] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:38:45,904 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:45] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:38:45,905 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:45] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:38:45,906 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:45] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:38:49,839 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:49] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:38:49,859 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:49] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:38:49,861 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:49] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:38:49,870 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:49] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:38:49,916 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:49] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:38:50,066 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:50] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:38:52,669 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:52] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:38:52,681 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:52] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:38:52,683 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:52] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:38:52,685 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:52] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:38:52,699 - INFO - 192.168.9.96 - - [27/Feb/2024 11:38:52] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:40:01,012 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:40:01,065 - INFO -  * Restarting with stat
+2024-02-27 11:40:01,547 - WARNING -  * Debugger is active!
+2024-02-27 11:40:01,553 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:40:04,769 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:04] "GET / HTTP/1.1" 200 -
+2024-02-27 11:40:04,954 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:04] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:40:04,955 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:04] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:40:04,957 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:04] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:40:04,963 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:04] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:40:04,964 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:04] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:40:04,965 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:04] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:40:10,040 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:10] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:40:10,059 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:10] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:40:10,060 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:10] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:40:10,069 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:10] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:40:10,108 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:10] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:40:10,315 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:10] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:40:12,851 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:12] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:40:12,869 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:12] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:40:12,871 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:12] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:40:12,872 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:12] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:40:12,885 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:12] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:40:43,384 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:43] "GET / HTTP/1.1" 200 -
+2024-02-27 11:40:43,399 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:43] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:40:43,404 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:43] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:40:43,406 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:43] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:40:43,408 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:43] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:40:43,412 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:43] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:40:43,422 - INFO - 192.168.9.96 - - [27/Feb/2024 11:40:43] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:41:05,225 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:41:05,277 - INFO -  * Restarting with stat
+2024-02-27 11:41:05,722 - WARNING -  * Debugger is active!
+2024-02-27 11:41:05,728 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:41:14,865 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:14] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:41:14,990 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:14] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:41:15,003 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:15] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:41:15,006 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:15] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:41:15,038 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:15] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:41:15,166 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:15] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:41:17,876 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:17] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:41:17,887 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:17] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:41:17,892 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:17] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:41:17,893 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:17] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:41:17,907 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:17] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:41:45,129 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:41:45,179 - INFO -  * Restarting with stat
+2024-02-27 11:41:45,617 - WARNING -  * Debugger is active!
+2024-02-27 11:41:45,623 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:41:48,539 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:48] "GET / HTTP/1.1" 200 -
+2024-02-27 11:41:48,706 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:48] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:41:48,718 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:48] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:41:48,719 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:48] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:41:48,721 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:48] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:41:48,724 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:48] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:41:48,737 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:48] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:41:52,133 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:52] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:41:52,151 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:52] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:41:52,151 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:52] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:41:52,159 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:52] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:41:52,203 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:52] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:41:52,399 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:52] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:41:55,101 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:55] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:41:55,120 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:55] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:41:55,122 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:55] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:41:55,122 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:55] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:41:55,138 - INFO - 192.168.9.96 - - [27/Feb/2024 11:41:55] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:42:33,062 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:42:33,110 - INFO -  * Restarting with stat
+2024-02-27 11:42:33,532 - WARNING -  * Debugger is active!
+2024-02-27 11:42:33,538 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:42:42,630 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:42:42,677 - INFO -  * Restarting with stat
+2024-02-27 11:42:43,092 - WARNING -  * Debugger is active!
+2024-02-27 11:42:43,098 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:42:50,769 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:50] "GET / HTTP/1.1" 200 -
+2024-02-27 11:42:50,947 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:50] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:42:50,949 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:50] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:42:50,955 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:50] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:42:50,957 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:50] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:42:50,958 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:50] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:42:50,967 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:50] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:42:54,403 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:54] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:42:54,423 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:54] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:42:54,424 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:54] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:42:54,433 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:54] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:42:54,486 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:54] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:42:54,593 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:54] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:42:57,604 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:57] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:42:57,619 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:57] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:42:57,620 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:57] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:42:57,625 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:57] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:42:57,638 - INFO - 192.168.9.96 - - [27/Feb/2024 11:42:57] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:44:16,879 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:44:16,925 - INFO -  * Restarting with stat
+2024-02-27 11:44:17,354 - WARNING -  * Debugger is active!
+2024-02-27 11:44:17,360 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:44:22,268 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:22] "GET / HTTP/1.1" 200 -
+2024-02-27 11:44:22,441 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:22] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:44:22,452 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:22] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:44:22,460 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:22] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:44:22,461 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:22] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:44:22,463 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:44:22,467 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:22] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:44:26,110 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:26] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:44:26,132 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:26] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:44:26,134 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:26] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:44:26,142 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:26] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:44:26,191 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:26] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:44:26,341 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:44:28,847 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:28] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:44:28,863 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:28] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:44:28,866 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:28] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:44:28,867 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:28] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:44:28,881 - INFO - 192.168.9.96 - - [27/Feb/2024 11:44:28] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:47:46,189 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:47:46,247 - INFO -  * Restarting with stat
+2024-02-27 11:47:46,729 - WARNING -  * Debugger is active!
+2024-02-27 11:47:46,735 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:48:12,659 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:12] "GET / HTTP/1.1" 200 -
+2024-02-27 11:48:12,842 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:12] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:48:12,850 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:12] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:48:12,851 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:12] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:12,855 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:12] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:12,856 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:12] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:48:12,871 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:12] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:48:16,805 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:16] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:48:16,823 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:16] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:48:16,824 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:16] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:16,832 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:16] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:48:16,899 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:16] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:48:17,080 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:17] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:48:20,075 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:20] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:48:20,090 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:20] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:48:20,093 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:20] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:20,094 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:20] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:48:20,110 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:20] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:48:46,316 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:48:46,384 - INFO -  * Restarting with stat
+2024-02-27 11:48:47,005 - WARNING -  * Debugger is active!
+2024-02-27 11:48:47,011 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:48:47,798 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:47] "GET / HTTP/1.1" 200 -
+2024-02-27 11:48:47,979 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:47] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:48:47,981 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:47] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:48:47,993 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:47] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:48:47,995 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:47] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:47,999 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:47] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:48:47,999 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:47] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:51,748 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:51] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:48:51,767 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:51] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:48:51,769 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:51] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:51,773 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:51] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:48:51,835 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:51] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:48:51,991 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:48:54,167 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:54] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:48:54,179 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:54] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:48:54,182 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:54] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:48:54,183 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:54] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:48:54,197 - INFO - 192.168.9.96 - - [27/Feb/2024 11:48:54] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:51:03,234 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:51:03,283 - INFO -  * Restarting with stat
+2024-02-27 11:51:03,745 - WARNING -  * Debugger is active!
+2024-02-27 11:51:03,751 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:51:06,698 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:06] "GET / HTTP/1.1" 200 -
+2024-02-27 11:51:06,876 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:06] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:51:06,882 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:06] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:51:06,886 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:06] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:06,887 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:06] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:06,889 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:06] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:51:06,899 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:06] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:51:10,154 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:10] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:51:10,173 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:10] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:51:10,174 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:10] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:10,180 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:10] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:51:10,251 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:10] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:51:10,426 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:10] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:51:13,532 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:13] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:51:13,549 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:13] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:51:13,550 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:13] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:13,551 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:13] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:51:13,569 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:13] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:51:47,164 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:51:47,206 - INFO -  * Restarting with stat
+2024-02-27 11:51:47,623 - WARNING -  * Debugger is active!
+2024-02-27 11:51:47,628 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:51:53,655 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:53] "GET / HTTP/1.1" 200 -
+2024-02-27 11:51:53,828 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:53] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:51:53,841 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:53] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:51:53,845 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:53] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:53,846 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:53] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:51:53,851 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:53] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:53,852 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:53] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:51:57,394 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:57] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:51:57,413 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:57] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:51:57,414 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:57] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:57,421 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:57] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:51:57,479 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:57] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:51:57,592 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:57] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:51:59,889 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:59] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:51:59,904 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:59] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:51:59,906 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:59] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:51:59,907 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:59] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:51:59,921 - INFO - 192.168.9.96 - - [27/Feb/2024 11:51:59] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:52:29,990 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:52:30,029 - INFO -  * Restarting with stat
+2024-02-27 11:52:30,462 - WARNING -  * Debugger is active!
+2024-02-27 11:52:30,469 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:52:33,351 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:33] "GET / HTTP/1.1" 200 -
+2024-02-27 11:52:33,522 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:33] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:52:33,528 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:33] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:52:33,532 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:33] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:52:33,536 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:33] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:52:33,538 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:33] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:52:33,543 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:33] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:52:37,104 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:37] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:52:37,124 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:37] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:52:37,126 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:37] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:52:37,132 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:37] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:52:37,192 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:37] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:52:37,344 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:37] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:52:39,686 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:39] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:52:39,698 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:39] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:52:39,700 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:39] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:52:39,701 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:39] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:52:39,717 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:39] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:52:55,727 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:55] "GET / HTTP/1.1" 200 -
+2024-02-27 11:52:55,744 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:55] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:52:55,746 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:55] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:52:55,751 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:55] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:52:55,754 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:55] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:52:55,755 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:55] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:52:55,764 - INFO - 192.168.9.96 - - [27/Feb/2024 11:52:55] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:01,141 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:01] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:53:01,162 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:01] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:01,163 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:01] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:01,169 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:01] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:01,220 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:01] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:01,356 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:53:04,139 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:04] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:53:04,152 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:04] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:04,154 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:04] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:04,155 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:04] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:04,173 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:04] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:33,012 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:53:33,072 - INFO -  * Restarting with stat
+2024-02-27 11:53:33,729 - WARNING -  * Debugger is active!
+2024-02-27 11:53:33,737 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:53:34,578 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:34] "GET / HTTP/1.1" 200 -
+2024-02-27 11:53:34,755 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:34] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:34,770 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:34] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:34,771 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:34] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:53:34,775 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:34] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:34,777 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:34] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:34,777 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:34] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:38,094 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:38] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:53:38,115 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:38] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:38,116 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:38] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:38,124 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:38] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:38,183 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:38] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:38,325 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:38] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:53:40,663 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:40] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:53:40,677 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:40] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:40,679 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:40] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:40,681 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:40] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:40,694 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:40] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:46,254 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:46] "GET / HTTP/1.1" 200 -
+2024-02-27 11:53:46,271 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:46] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:46,272 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:46] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:53:46,280 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:46] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:46,282 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:46] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:46,283 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:46] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:46,295 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:46] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:50,182 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:50] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:53:50,205 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:50] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:50,207 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:50] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:50,212 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:50] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:50,267 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:50] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:53:50,386 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:50] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:53:52,859 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:52] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:53:52,874 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:52] "[36mGET /static/css/error.css HTTP/1.1[0m" 304 -
+2024-02-27 11:53:52,876 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:52] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-02-27 11:53:52,878 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:52] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:53:52,893 - INFO - 192.168.9.96 - - [27/Feb/2024 11:53:52] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:54:06,323 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:06] "GET / HTTP/1.1" 200 -
+2024-02-27 11:54:06,339 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:06] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:54:06,341 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:06] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:54:06,343 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:06] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:54:06,350 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:06] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:54:06,351 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:06] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:54:06,362 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:06] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:54:16,175 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 11:54:16,216 - INFO -  * Restarting with stat
+2024-02-27 11:54:16,693 - WARNING -  * Debugger is active!
+2024-02-27 11:54:16,698 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 11:54:28,800 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:28] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 11:54:28,928 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:28] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 11:54:28,933 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:28] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:54:28,944 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:28] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 11:54:28,965 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:28] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:54:29,110 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:29] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:34,044 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:34] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:39,059 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:39] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:44,051 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:44] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:49,056 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:49,728 - INFO - Processing takeout request for snipe_id: 103, user_id: 1234567891
+2024-02-27 11:54:49,729 - INFO - User: 1234567891, product id: 103
+2024-02-27 11:54:49,734 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 11:54:49,749 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "[36mGET /static/css/success.css HTTP/1.1[0m" 304 -
+2024-02-27 11:54:49,752 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:54:49,754 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 11:54:49,759 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "[36mGET /static/js/success.js HTTP/1.1[0m" 304 -
+2024-02-27 11:54:49,759 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-02-27 11:54:49,767 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 11:54:49,929 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:49] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:54,911 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:54] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:59,961 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:59] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 11:54:59,962 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:59] "GET / HTTP/1.1" 200 -
+2024-02-27 11:54:59,990 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:59] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 11:54:59,992 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:59] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 11:54:59,993 - INFO - 192.168.9.96 - - [27/Feb/2024 11:54:59] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:55:00,004 - INFO - 192.168.9.96 - - [27/Feb/2024 11:55:00] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 11:55:00,012 - INFO - 192.168.9.96 - - [27/Feb/2024 11:55:00] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 11:55:00,023 - INFO - 192.168.9.96 - - [27/Feb/2024 11:55:00] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:09:42,068 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:42] "GET / HTTP/1.1" 200 -
+2024-02-27 12:09:42,084 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:42] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:09:42,089 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:42] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:09:42,090 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:42] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:09:42,098 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:42] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:09:42,102 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:42] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:09:42,107 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:42] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:09:45,982 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:45] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 12:09:46,003 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:46] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 12:09:46,005 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:46] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:09:46,011 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:46] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 12:09:46,075 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:46] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:09:46,295 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:09:51,192 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:09:56,196 - INFO - 192.168.9.96 - - [27/Feb/2024 12:09:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:10:01,199 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:10:05,271 - INFO - Processing takeout request for snipe_id: 103, user_id: 1234567891
+2024-02-27 12:10:05,271 - INFO - User: 1234567891, product id: 103
+2024-02-27 12:10:05,272 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 12:10:05,287 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "[36mGET /static/css/success.css HTTP/1.1[0m" 304 -
+2024-02-27 12:10:05,290 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:10:05,292 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 12:10:05,299 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "[36mGET /static/js/success.js HTTP/1.1[0m" 304 -
+2024-02-27 12:10:05,300 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-02-27 12:10:05,311 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:10:05,486 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:05] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:10:10,548 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:10] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:10:15,560 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:10:15,567 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "GET / HTTP/1.1" 200 -
+2024-02-27 12:10:15,582 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:10:15,583 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:10:15,585 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:10:15,600 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:10:15,601 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:10:15,609 - INFO - 192.168.9.96 - - [27/Feb/2024 12:10:15] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:12:31,879 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 12:12:31,929 - INFO -  * Restarting with stat
+2024-02-27 12:12:32,402 - WARNING -  * Debugger is active!
+2024-02-27 12:12:32,407 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 12:12:38,992 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:38] "GET / HTTP/1.1" 200 -
+2024-02-27 12:12:39,176 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:39] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:12:39,181 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:39] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:12:39,182 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:39] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:12:39,188 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:39] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:12:39,190 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:39] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:12:39,202 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:39] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:12:42,347 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:42] "GET / HTTP/1.1" 200 -
+2024-02-27 12:12:42,363 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:42] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:12:42,368 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:42] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:12:42,369 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:42] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:12:42,377 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:42] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:12:42,378 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:42] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:12:45,906 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:45] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 12:12:45,924 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:45] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 12:12:45,925 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:45] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:12:45,933 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:45] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 12:12:46,009 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:46] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:12:46,127 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:12:51,073 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:12:56,083 - INFO - 192.168.9.96 - - [27/Feb/2024 12:12:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:13:01,084 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:13:05,956 - INFO - Processing takeout request for snipe_id: 103, user_id: 1234567891
+2024-02-27 12:13:05,956 - INFO - User: 1234567891, product id: 103
+2024-02-27 12:13:05,962 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:05] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 12:13:05,977 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:05] "[36mGET /static/css/success.css HTTP/1.1[0m" 304 -
+2024-02-27 12:13:05,980 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:05] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:13:05,981 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:05] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 12:13:05,991 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:05] "[36mGET /static/js/success.js HTTP/1.1[0m" 304 -
+2024-02-27 12:13:05,994 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:05] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-02-27 12:13:05,996 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:05] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:13:06,170 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:06] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:13:11,539 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:13:16,562 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:13:16,570 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "GET / HTTP/1.1" 200 -
+2024-02-27 12:13:16,588 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:13:16,592 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:13:16,597 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:13:16,603 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:13:16,605 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:13:16,621 - INFO - 192.168.9.96 - - [27/Feb/2024 12:13:16] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:44:00,384 - INFO -  * Detected change in 'C:\\Users\\Dev\\Desktop\\vending-Flask\\main.py', reloading
+2024-02-27 12:44:00,433 - INFO -  * Restarting with stat
+2024-02-27 12:44:00,924 - WARNING -  * Debugger is active!
+2024-02-27 12:44:00,930 - INFO -  * Debugger PIN: 112-619-130
+2024-02-27 12:44:08,267 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 12:44:08,427 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,442 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,460 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,498 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,598 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:08,687 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "GET / HTTP/1.1" 200 -
+2024-02-27 12:44:08,704 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,707 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,708 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,717 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,718 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:44:08,724 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:08] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:44:17,313 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:17] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 12:44:17,330 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:17] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 12:44:17,332 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:17] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:44:17,343 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:17] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 12:44:17,385 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:17] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:44:17,542 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:17] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:22,543 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:27,519 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:27] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:32,514 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:32] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:37,524 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:37] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:38,754 - INFO - Processing takeout request for snipe_id: 103, user_id: 1234567891
+2024-02-27 12:44:38,755 - INFO - User: 1234567891, product id: 103
+2024-02-27 12:44:39,350 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "POST /proccessing HTTP/1.1" 200 -
+2024-02-27 12:44:39,366 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "[36mGET /static/css/success.css HTTP/1.1[0m" 304 -
+2024-02-27 12:44:39,367 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:44:39,373 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-02-27 12:44:39,376 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "[36mGET /static/js/success.js HTTP/1.1[0m" 304 -
+2024-02-27 12:44:39,377 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-02-27 12:44:39,386 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:44:39,578 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:39] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:44,536 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:44] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:49,548 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:44:49,556 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "GET / HTTP/1.1" 200 -
+2024-02-27 12:44:49,573 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:44:49,575 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:44:49,576 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:44:49,587 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:44:49,588 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:44:49,605 - INFO - 192.168.9.96 - - [27/Feb/2024 12:44:49] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:45:53,864 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:53] "GET / HTTP/1.1" 200 -
+2024-02-27 12:45:53,880 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:53] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:45:53,884 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:53] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:45:53,887 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:53] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:45:53,893 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:53] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:45:53,893 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:53] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:45:53,900 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:53] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:45:57,884 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:57] "GET / HTTP/1.1" 200 -
+2024-02-27 12:45:57,903 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:57] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-02-27 12:45:57,903 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:57] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-02-27 12:45:57,907 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:57] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:45:57,915 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:57] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:45:57,916 - INFO - 192.168.9.96 - - [27/Feb/2024 12:45:57] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-02-27 12:46:00,594 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:00] "POST /process_form HTTP/1.1" 200 -
+2024-02-27 12:46:00,613 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:00] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-02-27 12:46:00,615 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:00] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-02-27 12:46:00,622 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:00] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-02-27 12:46:00,686 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:00] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-02-27 12:46:00,797 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:00] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:05,772 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:05] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:10,775 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:10] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:16,535 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:21,548 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:26,545 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:31,543 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:31] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:36,557 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:36] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:41,543 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:41] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:46,554 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-02-27 12:46:51,539 - INFO - 192.168.9.96 - - [27/Feb/2024 12:46:51] "GET /check_session_status HTTP/1.1" 200 -

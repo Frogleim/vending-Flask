@@ -82,13 +82,14 @@
                 <p id="finish-text">ДА</p>
             </button>
         </form>
-        <button class="cancel-button" onclick="cancelButtonClick()">
+        <button class="cancel-button" onclick="deniedButtonClick()">
         <p id="cancel-text">НЕТ</p>
         </button>
       
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/close.js') }}"></script>
     <script>
         function checkSessionExpiration() {
             // Make an AJAX request to the server to check session status
