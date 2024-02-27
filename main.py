@@ -3,12 +3,23 @@ import ast
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify, flash
 from api_connect import master_system, logs_setting
 from datetime import datetime, timedelta, timezone
-
+import requests
 import socket
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
+
+def send_command(cell_number):
+    data = {
+    "shelf_number": 1,
+    "spiral_number": cell_number
+    }
+    r = requests.post('http://192.168.9.94:8000/get_goods/', json=data)
+    if r.status_code == 200:
+        return True
+    else:
+        return False
 
 def get_timeouts():
     ip = get_ipv4_address()
@@ -87,6 +98,7 @@ def process_form():
         try:
             status = master_system.check_user(int(user_id), ip_address)
             data = {"master_system": status['data'], 'user_id': user_id}
+            print(data)
             if 'success' in status['status']:
                 session['user_id'] = user_id
                 return render_template('home.html', data=data, user_id=user_id, fio=status['user_data'])
@@ -101,6 +113,24 @@ def process_form():
     return redirect(url_for('home'))
 
 
+@app.route('/proccessing', methods=['POST'])
+def proccessing():
+    snipe_id = request.form.get('snipe_id')
+    user_id = request.form.get('user_id')
+    print(user_id)
+    image_url = request.form.get('image')
+    fio = request.form.get('fio')  # Get the value of 'fio' from the form
+    product_name = request.form.get('goods')  # Get the value of 'goods' from the form
+    cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
+    success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
+
+    # status = send_command(cell_number=cell_number)
+
+
+    return render_template('wait.html', data=success_data)
+
+
+
 @app.route('/takeout', methods=['POST'])
 def takeout_goods():
     try:
@@ -110,15 +140,20 @@ def takeout_goods():
         image_url = request.form.get('image')
         fio = request.form.get('fio')  # Get the value of 'fio' from the form
         product_name = request.form.get('goods')  # Get the value of 'goods' from the form
-
-        print(type(fio))
-        print(product_name)
-        # master_system.checkout(user_id, snipe_id)
-        logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
-        logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
-        success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
-        success(success_data)
-        return render_template('success.html', data=success_data)
+        cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
+        print(cell_number)
+        status = send_command(cell_number=cell_number)
+        if status:
+            print(type(fio))
+            print(product_name)
+            # master_system.checkout(user_id, snipe_id)
+            logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+            logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
+            success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
+            success(success_data)
+            return render_template('success.html', data=success_data)
+        else:
+            render_template('takeout_error.html')
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
         return render_template('takeout_error.html')

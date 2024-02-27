@@ -34,6 +34,7 @@
                             <div class="card-body">
                                 <p id="good-title">{{ product.goods }}</p>
                             </div>
+                            <input type="hidden" name="cell_number" class="cell_number" value="{{ product.cell_number }}">
                             {% if product.goods_image %}
                                 <img src="{{ product.goods_image }}" class="card-img" alt="...">
                             {% else %}
@@ -70,9 +71,10 @@
             Выдать это устройство?
         </h1>
         <p id="device-title"></p>
-        <form id="takeoutForm" action="{{ url_for('takeout_goods') }}" method="post">
+        <form id="takeoutForm" action="{{ url_for('proccessing') }}" method="post">
             <input type="hidden" name="snipe_id" id="snipe_id_input">
             <input type="hidden" name="user_id" value="{{ user_id }}">
+            <input type="hidden" name="cell_number" id="cell_number">
             <input type="hidden" name="image" id="image_input">
             <input type="hidden" name="fio" value="{{ fio[0] }}">
             <input type="hidden" name="goods" id="goods_input">
@@ -111,9 +113,15 @@
     var snipe_id = $("#popup1").data("snipe_id");
     var imgSrc = $('#popup1').find(".popup-image").attr("src");
     var goods = $('#popup1').find("#device-title").text().trim();
+    var cellNumber = $('#popup1').find("#cell_number").val();
+    console.log(cellNumber);
+
+
         
     
     $('#snipe_id_input').val(snipe_id);
+    $('#cell_number').val(cellNumber); // Update the value of cell_number in the form
+
     $('#image_input').val(imgSrc);
     $('#goods_input').val(goods);
     

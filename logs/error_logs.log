@@ -76,3 +76,4 @@
 2024-02-09 11:47:21,512 - ERROR - Error processing takeout request: invalid syntax (<unknown>, line 1)
 2024-02-09 11:48:11,410 - ERROR - Error processing takeout request: invalid syntax (<unknown>, line 1)
 2024-02-09 11:49:07,378 - ERROR - Exception: 'data'
+2024-02-27 09:32:13,360 - ERROR - Error processing takeout request: HTTPConnectionPool(host='192.168.9.94', port=8000): Max retries exceeded with url: /get_goods/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001756A02D9D0>, 'Connection to 192.168.9.94 timed out. (connect timeout=None)'))
