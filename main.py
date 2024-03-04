@@ -154,9 +154,8 @@ def takeout_goods():
         product_name = request.form.get('goods')  # Get the value of 'goods' from the form
         cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
         print(cell_number)
-        status = True
         try:
-            # status = send_command(cell_number=cell_number)
+            status = send_command(cell_number=cell_number)
             if status:
                 print(type(fio))
                 print(product_name)

@@ -22464,3 +22464,27 @@ Image URL: https://snipeit-lab.ptsecurity.com/uploads/accessories/accessory-imag
 2024-03-04 16:15:11,250 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:11] "GET /check_session_status HTTP/1.1" 200 -
 2024-03-04 16:15:16,263 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:16] "GET /check_session_status HTTP/1.1" 200 -
 2024-03-04 16:15:21,262 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:21] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:15:26,258 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:26] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:15:31,249 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:31] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:15:36,266 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:36] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:15:41,274 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:41] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:15:46,269 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:46] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:15:51,280 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:51] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:15:56,273 - INFO - 192.168.1.4 - - [04/Mar/2024 16:15:56] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:01,368 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:01] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:07,104 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:07] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:12,094 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:12] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:17,098 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:17] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:22,086 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:27,084 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:27] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:32,086 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:32] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:37,081 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:37] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:42,101 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:42] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:47,074 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:47] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:52,073 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:52] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:16:57,081 - INFO - 192.168.1.4 - - [04/Mar/2024 16:16:57] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:17:02,091 - INFO - 192.168.1.4 - - [04/Mar/2024 16:17:02] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-04 16:17:34,403 - INFO -  * Detected change in 'C:\\Users\\admin\\Desktop\\projects\\vending-Flask\\main.py', reloading
+2024-03-04 16:17:34,427 - INFO -  * Restarting with stat
+2024-03-04 16:17:34,677 - WARNING -  * Debugger is active!
+2024-03-04 16:17:34,681 - INFO -  * Debugger PIN: 617-303-156
