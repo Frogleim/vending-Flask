@@ -29,7 +29,14 @@
 
     <img id="proccessing_img" src="{{ url_for('static', filename='images/Group 625544.svg')}}" alt="">
        
-        <form action="{{ url_for('process_form') }}" method="post" id="myForm">
+        <form action="{{ url_for('takeout_goods') }}" method="post" id="myForm">
+             <input type="hidden" name="snipe_id" id="snipe_id_input" value="{{data.snipe_id}}">
+            <input type="hidden" name="user_id" value="{{ data.user_id }}">
+            <input type="hidden" name="cell_number" id="cell_number" value="{{data.cell_number}}">
+            <input type="hidden" name="image" id="image_input" value="{{data.image_url}}">
+            <input type="hidden" name="fio" value="{{ data.fio }}">
+            <input type="hidden" name="goods" id="goods_input" value="{{data.product_name}}">
+             <button type="submit" class="access btn-primary" id="submitButton">Primary</button>
 
          
         </form>
@@ -39,6 +46,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
     <script src="{{ url_for('static', filename='js/success.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/wait.js') }}"></script>
     <!-- <script src="{{ url_for('static', filename='js/timer.js') }}"></script> -->
 
     <script>

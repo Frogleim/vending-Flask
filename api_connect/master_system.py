@@ -3,25 +3,25 @@ import socket
 
 
 def check_user(user_number, ip):
-    url = f'http://192.168.9.96:8000/check_user/?user_id={user_number}&ip_address={ip}'
+    url = f'http://localhost:8000/check_user/?user_id={user_number}&ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
 
 def check_machine_status(ip):
-    url = f'http://192.168.9.96:8000/vending_status/?ip_address={ip}'
+    url = f'http://localhost:8000/vending_status/?ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
 
 def change_machine_status(ip):
-    url = f'http://192.168.9.96:8000/change_status/?ip_address={ip}'
+    url = f'http://localhost:8000/change_status/?ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
 
 def get_timeouts(ip):
-    url = f'http://192.168.9.96:8000/timeouts/?ip_address={ip}'
+    url = f'http://localhost:8000/timeouts/?ip_address={ip}'
     r = requests.get(url)
     return r.json()
 
@@ -40,7 +40,7 @@ def get_ip_address():
 
 
 def checkout(user_id, product_id):
-    url = f'http://192.168.9.96:8000/checkout/?user_id={user_id}&product_id={product_id}'
+    url = f'http://localhost:8000/checkout/?user_id={user_id}&product_id={product_id}'
     r = requests.get(url)
     return r.json()
 

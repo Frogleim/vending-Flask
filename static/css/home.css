@@ -12,8 +12,11 @@
 
 
 .row {
+    position: absolute;
     width: 800px;
     display: flex;
+    right: 9%;
+
     margin: 0;
     gap: var(--32, 32px);
 

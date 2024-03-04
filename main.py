@@ -11,11 +11,11 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 
-
 def read_config():
     with open('./api_connect/settings.json', 'r') as conf:
         data = json.load(conf)
     return data
+
 
 def send_command(cell_number):
     shelf_number = None
@@ -27,8 +27,8 @@ def send_command(cell_number):
             shelf_number = items['ndeck']
             spiral_number = items['spiral']
     data = {
-    "shelf_number": shelf_number,
-    "spiral_number": spiral_number
+        "shelf_number": shelf_number,
+        "spiral_number": spiral_number
     }
     print(data)
     r = requests.post('http://192.168.9.94:8080/get_goods/', json=data)
@@ -36,6 +36,7 @@ def send_command(cell_number):
         return True
     else:
         return False
+
 
 def get_timeouts():
     ip = get_ipv4_address()
@@ -137,26 +138,15 @@ def proccessing():
     fio = request.form.get('fio')  # Get the value of 'fio' from the form
     product_name = request.form.get('goods')  # Get the value of 'goods' from the form
     cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
-    success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
-
-    status = send_command(cell_number=cell_number)
-    if status:
-        logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
-        logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
-        master_system.checkout(user_id, snipe_id)
-        return render_template('success.html', data=success_data)
-    elif not status:
-        return render_template('takeout_error.html')
-
-
+    success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name, "snipe_id": snipe_id, 'cell_number': cell_number, 'user_id': user_id}
     return render_template('wait.html', data=success_data)
-
 
 
 @app.route('/takeout', methods=['POST'])
 def takeout_goods():
     try:
         snipe_id = request.form.get('snipe_id')
+        print(snipe_id)
         user_id = request.form.get('user_id')
         print(user_id)
         image_url = request.form.get('image')
@@ -164,27 +154,31 @@ def takeout_goods():
         product_name = request.form.get('goods')  # Get the value of 'goods' from the form
         cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
         print(cell_number)
-        status = send_command(cell_number=cell_number)
-        if status:
-            print(type(fio))
-            print(product_name)
-            master_system.checkout(user_id, snipe_id)
-            logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
-            logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
-            success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
-            success(success_data)
-            return render_template('success.html', data=success_data)
-        else:
-            render_template('takeout_error.html')
+        status = True
+        try:
+            # status = send_command(cell_number=cell_number)
+            if status:
+                print(type(fio))
+                print(product_name)
+                master_system.checkout(user_id, snipe_id)
+                logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+                logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
+                success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
+                success(success_data)
+                return render_template('success.html', data=success_data)
+            else:
+                return render_template('takeout_error.html')  # Return the rendered template
+        except Exception as e:
+            return render_template('takeout_error.html')  # Return the rendered template
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
-        return render_template('takeout_error.html')
+        return render_template('takeout_error.html')  # Return the rendered template
+
+
 
 @app.route('/success')
 def success(data):
     return render_template('success.html', data=data)
-
-
 
 
 @app.errorhandler(500)
@@ -208,5 +202,7 @@ def change_machine_status():
 
 if __name__ == '__main__':
     ip = get_ipv4_address()
+    print(ip)
+
     # Run the app on host 0.0.0.0 and port 5000
     app.run(host=f'{ip}', port=5000, debug=True)
