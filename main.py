@@ -6,18 +6,28 @@ from datetime import datetime, timedelta, timezone
 import requests
 import socket
 import json
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(base_dir)
+
+
+def read_config_file():
+    with open(os.path.join(parent_dir, 'config.json')) as config_file:
+        return json.load(config_file)
+
 
 def read_config():
-    with open('./api_connect/settings.json', 'r') as conf:
+    with open('api_connect/controller_settings.json', 'r') as conf:
         data = json.load(conf)
     return data
 
 
 def send_command(cell_number):
+    data = read_config_file()
     shelf_number = None
     spiral_number = None
     cells_data = read_config()
@@ -31,7 +41,7 @@ def send_command(cell_number):
         "spiral_number": spiral_number
     }
     print(data)
-    r = requests.post('http://192.168.9.94:8080/get_goods/', json=data)
+    r = requests.post(f'{data["controller_api_url"]}/get_goods/', json=data)
     if r.status_code == 200:
         return True
     else:
@@ -115,6 +125,7 @@ def process_form():
         try:
             status = master_system.check_user(int(user_id), ip_address)
             data = {"master_system": status['data'], 'user_id': user_id}
+            print(status['data'])
             if 'success' in status['status']:
                 session['user_id'] = user_id
                 return render_template('home.html', data=data, user_id=user_id, fio=status['user_data'])
@@ -138,7 +149,8 @@ def proccessing():
     fio = request.form.get('fio')  # Get the value of 'fio' from the form
     product_name = request.form.get('goods')  # Get the value of 'goods' from the form
     cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
-    success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name, "snipe_id": snipe_id, 'cell_number': cell_number, 'user_id': user_id}
+    success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name, "snipe_id": snipe_id,
+                    'cell_number': cell_number, 'user_id': user_id}
     return render_template('wait.html', data=success_data)
 
 
@@ -154,13 +166,15 @@ def takeout_goods():
         product_name = request.form.get('goods')  # Get the value of 'goods' from the form
         cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
         print(cell_number)
+        status = True
         try:
-            status = send_command(cell_number=cell_number)
+            # status = send_command(cell_number=cell_number)
             if status:
                 print(type(fio))
                 print(product_name)
                 master_system.checkout(user_id, snipe_id)
-                logs_setting.actions_logger.info(f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+                logs_setting.actions_logger.info(
+                    f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
                 logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
                 success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
                 success(success_data)
@@ -172,7 +186,6 @@ def takeout_goods():
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
         return render_template('takeout_error.html')  # Return the rendered template
-
 
 
 @app.route('/success')

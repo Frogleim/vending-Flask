@@ -12,3 +12,5 @@
 2024-03-04 16:12:51,673 - INFO - User: 1234567891, product id: 119
 2024-03-04 16:14:48,229 - INFO - Processing takeout request for snipe_id: 119, user_id: 1234567891
 2024-03-04 16:14:48,230 - INFO - User: 1234567891, product id: 119
+2024-03-06 14:28:57,270 - INFO - Processing takeout request for snipe_id: 127, user_id: 67123663928
+2024-03-06 14:28:57,271 - INFO - User: 67123663928, product id: 127

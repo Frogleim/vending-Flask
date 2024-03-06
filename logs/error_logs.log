@@ -2,3 +2,12 @@
 2024-03-04 15:29:28,285 - ERROR - HTTPConnectionPool(host='192.168.9.96', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.1.4 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002270FE191F0>, 'Connection to 192.168.9.96 timed out. (connect timeout=None)'))
 2024-03-04 15:55:40,559 - ERROR - Error processing takeout request: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
 2024-03-04 16:01:47,170 - ERROR - Error processing takeout request: HTTPConnectionPool(host='192.168.9.94', port=8080): Max retries exceeded with url: /get_goods/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000021DE2075520>, 'Connection to 192.168.9.94 timed out. (connect timeout=None)'))
+2024-03-05 14:39:57,003 - ERROR - Exception: 'data'
+2024-03-05 18:03:09,839 - ERROR - Exception: 'data'
+2024-03-05 19:43:57,125 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-05 19:43:58,341 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-06 13:46:38,860 - ERROR - Exception: 'data'
+2024-03-06 14:25:15,335 - ERROR - HTTPConnectionPool(host='192.168.18.110', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023749CA4250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2024-03-06 14:26:11,163 - ERROR - Exception: invalid literal for int() with base 10: '    base_url, token = read_instance()'
+2024-03-06 14:26:56,294 - ERROR - HTTPConnectionPool(host='192.168.18.110', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000271E62405E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2024-03-06 14:27:35,973 - ERROR - HTTPConnectionPool(host='192.168.18.110', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000271E6240E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
