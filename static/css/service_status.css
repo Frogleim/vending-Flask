@@ -5,6 +5,15 @@
     /* Add more src declarations for other font formats if needed */
 }
 
+
+
+@font-face {
+    font-family: 'TT Positive';
+    src: url('/static/fonts/tt_positive/TT-Positive-Regular.woff2') format('woff2'), /* Modern Browsers */
+    
+    /* Add more src declarations for other font formats if needed */
+}
+
 #refresh-logo {
     position: absolute;
     top: 730px;

@@ -6,6 +6,12 @@
 }
 
 
+@font-face {
+    font-family: 'TT Positive';
+    src: url('/static/fonts/tt_positive/TT-Positive-Regular.woff2') format('woff2'), /* Modern Browsers */
+    
+    /* Add more src declarations for other font formats if needed */
+}
 .test-input {
     opacity: 0;
     width: 100%;

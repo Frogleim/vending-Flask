@@ -2,3 +2,9 @@
 2024-03-04 15:29:28,285 - ERROR - HTTPConnectionPool(host='192.168.9.96', port=8000): Max retries exceeded with url: /vending_status/?ip_address=192.168.1.4 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002270FE191F0>, 'Connection to 192.168.9.96 timed out. (connect timeout=None)'))
 2024-03-04 15:55:40,559 - ERROR - Error processing takeout request: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
 2024-03-04 16:01:47,170 - ERROR - Error processing takeout request: HTTPConnectionPool(host='192.168.9.94', port=8080): Max retries exceeded with url: /get_goods/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000021DE2075520>, 'Connection to 192.168.9.94 timed out. (connect timeout=None)'))
+2024-03-04 17:18:11,170 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-04 17:19:29,859 - ERROR - Exception: 'data'
+2024-03-04 17:41:13,636 - ERROR - Exception: 'data'
+2024-03-11 09:20:18,918 - ERROR - Exception: 'data'
+2024-03-11 10:33:41,753 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-11 10:34:34,450 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)

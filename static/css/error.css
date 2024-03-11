@@ -4,6 +4,14 @@
          url('/static/fonts/web/biform_regular.woff') format('woff'); /* Legacy Browsers */
     /* Add more src declarations for other font formats if needed */
 }
+
+
+@font-face {
+    font-family: 'TT Positive';
+    src: url('/static/fonts/tt_positive/TT-Positive-Regular.woff2') format('woff2'), /* Modern Browsers */
+    
+    /* Add more src declarations for other font formats if needed */
+}
 .navbar {
     height: 100px; /* Adjust this value based on your design */
 }
