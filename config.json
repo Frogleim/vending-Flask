@@ -1,0 +1,4 @@
+{
+  "master_system_url": "http://192.168.18.110:8000",
+  "controller_api_url": "http://192.168.9.94:8080"
+}
