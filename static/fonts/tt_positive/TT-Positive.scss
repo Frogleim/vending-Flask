@@ -1,0 +1,34 @@
+@mixin add-tt-positive-font($path-to-assets) {
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Black-Italic', 900, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Black', 900, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Bold-Italic', 700, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Bold', 700, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','DemiBold-Italic', 600, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','DemiBold', 600, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','ExtraBold-Italic', 800, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','ExtraBold', 800, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','ExtraLight-Italic', 200, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','ExtraLight', 200, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Hairline-Italic', 50, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Hairline', 50, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Light-Italic', 300, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Light', 300, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Medium-Italic', 500, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Medium', 500, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Regular-Italic', 400, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Regular', 400, normal);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Thin-Italic', 100, italic);
+    @include tt-positive-font($path-to-assets, 'TT-Positive','Thin', 100, normal);
+}
+
+@mixin tt-positive-font($path-to-assets, $variant, $type, $weight, $style) {
+    $font-full-path: '#{$path-to-assets}/#{$variant}';
+
+    @font-face {
+        font-family: '#{$variant}';
+        src:
+            url('#{$font-full-path}-#{$type}.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}

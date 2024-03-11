@@ -32,8 +32,10 @@
                     <div class="column">
                         <div class="card" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
                             <div class="card-body">
+                                
                                 <p id="good-title">{{ product.goods }}</p>
-                            <p class="good-type">{{ product.description }}</p>
+                                <p class="take-out-count">20 шт / 365 дней</p>
+                                <p class="good-type">{{ product.description }}</p>
                             </div>
                             <input type="hidden" name="cell_number" class="cell_number" value="{{ product.cell_number }}">
                             {% if product.goods_image %}
@@ -42,7 +44,6 @@
                                 <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
                             {% endif %}
                         </div>
-
                     </div>
                 {% endif %}
             {% endfor %}
