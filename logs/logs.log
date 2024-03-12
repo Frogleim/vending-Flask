@@ -28030,3 +28030,314 @@ Image URL: https://snipeit-lab.ptsecurity.com/uploads/accessories/accessory-imag
 2024-03-12 15:19:27,696 - INFO -  * Restarting with watchdog (windowsapi)
 2024-03-12 15:19:27,982 - WARNING -  * Debugger is active!
 2024-03-12 15:19:27,985 - INFO -  * Debugger PIN: 120-297-354
+2024-03-12 15:22:10,378 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:10] "GET / HTTP/1.1" 200 -
+2024-03-12 15:22:10,434 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:10] "GET /static/css/service.css HTTP/1.1" 200 -
+2024-03-12 15:22:10,474 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:10] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:22:10,482 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:10] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:10,484 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:10] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:10,486 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:10] "GET /static/images/Icons.svg HTTP/1.1" 200 -
+2024-03-12 15:22:10,588 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:10] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:22:14,601 - ERROR - Exception: 'data' is undefined
+2024-03-12 15:22:14,604 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:14] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:22:14,632 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:14] "[36mGET /static/css/login_error.css HTTP/1.1[0m" 304 -
+2024-03-12 15:22:14,644 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:14] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:14,644 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:14] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:14,801 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:14] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:14,834 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:14] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:22:14,836 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:14] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:22:17,553 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:17] "GET / HTTP/1.1" 200 -
+2024-03-12 15:22:17,568 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:17] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-12 15:22:17,578 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:17] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:22:17,579 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:17] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:17,581 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:17] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:17,581 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:17] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:17,789 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:17] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:22:44,479 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:44] "GET / HTTP/1.1" 200 -
+2024-03-12 15:22:44,495 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:44] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-12 15:22:44,504 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:44] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:22:44,506 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:44] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:44,507 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:44] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:44,507 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:44] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:44,693 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:44] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:22:45,742 - ERROR - Exception: 'data' is undefined
+2024-03-12 15:22:45,743 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:45] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:22:45,790 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:45] "[36mGET /static/css/login_error.css HTTP/1.1[0m" 304 -
+2024-03-12 15:22:45,799 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:45] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:45,800 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:45] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:45,938 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:45] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:45,965 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:45] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:22:45,965 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:45] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:22:56,908 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:56] "GET / HTTP/1.1" 200 -
+2024-03-12 15:22:56,923 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:56] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-12 15:22:56,938 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:56] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:22:56,938 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:56] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:56,939 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:56] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:22:56,940 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:56] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:22:57,109 - INFO - 192.168.18.110 - - [12/Mar/2024 15:22:57] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:23:35,489 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:35] "GET / HTTP/1.1" 200 -
+2024-03-12 15:23:35,503 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:35] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-12 15:23:35,512 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:35] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:23:35,515 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:35] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:23:35,517 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:35] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:23:35,517 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:35] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:23:35,693 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:35] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:23:37,051 - ERROR - Exception: 'data' is undefined
+2024-03-12 15:23:37,052 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:37] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:23:37,082 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:37] "[36mGET /static/css/login_error.css HTTP/1.1[0m" 304 -
+2024-03-12 15:23:37,094 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:37] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-03-12 15:23:37,094 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:37] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:23:37,247 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:37] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:23:37,274 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:37] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:23:37,274 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:37] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:23:38,827 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:38] "GET / HTTP/1.1" 200 -
+2024-03-12 15:23:38,841 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:38] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-12 15:23:38,851 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:38] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:23:38,853 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:38] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:23:38,857 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:38] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:23:38,857 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:38] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:23:39,039 - INFO - 192.168.18.110 - - [12/Mar/2024 15:23:39] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:31:03,962 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py', reloading
+2024-03-12 15:31:05,199 - INFO -  * Restarting with watchdog (windowsapi)
+2024-03-12 15:31:05,481 - WARNING -  * Debugger is active!
+2024-03-12 15:31:05,484 - INFO -  * Debugger PIN: 120-297-354
+2024-03-12 15:31:31,271 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\core\\management\\__init__.py', reloading
+2024-03-12 15:31:31,271 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\utils\\autoreload.py', reloading
+2024-03-12 15:31:31,271 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\__init__.py', reloading
+2024-03-12 15:31:31,272 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\apps\\registry.py', reloading
+2024-03-12 15:31:31,272 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\apps\\config.py', reloading
+2024-03-12 15:31:31,272 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\importlib\\__init__.py', reloading
+2024-03-12 15:31:31,274 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\drf_yasg\\__init__.py', reloading
+2024-03-12 15:31:31,274 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\pkg_resources\\__init__.py', reloading
+2024-03-12 15:31:32,305 - INFO -  * Restarting with watchdog (windowsapi)
+2024-03-12 15:31:32,589 - WARNING -  * Debugger is active!
+2024-03-12 15:31:32,592 - INFO -  * Debugger PIN: 120-297-354
+2024-03-12 15:31:43,153 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Scripts\\black-script.py', reloading
+2024-03-12 15:31:44,367 - INFO -  * Restarting with watchdog (windowsapi)
+2024-03-12 15:31:44,642 - WARNING -  * Debugger is active!
+2024-03-12 15:31:44,646 - INFO -  * Debugger PIN: 120-297-354
+2024-03-12 15:34:02,654 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\conf\\__init__.py', reloading
+2024-03-12 15:34:02,654 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\utils\\functional.py', reloading
+2024-03-12 15:34:02,654 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\views\\debug.py', reloading
+2024-03-12 15:34:02,655 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\utils\\deprecation.py', reloading
+2024-03-12 15:34:02,655 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\core\\handlers\\wsgi.py', reloading
+2024-03-12 15:34:02,655 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\contrib\\staticfiles\\handlers.py', reloading
+2024-03-12 15:34:02,655 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\wsgiref\\handlers.py', reloading
+2024-03-12 15:34:02,655 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\core\\servers\\basehttp.py', reloading
+2024-03-12 15:34:02,656 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\socketserver.py', reloading
+2024-03-12 15:34:02,656 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\threading.py', reloading
+2024-03-12 15:34:03,690 - INFO -  * Restarting with watchdog (windowsapi)
+2024-03-12 15:34:03,978 - WARNING -  * Debugger is active!
+2024-03-12 15:34:03,980 - INFO -  * Debugger PIN: 120-297-354
+2024-03-12 15:39:42,362 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\db\\models\\fields\\__init__.py', reloading
+2024-03-12 15:39:42,362 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\views\\decorators\\http.py', reloading
+2024-03-12 15:39:42,362 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\db\\models\\manager.py', reloading
+2024-03-12 15:39:42,363 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\db\\models\\query.py', reloading
+2024-03-12 15:39:42,364 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\db\\models\\sql\\query.py', reloading
+2024-03-12 15:39:42,365 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\db\\models\\lookups.py', reloading
+2024-03-12 15:39:43,396 - INFO -  * Restarting with watchdog (windowsapi)
+2024-03-12 15:39:43,688 - WARNING -  * Debugger is active!
+2024-03-12 15:39:43,691 - INFO -  * Debugger PIN: 120-297-354
+2024-03-12 15:39:43,748 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:43] "GET / HTTP/1.1" 200 -
+2024-03-12 15:39:43,813 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:43] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-12 15:39:43,846 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:43] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:39:43,858 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:43] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:39:43,859 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:43] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:39:43,859 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:43] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:39:43,964 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:43] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:39:44,742 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:44] "GET / HTTP/1.1" 200 -
+2024-03-12 15:39:44,754 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:44] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-12 15:39:44,766 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:44] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:39:44,767 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:44] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:39:44,768 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:44] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:39:44,769 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:44] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:39:44,942 - INFO - 192.168.18.110 - - [12/Mar/2024 15:39:44] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:40:13,003 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:13] "GET / HTTP/1.1" 200 -
+2024-03-12 15:40:13,019 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:13] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:40:13,047 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:13] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:40:13,048 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:13] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:13,049 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:13] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:13,050 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:13] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:40:13,214 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:13] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:40:20,369 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:20] "GET / HTTP/1.1" 200 -
+2024-03-12 15:40:20,382 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:20] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:40:20,393 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:20] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:40:20,395 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:20] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:20,395 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:20] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:20,395 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:20] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:40:20,569 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:20] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:40:22,693 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:22] "GET / HTTP/1.1" 200 -
+2024-03-12 15:40:22,707 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:22] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:40:22,716 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:22] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:40:22,718 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:22] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:22,718 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:22] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:22,718 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:40:22,891 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:22] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:40:23,533 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\views\\generic\\base.py', reloading
+2024-03-12 15:40:23,533 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\utils\\decorators.py', reloading
+2024-03-12 15:40:23,534 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\http\\response.py', reloading
+2024-03-12 15:40:23,534 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\json\\__init__.py', reloading
+2024-03-12 15:40:23,534 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\json\\encoder.py', reloading
+2024-03-12 15:40:23,534 - INFO -  * Detected change in 'C:\\Users\\OMEN\\anaconda3\\Lib\\site-packages\\django\\core\\serializers\\json.py', reloading
+2024-03-12 15:40:23,562 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-12 15:40:23,564 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:23] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:40:23,601 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:23] "[36mGET /static/css/login_error.css HTTP/1.1[0m" 304 -
+2024-03-12 15:40:23,613 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:23] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:23,613 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:23] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:40:23,764 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:23] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:40:23,791 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:23] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:40:23,791 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:23] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:40:24,600 - INFO -  * Restarting with watchdog (windowsapi)
+2024-03-12 15:40:24,892 - WARNING -  * Debugger is active!
+2024-03-12 15:40:24,895 - INFO -  * Debugger PIN: 120-297-354
+2024-03-12 15:40:33,840 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:33] "GET / HTTP/1.1" 200 -
+2024-03-12 15:40:33,908 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:33] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:40:33,942 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:33] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:40:33,953 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:33] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:33,957 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:33] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:40:33,957 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:33] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:40:34,049 - INFO - 192.168.18.110 - - [12/Mar/2024 15:40:34] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:43:48,181 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:48] "GET / HTTP/1.1" 200 -
+2024-03-12 15:43:48,192 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:48] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:43:48,202 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:48] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:43:48,378 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:48] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:43:48,379 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:48] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:43:48,380 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:48] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:43:48,414 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:48] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:43:49,771 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-12 15:43:49,773 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:49] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:43:49,803 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:49] "[36mGET /static/css/login_error.css HTTP/1.1[0m" 304 -
+2024-03-12 15:43:49,814 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:49] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-03-12 15:43:49,814 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:49] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:43:49,969 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:49] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:43:49,999 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:49] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:43:50,001 - INFO - 192.168.18.110 - - [12/Mar/2024 15:43:50] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:44:00,901 - INFO - 192.168.18.110 - - [12/Mar/2024 15:44:00] "GET / HTTP/1.1" 200 -
+2024-03-12 15:44:00,914 - INFO - 192.168.18.110 - - [12/Mar/2024 15:44:00] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:44:00,927 - INFO - 192.168.18.110 - - [12/Mar/2024 15:44:00] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:44:00,928 - INFO - 192.168.18.110 - - [12/Mar/2024 15:44:00] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:44:00,930 - INFO - 192.168.18.110 - - [12/Mar/2024 15:44:00] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:44:00,930 - INFO - 192.168.18.110 - - [12/Mar/2024 15:44:00] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:44:01,103 - INFO - 192.168.18.110 - - [12/Mar/2024 15:44:01] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:45:09,416 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:09] "GET / HTTP/1.1" 200 -
+2024-03-12 15:45:09,430 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:09] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:09,439 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:09] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:45:09,441 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:09] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:09,442 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:09] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:09,443 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:09] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:09,622 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:09] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,582 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:45:11,611 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,612 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/css/timeoutPopup.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,623 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,624 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/images/warning.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,624 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,778 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,778 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,809 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,810 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:45:11,850 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:11] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:45:16,904 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:16] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:45:22,941 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:22] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:45:22,942 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:22] "GET / HTTP/1.1" 200 -
+2024-03-12 15:45:22,995 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:22] "GET / HTTP/1.1" 200 -
+2024-03-12 15:45:23,011 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:23] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:23,025 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:23] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:23,025 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:23] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:45:23,026 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:23] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:23,026 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:23] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:23,207 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:23] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:45:23,995 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:23] "GET / HTTP/1.1" 200 -
+2024-03-12 15:45:24,007 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:24] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:24,018 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:24] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:45:24,021 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:24] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:24,022 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:24] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:24,022 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:24] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:26,143 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:26] "GET / HTTP/1.1" 200 -
+2024-03-12 15:45:26,155 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:26] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:26,165 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:26] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:45:26,167 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:26] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:26,168 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:26] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:26,168 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:26] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:27,412 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-12 15:45:27,413 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:27] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:45:27,486 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:27] "[36mGET /static/css/login_error.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:27,497 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:27] "[36mGET /static/images/error.jpg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:27,501 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:27] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:27,661 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:27] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:27,692 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:27] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:45:27,692 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:27] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:45:37,901 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:37] "GET / HTTP/1.1" 200 -
+2024-03-12 15:45:37,917 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:37] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:45:37,929 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:37] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:45:37,931 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:37] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:37,932 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:37] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:45:37,933 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:37] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:45:38,100 - INFO - 192.168.18.110 - - [12/Mar/2024 15:45:38] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:14,491 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:14] "GET / HTTP/1.1" 200 -
+2024-03-12 15:47:14,532 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:14] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:14,543 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:14] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:47:14,545 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:14] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:14,545 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:14] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:14,694 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:14] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:14,715 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:14] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:17,055 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:17] "GET / HTTP/1.1" 200 -
+2024-03-12 15:47:17,071 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:17] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:17,083 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:17] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:47:17,085 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:17] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:17,087 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:17] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:17,087 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:17] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:17,255 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:17] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,483 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:47:18,521 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,522 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/css/timeoutPopup.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,532 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,532 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,533 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/images/warning.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,685 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,686 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,715 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,715 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:18,763 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:18] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:47:23,763 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:23] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:47:28,915 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:28] "GET / HTTP/1.1" 200 -
+2024-03-12 15:47:28,915 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:28] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:47:28,933 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:28] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:28,947 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:28] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:47:28,949 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:28] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:28,950 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:28] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:28,951 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:28] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:29,136 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:29] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:37,324 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:37] "GET / HTTP/1.1" 200 -
+2024-03-12 15:47:37,337 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:37] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:37,347 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:37] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:47:37,349 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:37] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:37,350 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:37] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:37,350 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:37] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:37,526 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:37] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:39,270 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:39] "GET / HTTP/1.1" 200 -
+2024-03-12 15:47:39,284 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:39] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:39,303 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:39] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:47:39,304 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:39] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:39,305 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:39] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:39,306 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:39] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:39,468 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:39] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,153 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "POST /process_form HTTP/1.1" 200 -
+2024-03-12 15:47:40,193 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,194 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/css/timeoutPopup.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,203 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/images/close.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,203 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/images/warning.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,219 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/js/home.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,431 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/js/close.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,432 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/js/timer.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,454 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,454 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "[36mGET /static/fonts/tt_positive/TT-Positive-Regular.woff2 HTTP/1.1[0m" 304 -
+2024-03-12 15:47:40,496 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:40] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:47:45,908 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:45] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:47:50,919 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:50] "GET / HTTP/1.1" 200 -
+2024-03-12 15:47:50,921 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:50] "GET /check_session_status HTTP/1.1" 200 -
+2024-03-12 15:47:50,941 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:50] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2024-03-12 15:47:50,944 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:50] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-12 15:47:51,120 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:51] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:51,121 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:51] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-12 15:47:51,121 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:51] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-12 15:47:51,140 - INFO - 192.168.18.110 - - [12/Mar/2024 15:47:51] "[36mGET /static/fonts/web/biform_regular.woff2 HTTP/1.1[0m" 304 -

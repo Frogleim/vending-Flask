@@ -30,31 +30,33 @@
     <div class="container justify-content-center">
         <div class="row">
             {% for product in data.master_system %}
-            <div class="column">
-                <div class="card {% if product.quantity < 1 %}disabled{% endif %}" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
-                    <div class="card-body">
-                        <p id="good-title">{{ product.goods }}</p>
-                        <p class="take-out-count">20 шт / 365 дней</p>
-                        <p class="good-type">
-                            {% if product.quantity < 1 %}
-                            Нет в наличии
-                            {% else %}
-                                {{ product.description }}
-                            {% endif %}
-                        </p>
-                    </div>
-                    <input type="hidden" name="cell_number" class="cell_number" value="{{ product.cell_number }}">
-                    {% if product.goods_image %}
-                        <img src="{{ product.goods_image }}" class="card-img" alt="...">
-                    {% else %}
-                        <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
-                    {% endif %}
+    <div class="column">
+        <div class="card {% if product.quantity < 1 %}disabled{% endif %}" data-snipe_id="{{ product.snipe_id }}" onclick="checkAndPopUpShow(this)">
+            <div class="card-body">
+                <p id="good-title">{{ product.goods }}</p>
+                <p class="take-out-count">20 шт / 365 дней</p>
+                <p class="good-type">
                     {% if product.quantity < 1 %}
-                        <div class="overlay"></div>
+                        Нет в наличии
+                    {% else %}
+                        {{ product.description }}
                     {% endif %}
-                </div>
+                </p>
             </div>
-        {% endfor %}
+            <input type="hidden" name="cell_number" class="cell_number" value="{{ product.cell_number }}">
+            {% if product.goods_image %}
+                <!-- Display Base64-encoded image -->
+                <img src="data:image/jpeg;base64,{{ product.image_data }}" class="card-img" alt="...">
+            {% else %}
+                <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
+            {% endif %}
+            {% if product.quantity < 1 %}
+                <div class="overlay"></div>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+
 
        
         </div>

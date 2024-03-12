@@ -26,3 +26,9 @@
 2024-03-12 14:42:15,556 - ERROR - Exception: unexpected char '&' at 1271
 2024-03-12 15:04:44,332 - ERROR - Exception: unexpected char '&' at 1271
 2024-03-12 15:12:31,900 - ERROR - Exception: invalid literal for int() with base 10: '    background: var(--Card-background, #F6F6F6);'
+2024-03-12 15:22:14,601 - ERROR - Exception: 'data' is undefined
+2024-03-12 15:22:45,742 - ERROR - Exception: 'data' is undefined
+2024-03-12 15:23:37,051 - ERROR - Exception: 'data' is undefined
+2024-03-12 15:40:23,562 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-12 15:43:49,771 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)
+2024-03-12 15:45:27,412 - ERROR - Exception: Expecting value: line 1 column 1 (char 0)

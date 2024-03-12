@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/service_status.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/timeoutPopup.css') }}">
+
     <title>Vending</title>
 </head>
 <body>
@@ -20,9 +22,55 @@
         </button>
 
     </div>
+    <div id="overlay"></div>
+    <div id="timeout-popup">
+        <div class="timeout-container">
+            <img src="{{ url_for('static', filename='images/warning.svg') }}" class="timeout-warning" alt="Selected Image">
+        </div>
+        <h1 id="time-out-alert">
+            Ты еще здесь?
+        </h1>
+        <p id="time-out-title"></p>
+        <p id="device-title">{{ data.product_name }}</p>
+        <p id="timer-text">Начальный экран откроется через:</p>
+        <p id="timer">00:05</p>
+            <button type="submit" class="btn btn-dark finish-button" onclick="closePopup()">
+                <p id="accept-text">я тут</p>
+            </button>
+        <button class="cancel-button" onclick="deniedButtonClick()">
+        <p id="reject-text">выйти</p>
+        </button>
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
     <script>
+        function displayTimeoutPopup() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("timeout-popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("timeout-popup").style.display = "none";
+    $.ajax({
+        type: "GET",
+        url: "{{ url_for('reset_session_timeout') }}",
+        success: function (response) {
+            console.log("Session timeout reset successfully.");
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Error resetting session timeout:", errorThrown);
+        }
+    });
+}
+
+function deniedButtonClick() {
+    cancelButtonClick();
+}
+
+    checkSessionExpiration();
+    setInterval(checkSessionExpiration, 5000);
         function checkSessionExpiration() {
         // Make an AJAX request to the server to check session status
         $.ajax({
