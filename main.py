@@ -64,6 +64,16 @@ def get_ipv4_address():
     return s.getsockname()[0]
 
 
+@app.route('/reset_session_timeout')
+def reset_session_timeout():
+    if 'last_activity' in session:
+        # Update the last activity timestamp to the current time
+        session['last_activity'] = datetime.now(timezone.utc)
+        return jsonify({'status': 'success'})
+    else:
+        return jsonify({'status': 'error', 'message': 'Session does not exist or last activity not set'}), 400
+
+
 @app.route('/check_session_status')
 def check_session_status():
     expire_time = timedelta(seconds=get_timeouts()['users_timeout'])
@@ -71,9 +81,13 @@ def check_session_status():
         last_activity_time = session['last_activity']
         expiration_time = last_activity_time + expire_time
         current_time = datetime.now(timezone.utc)
+        midpoint = last_activity_time + (expire_time / 2)
+
         if current_time > expiration_time:
             session.pop('user_id', None)
             return jsonify({'status': 'expired'})
+        elif current_time > midpoint:
+            return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
 
@@ -85,9 +99,15 @@ def check_session_status_operator():
         last_activity_time = session['last_activity']
         expiration_time = last_activity_time + expire_time
         current_time = datetime.now(timezone.utc)
+
+        # Calculate the midpoint between last activity time and expiration time
+        midpoint = last_activity_time + (expire_time / 2)
+
         if current_time > expiration_time:
             session.pop('user_id', None)
             return jsonify({'status': 'expired'})
+        elif current_time > midpoint:
+            return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
 
@@ -160,15 +180,15 @@ def takeout_goods():
         snipe_id = request.form.get('snipe_id')
         print(snipe_id)
         user_id = request.form.get('user_id')
-        print(user_id)
+        print(f'User ID {user_id}')
         image_url = request.form.get('image')
         fio = request.form.get('fio')  # Get the value of 'fio' from the form
         product_name = request.form.get('goods')  # Get the value of 'goods' from the form
         cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
         print(cell_number)
-        status = True
+        # status = True
         try:
-            # status = send_command(cell_number=cell_number)
+            status = send_command(cell_number=cell_number)
             if status:
                 print(type(fio))
                 print(product_name)
@@ -182,6 +202,7 @@ def takeout_goods():
             else:
                 return render_template('takeout_error.html')  # Return the rendered template
         except Exception as e:
+            print(e)
             return render_template('takeout_error.html')  # Return the rendered template
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")

@@ -41,27 +41,37 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
     <script src="{{ url_for('static', filename='js/success.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
 
     <script>
       
         function checkSessionExpiration() {
-    // Make an AJAX request to the server to check session status
-    $.ajax({
+            $.ajax({
         type: "GET",
-        url: "{{ url_for('check_session_status') }}",
+        url: "{{ url_for('reset_session_timeout') }}",
         success: function (response) {
-            console.log(response);
-
-            if (response.status === 'expired') {
-                // Session has expired, redirect to home
-                window.location.href = "{{ url_for('home') }}";
-            }
+            console.log("Session timeout reset successfully.");
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            console.error("Error checking session status:", errorThrown);
+            console.error("Error resetting session timeout:", errorThrown);
         }
     });
+    // Make an AJAX request to the server to check session status
+    // $.ajax({
+    //     type: "GET",
+    //     url: "{{ url_for('check_session_status') }}",
+    //     success: function (response) {
+    //         console.log(response);
+
+    //         if (response.status === 'expired') {
+    //             // Session has expired, redirect to home
+    //             window.location.href = "{{ url_for('home') }}";
+    //         }
+    //     },
+    //     error: function (jqXHR, textStatus, errorThrown) {
+    //         console.error("Error checking session status:", errorThrown);
+    //     }
+    // });
 }
 
 // Check session status immediately on page load

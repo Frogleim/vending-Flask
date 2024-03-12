@@ -1,28 +1,39 @@
 var timeInSeconds = 10;
+var popupTimer = 5;
 
-        // Function to update the timer display
-        function updateTimer() {
-            var minutes = Math.floor(timeInSeconds / 60);
-            var seconds = timeInSeconds % 60;
 
-            // Add leading zeros if needed
-            var displayMinutes = String(minutes).padStart(2, '0');
-            var displaySeconds = String(seconds).padStart(2, '0');
+function updatePopupTimer() {
+    var minutes = Math.floor(popupTimer / 60);
+    var seconds = popupTimer % 60;
 
-            // Update the timer display
-            document.getElementById('timer').textContent = displayMinutes + ':' + displaySeconds;
+    var displayMinutes = String(minutes).padStart(2, '0');
+    var displaySeconds = String(seconds).padStart(2, '0');
 
-            // Check if the timer has expired
-            if (timeInSeconds <= 0) {
-                clearInterval(timerInterval); // Stop the timer
-                window.location.href = '/'; // Redirect to the specified URL
-            } else {
-                timeInSeconds--; // Decrement the time remaining
-            }
-        }
+    document.getElementById('timer').textContent = displayMinutes + ':' + displaySeconds;
 
-        // Call the updateTimer function initially
-        updateTimer();
+    if (popupTimer <= 0) {
+        clearInterval(popupTimer); 
+        window.location.href = '/'; 
+    } else {
+        popupTimer--; 
+    }
+}
 
-        // Update the timer display every second
-        var timerInterval = setInterval(updateTimer, 1000);
+function updateTimer() {
+    var minutes = Math.floor(timeInSeconds / 60);
+    var seconds = timeInSeconds % 60;
+
+    var displayMinutes = String(minutes).padStart(2, '0');
+    var displaySeconds = String(seconds).padStart(2, '0');
+
+    document.getElementById('timer').textContent = displayMinutes + ':' + displaySeconds;
+
+    if (timeInSeconds <= 0) {
+        clearInterval(timerInterval); 
+        window.location.href = '/'; 
+    } else {
+        timeInSeconds--; 
+    }
+}
+updateTimer();
+var timerInterval = setInterval(updateTimer, 1000);

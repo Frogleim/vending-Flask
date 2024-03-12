@@ -1,0 +1,215 @@
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+
+.timeout-container {
+    border-radius: 10px; /* Border radius */
+    padding: 20px; /* Padding */
+}
+
+#timeout-popup {
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+    height: 1030px;
+    background: var(--Background-Content-general, #F3F4F5);
+
+    z-index: 9999;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.timeout-warning {
+    position: absolute;
+    width: 654px;
+    height: 368px;
+    left: 30px;
+    top: 20px;
+}
+
+.success-text {
+    position: absolute;
+    top: 630px;
+    color: black;
+    font-size: 72px;
+    font-family: Biform;
+    font-weight: 400;
+    line-height: 100.80px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+#device-title {
+    position: absolute;
+    top: 750px;
+    padding-left: 100px;
+    padding-right: 40px;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-align: center;
+    /* P Regular */
+    font-family: "TT Positive";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 44.8px */
+}
+
+
+
+#timer-text {
+    position: absolute;
+    bottom: 220px;
+    color: var(--Typography-Ghost, rgba(0, 0, 0, 0.80));
+    text-align: center;
+    /* P Tag */
+    align-self: stretch;
+    left: 125px;
+    font-family: "TT Positive";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 127%; /* 27.94px */
+    text-transform: uppercase;
+}
+
+
+#timer {
+    position: absolute;
+    bottom: 150px;
+    left: 270px;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-align: center;
+    font-family: Biform;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 53.2px */
+    letter-spacing: 3.8px;
+}
+
+
+#timeout-popup .cancel-button {
+    width: 336px;
+    height: 122px;
+    position: absolute;
+    padding: var(--16, 16px) var(--20, 20px);
+    border: 2px solid var(--border-general-2-x, rgba(0, 0, 0, 0.20));
+    gap: var(--16, 16px);
+    bottom: 30px;
+    left: 25%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#timeout-popup #reject-text {
+    color: var(--Typography-Primary, #1B1B1B);
+    /* Button M */
+    font-family: "TT Positive";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 64px */
+    text-transform: uppercase;
+}
+
+
+#timeout-popup .finish-button {
+    color: var(--white, #FFF);
+    font-family: "TT Positive";
+    font-size: 21.781px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 30px;
+    left: 50%; 
+    font-size: 16px;
+    cursor: pointer;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    height: 122px;
+    width: 336px;
+    background: #282828;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+#time-out-title #finish-text {
+    color: var(--white, #FFF);
+    /* Button M */
+    font-family: "TT Positive";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 64px */
+    text-transform: uppercase;
+}
+
+#timeout-popup #accept-text {
+    color: var(--white, #FFF);
+    /* Button M */
+    font-family: "TT Positive";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 64px */
+    text-transform: uppercase;
+}
+
+
+#timeout-popup #time-out-alert {
+    position: relative;
+    top: 60%;
+    color: var(--Typography-Primary, #1B1B1B);
+    text-align: center;
+    font-family: "Biform";
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+
+
+
+}
+
+
+#timeout-popup #time-out-title {
+    color: var(--Typography-Primary, #1B1B1B);
+text-align: center;
+/* P Regular */
+font-family: "TT Positive";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 44.8px */
+}
+
