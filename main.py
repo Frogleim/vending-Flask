@@ -27,7 +27,7 @@ def read_config():
 
 
 def send_command(cell_number):
-    data = read_config_file()
+    url_data = read_config_file()
     shelf_number = None
     spiral_number = None
     cells_data = read_config()
@@ -41,7 +41,7 @@ def send_command(cell_number):
         "spiral_number": spiral_number
     }
     print(data)
-    r = requests.post(f'{data["controller_api_url"]}/get_goods/', json=data)
+    r = requests.post(f'{url_data["controller_api_url"]}/get_goods/', json=data)
     if r.status_code == 200:
         return True
     else:
@@ -90,7 +90,6 @@ def check_session_status():
             return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
-
 
 @app.route('/check_session_status_operator')
 def check_session_status_operator():
@@ -234,8 +233,14 @@ def change_machine_status():
 
 
 if __name__ == '__main__':
+    import subprocess
+
     ip = get_ipv4_address()
     print(ip)
 
+    # Execute the shell script with the detected IP address
+    subprocess.Popen(["./firefox_setup.sh", ip])
+
     # Run the app on host 0.0.0.0 and port 5000
-    app.run(host=f'{ip}', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
