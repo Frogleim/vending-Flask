@@ -27,7 +27,7 @@ def read_config():
 
 
 def send_command(cell_number):
-    url_data = read_config_file()
+    data = read_config_file()
     shelf_number = None
     spiral_number = None
     cells_data = read_config()
@@ -41,7 +41,7 @@ def send_command(cell_number):
         "spiral_number": spiral_number
     }
     print(data)
-    r = requests.post(f'{url_data["controller_api_url"]}/get_goods/', json=data)
+    r = requests.post(f'{data["controller_api_url"]}/get_goods/', json=data)
     if r.status_code == 200:
         return True
     else:
@@ -54,9 +54,6 @@ def get_timeouts():
     return timeouts
 
 
-normal_user_timeout = timedelta(seconds=15)
-operator_timeout = timedelta(seconds=10)
-
 
 def get_ipv4_address():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -68,7 +65,7 @@ def get_ipv4_address():
 def reset_session_timeout():
     if 'last_activity' in session:
         # Update the last activity timestamp to the current time
-        session['last_activity'] = datetime.now(timezone.utc)
+        session['last_activity'] = time.time()
         return jsonify({'status': 'success'})
     else:
         return jsonify({'status': 'error', 'message': 'Session does not exist or last activity not set'}), 400
@@ -76,29 +73,37 @@ def reset_session_timeout():
 
 @app.route('/check_session_status')
 def check_session_status():
-    expire_time = timedelta(seconds=get_timeouts()['users_timeout'])
+
+    ex_time = get_timeouts()['users_timeout']
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
-        expiration_time = last_activity_time + expire_time
-        current_time = datetime.now(timezone.utc)
-        midpoint = last_activity_time + (expire_time / 2)
+        logs_setting.actions_logger.info(f'Last activity: {last_activity_time}')
+        current_time = time.time()
+        logs_setting.actions_logger.info(f'Current time: {current_time}')
+        print(current_time - last_activity_time)
+        print(f'Master expiration time: {ex_time}, type: {type(ex_time)}')
 
-        if current_time > expiration_time:
+        midpoint = ex_time / 2
+
+        if current_time - last_activity_time > float(ex_time):
             session.pop('user_id', None)
+            print(f'Session expired: {current_time - last_activity_time}')
             return jsonify({'status': 'expired'})
-        elif current_time > midpoint:
+        elif current_time - last_activity_time >= midpoint:
             return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
 
+
 @app.route('/check_session_status_operator')
 def check_session_status_operator():
     expire_time = timedelta(seconds=get_timeouts()['operator_timeout'])
+    logs_setting.actions_logger.info(f'Expire time: {expire_time}')
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
         expiration_time = last_activity_time + expire_time
-        current_time = datetime.now(timezone.utc)
-
+        current_time = time.time()
+        logs_setting.actions_logger.info(f'Current time: {current_time}')
         # Calculate the midpoint between last activity time and expiration time
         midpoint = last_activity_time + (expire_time / 2)
 
@@ -120,11 +125,14 @@ def home():
         if 'success' in machine_status['status']:
             print(session)
             session['user_id'] = user_id
-            session['last_activity'] = datetime.now(timezone.utc)
+            session['last_activity'] = time.time()
+            logs_setting.actions_logger.info(f'New session: {session["last_activity"]}')
             return render_template('index.html')
         else:
             session['user_id'] = user_id
-            session['last_activity'] = datetime.now(timezone.utc)
+            session['last_activity'] = time.time()
+            logs_setting.actions_logger.info(f'New session: {session["last_activity"]}')
+
             return render_template('serivce.html')
     except Exception as e:
         logs_setting.error_logs_logger.error(e)
@@ -144,7 +152,6 @@ def process_form():
         try:
             status = master_system.check_user(int(user_id), ip_address)
             data = {"master_system": status['data'], 'user_id': user_id}
-            print(status['data'])
             if 'success' in status['status']:
                 session['user_id'] = user_id
                 return render_template('home.html', data=data, user_id=user_id, fio=status['user_data'])
@@ -233,14 +240,8 @@ def change_machine_status():
 
 
 if __name__ == '__main__':
-    import subprocess
-
     ip = get_ipv4_address()
     print(ip)
 
-    # Execute the shell script with the detected IP address
-    subprocess.Popen(["./firefox_setup.sh", ip])
-
     # Run the app on host 0.0.0.0 and port 5000
-    app.run(host='0.0.0.0', port=5000, debug=True)
-
+    app.run(host=f'{ip}', port=5000, debug=True)

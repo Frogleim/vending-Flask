@@ -108,7 +108,6 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
 
     <script>
       function checkSessionExpiration() {
@@ -132,7 +131,13 @@
 function displayTimeoutPopup() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("timeout-popup").style.display = "block";
+    loadTimerScript();
 }
+function loadTimerScript() {
+            var script = document.createElement('script');
+            script.src = "{{ url_for('static', filename='js/timer.js') }}";
+            document.body.appendChild(script);
+        }
 
 function closePopup() {
     document.getElementById("overlay").style.display = "none";
