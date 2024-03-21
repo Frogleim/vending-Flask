@@ -1,5 +1,6 @@
 import time
 import ast
+import subprocess
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify, flash
 from api_connect import master_system, logs_setting
 from datetime import datetime, timedelta, timezone
@@ -36,12 +37,12 @@ def send_command(cell_number):
         if items['cell'] == int(cell_number):
             shelf_number = items['ndeck']
             spiral_number = items['spiral']
-    data = {
+    dat = {
         "shelf_number": shelf_number,
         "spiral_number": spiral_number
     }
     print(data)
-    r = requests.post(f'{data["controller_api_url"]}/get_goods/', json=data)
+    r = requests.post(f'{data["controller_api_url"]}/get_goods/', json=dat)
     if r.status_code == 200:
         return True
     else:
@@ -126,12 +127,10 @@ def home():
         if 'success' in machine_status['status']:
             print(session)
             session['user_id'] = user_id
-            session['last_activity'] = time.time()
             logs_setting.actions_logger.info(f'New session: {session["last_activity"]}')
             return render_template('index.html')
         else:
             session['user_id'] = user_id
-            session['last_activity'] = time.time()
             logs_setting.actions_logger.info(f'New session: {session["last_activity"]}')
 
             return render_template('serivce.html')
@@ -150,6 +149,8 @@ def process_form():
     user_id = request.form.get('user_id') or session.get('user_id')
     if 'user_id' in session:
         ip_address = master_system.get_ip_address()
+        session['last_activity'] = time.time()
+
         try:
             status = master_system.check_user(int(user_id), ip_address)
             print(status)
@@ -240,10 +241,22 @@ def change_machine_status():
         logs_setting.error_logs_logger.error(f"Error changing machine status: {str(e)}")
         return jsonify({'status': 'failed', 'message': str(e)})
 
+def open_browser(ip_address):
+    try:
+        subprocess.run(['./firefox_setup.sh', ip_address], check=True)
+        return 'Browser opened successfully'
+    except subprocess.CalledProcessError as e:
+        return False
+
 
 if __name__ == '__main__':
     ip = get_ipv4_address()
     print(ip)
+    
+    # Open browser using threading
+    import threading
+    browser_thread = threading.Thread(target=open_browser, args=(ip,))
+    browser_thread.start()
 
-    # Run the app on host 0.0.0.0 and port 5000
-    app.run(host=f'{ip}', port=5000, debug=True)
+    # Run the Flask app on host 0.0.0.0 and port 5000
+    app.run(host=ip, port=5000, debug=True)

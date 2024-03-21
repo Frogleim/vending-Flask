@@ -5,3 +5,11 @@
 2024-03-21 00:47:51,265 - ERROR - Exception: 'data' is undefined
 2024-03-21 00:49:54,117 - ERROR - Exception: 'data' is undefined
 2024-03-21 01:02:07,042 - ERROR - Exception: invalid literal for int() with base 10: 'closePopupButtonClick'
+2024-03-21 13:05:56,986 - ERROR - HTTPConnectionPool(host='10.30.22.11', port=8000): Max retries exceeded with url: //vending_status/?ip_address=10.13.69.14 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ffec89fd1d0>: Failed to establish a new connection: [Errno 113] No route to host'))
+2024-03-21 13:05:56,988 - ERROR - HTTPConnectionPool(host='10.30.22.11', port=8000): Max retries exceeded with url: //vending_status/?ip_address=10.13.69.14 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ffec89fe150>: Failed to establish a new connection: [Errno 113] No route to host'))
+2024-03-21 13:07:13,899 - ERROR - HTTPConnectionPool(host='10.30.22.11', port=8000): Max retries exceeded with url: //vending_status/?ip_address=10.13.69.14 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ffef9b02010>: Failed to establish a new connection: [Errno 113] No route to host'))
+2024-03-21 13:07:13,904 - ERROR - HTTPConnectionPool(host='10.30.22.11', port=8000): Max retries exceeded with url: //vending_status/?ip_address=10.13.69.14 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ffef854df90>: Failed to establish a new connection: [Errno 113] No route to host'))
+2024-03-21 13:08:56,102 - ERROR - HTTPConnectionPool(host='10.30.22.11', port=8000): Max retries exceeded with url: //vending_status/?ip_address=10.13.69.14 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ffef8601790>: Failed to establish a new connection: [Errno 113] No route to host'))
+2024-03-21 14:20:54,079 - ERROR - Exception: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2024-03-21 14:21:32,816 - ERROR - Exception: invalid literal for int() with base 10: 'http://10.13.69.14:5000/static/images/2NF%201.pnghttp://10.13.69.14:5000/static/images/2NF%201.png'
+2024-03-21 14:21:36,255 - ERROR - Exception: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
