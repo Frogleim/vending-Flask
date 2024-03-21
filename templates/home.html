@@ -110,7 +110,7 @@
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
 
     <script>
-      function checkSessionExpiration() {
+function checkSessionExpiration() {
     $.ajax({
         type: "GET",
         url: "{{ url_for('check_session_status') }}",
@@ -134,10 +134,10 @@ function displayTimeoutPopup() {
     loadTimerScript();
 }
 function loadTimerScript() {
-            var script = document.createElement('script');
-            script.src = "{{ url_for('static', filename='js/timer.js') }}";
-            document.body.appendChild(script);
-        }
+    var script = document.createElement('script');
+    script.src = "{{ url_for('static', filename='js/timer.js') }}";
+    document.body.appendChild(script);
+}
 
 function closePopup() {
     document.getElementById("overlay").style.display = "none";
@@ -158,10 +158,9 @@ function deniedButtonClick() {
     cancelButtonClick();
 }
 
-    checkSessionExpiration();
-    setInterval(checkSessionExpiration, 5000);
+setInterval(checkSessionExpiration, 5000);
 
-        function submitTakeoutForm() {
+function submitTakeoutForm() {
     var snipe_id = $("#popup1").data("snipe_id");
     var imgSrc = $('#popup1').find(".popup-image").attr("src");
     var goods = $('#popup1').find("#device-title").text().trim();
@@ -169,12 +168,11 @@ function deniedButtonClick() {
     console.log(cellNumber);
     $('#snipe_id_input').val(snipe_id);
     $('#cell_number').val(cellNumber); 
-
     $('#image_input').val(imgSrc);
     $('#goods_input').val(goods);
     $('#takeoutForm').submit();
     PopUpHide();
 }
-    </script>
+</script>
 </body>
 </html>

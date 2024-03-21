@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, session, redirect, url_for, j
 from api_connect import master_system, logs_setting
 from datetime import datetime, timedelta, timezone
 import requests
+import subprocess
 import socket
 import json
 import os
@@ -239,9 +240,23 @@ def change_machine_status():
         return jsonify({'status': 'failed', 'message': str(e)})
 
 
+def open_browser(ip_address):
+    try:
+        subprocess.run(['./firefox_setup.sh', ip_address], check=True)
+        return 'Browser opened successfully'
+    except subprocess.CalledProcessError as e:
+        return False
+
+
 if __name__ == '__main__':
     ip = get_ipv4_address()
     print(ip)
 
-    # Run the app on host 0.0.0.0 and port 5000
-    app.run(host=f'{ip}', port=5000, debug=True)
+    # Open browser using threading
+    # import threading
+    #
+    # browser_thread = threading.Thread(target=open_browser, args=(ip,))
+    # browser_thread.start()
+
+    # Run the Flask app on host 0.0.0.0 and port 5000
+    app.run(host=ip, port=5000, debug=True)
