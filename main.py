@@ -66,11 +66,12 @@ def reset_session_timeout():
     if 'last_activity' in session:
         # Update the last activity timestamp to the current time
         session['last_activity'] = time.time()
+        print('Pop up reseted')
         return jsonify({'status': 'success'})
     else:
         return jsonify({'status': 'error', 'message': 'Session does not exist or last activity not set'}), 400
 
-
+#67123663928
 @app.route('/check_session_status')
 def check_session_status():
 
@@ -97,7 +98,7 @@ def check_session_status():
 
 @app.route('/check_session_status_operator')
 def check_session_status_operator():
-    expire_time = timedelta(seconds=get_timeouts()['operator_timeout'])
+    expire_time = get_timeouts()['users_timeout']
     logs_setting.actions_logger.info(f'Expire time: {expire_time}')
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
@@ -151,12 +152,13 @@ def process_form():
         ip_address = master_system.get_ip_address()
         try:
             status = master_system.check_user(int(user_id), ip_address)
-            data = {"master_system": status['data'], 'user_id': user_id}
+            print(status)
+            data_dict = {"master_system": status['data'], 'user_id': user_id}
+            print(data_dict)
             if 'success' in status['status']:
                 session['user_id'] = user_id
-                return render_template('home.html', data=data, user_id=user_id, fio=status['user_data'])
+                return render_template('home.html', data=data_dict, user_id=user_id, fio=status['user_data'])
             if status['status'] == 'operator':
-                # Do something with user_id, e.g., save it to a database
                 session['user_id'] = user_id
                 return render_template('service_status.html')
         except Exception as e:

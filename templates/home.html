@@ -81,7 +81,7 @@
                 <p id="finish-text">ДА</p>
             </button>
         </form>
-        <button class="cancel-button" onclick="deniedButtonClick()">
+        <button class="cancel-button" onclick="closePopupButtonClick()">
         <p id="cancel-text">НЕТ</p>
         </button>
       
@@ -96,7 +96,7 @@
         <p id="time-out-title"></p>
         <p id="device-title">{{ data.product_name }}</p>
         <p id="timer-text">Начальный экран откроется через:</p>
-        <p id="timer">00:05</p>
+        <p id="timer">00:10</p>
             <button type="submit" class="btn btn-dark finish-button" onclick="closePopup()">
                 <p id="accept-text">я тут</p>
             </button>
@@ -110,22 +110,28 @@
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
 
     <script>
-      function checkSessionExpiration() {
-    $.ajax({
-        type: "GET",
-        url: "{{ url_for('check_session_status') }}",
-        success: function (response) {
-            console.log(response.status);
-            if (response.status === 'expired') {
-                window.location.href = "{{ url_for('home') }}";
-            } else if (response.status === 'half_expired') {
-                displayTimeoutPopup();
+    var sessionExpired = false;
+
+function checkSessionExpiration() {
+    if (!sessionExpired) {
+        $.ajax({
+            type: "GET",
+            url: "{{ url_for('check_session_status') }}",
+            success: function (response) {
+                console.log(response.status);
+                if (response.status === 'expired') {
+                    window.location.href = "{{ url_for('home') }}";
+                    sessionExpired = true; // Set the flag to true when displaying the popup
+
+                } else if (response.status === 'half_expired') {
+                    displayTimeoutPopup();
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Error checking session status:", errorThrown);
             }
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.error("Error checking session status:", errorThrown);
-        }
-    });
+        });
+    }
 }
 
 function displayTimeoutPopup() {
@@ -133,15 +139,17 @@ function displayTimeoutPopup() {
     document.getElementById("timeout-popup").style.display = "block";
     loadTimerScript();
 }
+
 function loadTimerScript() {
-            var script = document.createElement('script');
-            script.src = "{{ url_for('static', filename='js/timer.js') }}";
-            document.body.appendChild(script);
-        }
+    var script = document.createElement('script');
+    script.src = "{{ url_for('static', filename='js/timer.js') }}";
+    document.body.appendChild(script);
+}
 
 function closePopup() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("timeout-popup").style.display = "none";
+    sessionExpired = false; // Reset the flag when closing the popup
     $.ajax({
         type: "GET",
         url: "{{ url_for('reset_session_timeout') }}",
@@ -158,23 +166,27 @@ function deniedButtonClick() {
     cancelButtonClick();
 }
 
-    checkSessionExpiration();
-    setInterval(checkSessionExpiration, 5000);
+function closePopupButtonClick() {
+    PopUpHide();
+}
 
-        function submitTakeoutForm() {
+setInterval(checkSessionExpiration, 5000);
+
+function submitTakeoutForm() {
     var snipe_id = $("#popup1").data("snipe_id");
     var imgSrc = $('#popup1').find(".popup-image").attr("src");
     var goods = $('#popup1').find("#device-title").text().trim();
     var cellNumber = $('#popup1').find("#cell_number").val();
     console.log(cellNumber);
     $('#snipe_id_input').val(snipe_id);
-    $('#cell_number').val(cellNumber); 
+    $('#cell_number').val(cellNumber);
 
     $('#image_input').val(imgSrc);
     $('#goods_input').val(goods);
     $('#takeoutForm').submit();
     PopUpHide();
 }
+
     </script>
 </body>
 </html>

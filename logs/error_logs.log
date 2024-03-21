@@ -1,0 +1,7 @@
+2024-03-21 00:43:12,099 - ERROR - Exception: 'data' is undefined
+2024-03-21 00:43:32,390 - ERROR - Exception: 'data' is undefined
+2024-03-21 00:45:16,024 - ERROR - Exception: invalid literal for int() with base 10: "                session['user_id'] = user_id"
+2024-03-21 00:46:02,977 - ERROR - Exception: 'data' is undefined
+2024-03-21 00:47:51,265 - ERROR - Exception: 'data' is undefined
+2024-03-21 00:49:54,117 - ERROR - Exception: 'data' is undefined
+2024-03-21 01:02:07,042 - ERROR - Exception: invalid literal for int() with base 10: 'closePopupButtonClick'
