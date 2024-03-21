@@ -31,9 +31,8 @@
             Ты еще здесь?
         </h1>
         <p id="time-out-title"></p>
-        <p id="device-title">{{ data.product_name }}</p>
         <p id="timer-text">Начальный экран откроется через:</p>
-        <p id="timer">00:05</p>
+        <p id="timer">00:10</p>
             <button type="submit" class="btn btn-dark finish-button" onclick="closePopup()">
                 <p id="accept-text">я тут</p>
             </button>
@@ -45,14 +44,45 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
     <script>
-        function displayTimeoutPopup() {
+          var sessionExpired = false;
+
+function checkSessionExpiration() {
+    if (!sessionExpired) {
+        $.ajax({
+            type: "GET",
+            url: "{{ url_for('check_session_status') }}",
+            success: function (response) {
+                console.log(response.status);
+                if (response.status === 'expired') {
+                    window.location.href = "{{ url_for('home') }}";
+                } else if (response.status === 'half_expired') {
+                    displayTimeoutPopup();
+                    sessionExpired = true; // Set the flag to true when displaying the popup
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Error checking session status:", errorThrown);
+            }
+        });
+    }
+}
+
+function displayTimeoutPopup() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("timeout-popup").style.display = "block";
+    loadTimerScript();
+}
+
+function loadTimerScript() {
+    var script = document.createElement('script');
+    script.src = "{{ url_for('static', filename='js/timer.js') }}";
+    document.body.appendChild(script);
 }
 
 function closePopup() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("timeout-popup").style.display = "none";
+    sessionExpired = false; // Reset the flag when closing the popup
     $.ajax({
         type: "GET",
         url: "{{ url_for('reset_session_timeout') }}",
@@ -69,26 +99,7 @@ function deniedButtonClick() {
     cancelButtonClick();
 }
 
-    checkSessionExpiration();
-    setInterval(checkSessionExpiration, 5000);
-        function checkSessionExpiration() {
-        // Make an AJAX request to the server to check session status
-        $.ajax({
-            type: "GET",
-            url: "{{ url_for('check_session_status_operator') }}",
-            success: function (response) {
-                console.log(response.status);
-
-                if (response.status === 'expired') {
-                    // Session has expired, redirect to home
-                    window.location.href = "{{ url_for('home') }}";
-                }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error("Error checking session status:", errorThrown);
-            }
-        });
-    }
+setInterval(checkSessionExpiration, 5000);
     function returnToWork() {
             // Make an AJAX request to the server to change machine status
             $.ajax({
@@ -112,10 +123,6 @@ function deniedButtonClick() {
         }
 
     // Check session status immediately on page load
-    checkSessionExpiration();
-
-    // Check session status every 5 seconds (adjust the interval as needed)
-    setInterval(checkSessionExpiration, 5000);
     $(document).ready(function () {
         $(".custom-button").on("click", function () {
             returnToWork();

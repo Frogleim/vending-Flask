@@ -81,7 +81,7 @@
                 <p id="finish-text">ДА</p>
             </button>
         </form>
-        <button class="cancel-button" onclick="deniedButtonClick()">
+        <button class="cancel-button" onclick="closePopupButtonClick()">
         <p id="cancel-text">НЕТ</p>
         </button>
       
@@ -96,7 +96,7 @@
         <p id="time-out-title"></p>
         <p id="device-title">{{ data.product_name }}</p>
         <p id="timer-text">Начальный экран откроется через:</p>
-        <p id="timer">00:05</p>
+        <p id="timer">00:10</p>
             <button type="submit" class="btn btn-dark finish-button" onclick="closePopup()">
                 <p id="accept-text">я тут</p>
             </button>
@@ -121,11 +121,8 @@ function checkSessionExpiration() {
             } else if (response.status === 'half_expired') {
                 displayTimeoutPopup();
             }
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.error("Error checking session status:", errorThrown);
-        }
-    });
+        });
+    }
 }
 
 function displayTimeoutPopup() {
@@ -133,6 +130,7 @@ function displayTimeoutPopup() {
     document.getElementById("timeout-popup").style.display = "block";
     loadTimerScript();
 }
+
 function loadTimerScript() {
     var script = document.createElement('script');
     script.src = "{{ url_for('static', filename='js/timer.js') }}";
@@ -142,6 +140,7 @@ function loadTimerScript() {
 function closePopup() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("timeout-popup").style.display = "none";
+    sessionExpired = false; // Reset the flag when closing the popup
     $.ajax({
         type: "GET",
         url: "{{ url_for('reset_session_timeout') }}",
