@@ -1,9 +1,7 @@
 import time
-import ast
 import subprocess
-from flask import Flask, render_template, request, session, redirect, url_for, jsonify, flash
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from api_connect import master_system, logs_setting
-from datetime import datetime, timedelta, timezone
 import requests
 import subprocess
 import socket
@@ -32,23 +30,25 @@ def send_command(cell_number):
     data = read_config_file()
     shelf_number = None
     spiral_number = None
+    logs_setting.system_log_logger.info(f'Connecting to controllet {data["controller_api_url"]}')
     cells_data = read_config()
     for items in cells_data['cells']:
-        print(items)
         if items['cell'] == int(cell_number):
             shelf_number = items['ndeck']
             spiral_number = items['spiral']
-    dat = {
+    machine_payload = {
         "shelf_number": shelf_number,
         "spiral_number": spiral_number
     }
-    print(data)
-    r = requests.post(f'{data["controller_api_url"]}/get_goods/', json=dat)
-    if r.status_code == 200:
-        return True
-    else:
-        return False
-
+    try:
+        r = requests.post(f'{data["controller_api_url"]}/get_goods/', json=machine_payload)
+        if r.status_code == 200:
+            return True
+        else:
+            logs_setting.error_logs_logger.error(f'Failed to connect to controller! Status code: {r.status_code}')
+            return False
+    except Exception as e:
+        logs_setting.error_logs_logger.error(f'Controller connect error!\nError Message: {e}')
 
 def get_timeouts():
     ip = get_ipv4_address()
@@ -66,9 +66,8 @@ def get_ipv4_address():
 @app.route('/reset_session_timeout')
 def reset_session_timeout():
     if 'last_activity' in session:
-        # Update the last activity timestamp to the current time
         session['last_activity'] = time.time()
-        print('Pop up reseted')
+        logs_setting.system_log_logger.info('Pop up reseted')
         return jsonify({'status': 'success'})
     else:
         return jsonify({'status': 'error', 'message': 'Session does not exist or last activity not set'}), 400
@@ -80,19 +79,16 @@ def check_session_status():
     ex_time = get_timeouts()['users_timeout']
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
-        logs_setting.actions_logger.info(f'Last activity: {last_activity_time}')
+        logs_setting.system_log_logger.info(f'Last activity: {last_activity_time}')
         current_time = time.time()
-        logs_setting.actions_logger.info(f'Current time: {current_time}')
+        logs_setting.system_log_logger.info(f'Current time: {current_time}')
         print(current_time - last_activity_time)
         print(f'Master expiration time: {ex_time}, type: {type(ex_time)}')
 
         midpoint = ex_time / 2
 
-        if current_time - last_activity_time > float(ex_time):
-            session.pop('user_id', None)
+        if current_time - last_activity_time > midpoint:
             print(f'Session expired: {current_time - last_activity_time}')
-            return jsonify({'status': 'expired'})
-        elif current_time - last_activity_time >= midpoint:
             return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
@@ -100,20 +96,19 @@ def check_session_status():
 
 @app.route('/check_session_status_operator')
 def check_session_status_operator():
-    expire_time = get_timeouts()['users_timeout']
-    logs_setting.actions_logger.info(f'Expire time: {expire_time}')
+    ex_time = get_timeouts()['users_timeout']
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
-        expiration_time = last_activity_time + expire_time
+        logs_setting.system_log_logger.info(f'Last activity: {last_activity_time}')
         current_time = time.time()
-        logs_setting.actions_logger.info(f'Current time: {current_time}')
-        # Calculate the midpoint between last activity time and expiration time
-        midpoint = last_activity_time + (expire_time / 2)
+        logs_setting.system_log_logger.info(f'Current time: {current_time}')
+        print(current_time - last_activity_time)
+        print(f'Master expiration time: {ex_time}, type: {type(ex_time)}')
 
-        if current_time > expiration_time:
-            session.pop('user_id', None)
-            return jsonify({'status': 'expired'})
-        elif current_time > midpoint:
+        midpoint = ex_time / 2
+
+        if current_time - last_activity_time > midpoint:
+            print(f'Session expired: {current_time - last_activity_time}')
             return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
@@ -121,6 +116,7 @@ def check_session_status_operator():
 
 @app.route('/')
 def home():
+    logs_setting.system_log_logger.info('Trying to connect to master system....')
     ip = get_ipv4_address()
     user_id = request.args.get('user_id')
     try:
@@ -128,12 +124,11 @@ def home():
         if 'success' in machine_status['status']:
             print(session)
             session['user_id'] = user_id
-            logs_setting.actions_logger.info(f'New session: {session["last_activity"]}')
+            logs_setting.system_log_logger.info(f'User session: {session}')
             return render_template('index.html')
         else:
             session['user_id'] = user_id
-            logs_setting.actions_logger.info(f'New session: {session["last_activity"]}')
-
+            logs_setting.system_log_logger.info(f'Operator session: {session}')
             return render_template('serivce.html')
     except Exception as e:
         logs_setting.error_logs_logger.error(e)
@@ -151,12 +146,11 @@ def process_form():
     if 'user_id' in session:
         ip_address = master_system.get_ip_address()
         session['last_activity'] = time.time()
-
+        logs_setting.system_log_logger.info(f'Processing last_activity session: {session["last_activity"]}')
         try:
             status = master_system.check_user(int(user_id), ip_address)
-            print(status)
+            logs_setting.system_log_logger.info(f'Status of machine: {status["status"]}')
             data_dict = {"master_system": status['data'], 'user_id': user_id}
-            print(data_dict)
             if 'success' in status['status']:
                 session['user_id'] = user_id
                 return render_template('home.html', data=data_dict, user_id=user_id, fio=status['user_data'])
@@ -164,7 +158,6 @@ def process_form():
                 session['user_id'] = user_id
                 return render_template('service_status.html')
         except Exception as e:
-
             logs_setting.error_logs_logger.error(f"Exception: {str(e)}")
             return render_template('login_error.html')
     return redirect(url_for('home'))
@@ -176,9 +169,9 @@ def proccessing():
     user_id = request.form.get('user_id')
     print(user_id)
     image_url = request.form.get('image')
-    fio = request.form.get('fio')  # Get the value of 'fio' from the form
-    product_name = request.form.get('goods')  # Get the value of 'goods' from the form
-    cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
+    fio = request.form.get('fio')
+    product_name = request.form.get('goods')
+    cell_number = request.form.get('cell_number')
     success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name, "snipe_id": snipe_id,
                     'cell_number': cell_number, 'user_id': user_id}
     return render_template('wait.html', data=success_data)
@@ -188,35 +181,31 @@ def proccessing():
 def takeout_goods():
     try:
         snipe_id = request.form.get('snipe_id')
-        print(snipe_id)
         user_id = request.form.get('user_id')
-        print(f'User ID {user_id}')
         image_url = request.form.get('image')
-        fio = request.form.get('fio')  # Get the value of 'fio' from the form
-        product_name = request.form.get('goods')  # Get the value of 'goods' from the form
-        cell_number = request.form.get('cell_number')  # Get the value of 'cell_number' from the form
+        fio = request.form.get('fio')
+        product_name = request.form.get('goods')
+        cell_number = request.form.get('cell_number')
         print(cell_number)
-        # status = True
+        status = True
         try:
-            status = send_command(cell_number=cell_number)
+        #    status = send_command(cell_number=cell_number)
             if status:
-                print(type(fio))
-                print(product_name)
                 master_system.checkout(user_id, snipe_id)
                 logs_setting.actions_logger.info(
-                    f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id}")
+                    f"Processing takeout request for snipe_id: {snipe_id}, user_id: {user_id} user: {fio}")
                 logs_setting.actions_logger.info(f"User: {user_id}, product id: {snipe_id}")
                 success_data = {'image_url': image_url, 'fio': fio, 'product_name': product_name}
                 success(success_data)
                 return render_template('success.html', data=success_data)
             else:
-                return render_template('takeout_error.html')  # Return the rendered template
+                return render_template('takeout_error.html')  
         except Exception as e:
-            print(e)
-            return render_template('takeout_error.html')  # Return the rendered template
+            logs_setting.error_logs_logger.error(f'Failed to checkout!\nError message: {e}')
+            return render_template('takeout_error.html')  
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
-        return render_template('takeout_error.html')  # Return the rendered template
+        return render_template('takeout_error.html')  
 
 
 @app.route('/success')
@@ -262,7 +251,6 @@ if __name__ == '__main__':
     ip = get_ipv4_address()
     print(ip)
     
-    # Open browser using threading
     import threading
     browser_thread = threading.Thread(target=open_browser, args=(ip,))
     browser_thread.start()
@@ -273,5 +261,4 @@ if __name__ == '__main__':
     # browser_thread = threading.Thread(target=open_browser, args=(ip,))
     # browser_thread.start()
 
-    # Run the Flask app on host 0.0.0.0 and port 5000
     app.run(host=ip, port=5000, debug=True)

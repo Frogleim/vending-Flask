@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <p id="fio">{{fio[0]}}</p>
             <div class="btn-container">
-                <button type="button" class="btn btn-outline-secondary logout-button">
+                <button type="button" class="btn btn-outline-secondary logout-button" onclick="cancelButtonClick()">
                     <p id="close-text">Выйти</p>
                     <img src="{{ url_for('static', filename='images/close.svg') }}" alt="SVG Icon" class="icon-logout" onclick="cancelButtonClick()">
 
@@ -27,7 +27,7 @@
     </nav>
 
 
-    <div class="container justify-content-center">
+    <div class="container-fluid justify-content-center">
         <div class="row">
             {% for product in data.master_system %}
     <div class="column">
@@ -45,8 +45,7 @@
             </div>
             <input type="hidden" name="cell_number" class="cell_number" value="{{ product.cell_number }}">
             {% if product.goods_image %}
-                <!-- Display Base64-encoded image -->
-                <img src="data:image/jpeg;base64,{{ product.image_data }}" class="card-img" alt="...">
+                <img src="data:image/jpeg;base64,{{ product.image_data }}" class="card-img"  alt="...">
             {% else %}
                 <img src="https://karanzi.websites.co.in/obaju-turquoise/img/product-placeholder.png" class="card-img" alt="...">
             {% endif %}
@@ -81,7 +80,7 @@
                 <p id="finish-text">ДА</p>
             </button>
         </form>
-        <button class="cancel-button" onclick="closePopupButtonClick()">
+        <button class="cancel-button" onclick="closePopupButton()">
         <p id="cancel-text">НЕТ</p>
         </button>
       
@@ -116,13 +115,15 @@ function checkSessionExpiration() {
         url: "{{ url_for('check_session_status') }}",
         success: function (response) {
             console.log(response.status);
-            if (response.status === 'expired') {
-                window.location.href = "{{ url_for('home') }}";
-            } else if (response.status === 'half_expired') {
+            if (response.status === 'half_expired') {
                 displayTimeoutPopup();
             }
-        });
-    }
+        }
+    });
+}
+
+function checkSession() {
+    setInterval(checkSessionExpiration, 5000);
 }
 
 function displayTimeoutPopup() {
@@ -140,12 +141,15 @@ function loadTimerScript() {
 function closePopup() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("timeout-popup").style.display = "none";
-    sessionExpired = false; // Reset the flag when closing the popup
+    sessionExpired = false;
     $.ajax({
         type: "GET",
         url: "{{ url_for('reset_session_timeout') }}",
         success: function (response) {
             console.log("Session timeout reset successfully.");
+            // After resetting the session timeout, check the session status again
+            // to determine whether to display the timeout popup
+            checkSessionExpiration();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.error("Error resetting session timeout:", errorThrown);
@@ -153,11 +157,17 @@ function closePopup() {
     });
 }
 
+
 function deniedButtonClick() {
     cancelButtonClick();
 }
 
-setInterval(checkSessionExpiration, 5000);
+
+function closePopupButton() {
+    PopUpHide()
+}
+
+
 
 function submitTakeoutForm() {
     var snipe_id = $("#popup1").data("snipe_id");
@@ -172,6 +182,8 @@ function submitTakeoutForm() {
     $('#takeoutForm').submit();
     PopUpHide();
 }
+
+checkSession()
 </script>
 </body>
 </html>

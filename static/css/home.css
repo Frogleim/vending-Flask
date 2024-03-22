@@ -12,40 +12,41 @@
     height: 150px; 
 }
 
-
-.row {
-    position: absolute;
-    width: 800px; /* Adjust this width as needed */
-    display: flex;
-    right: 5%;
-    margin: 0;
-    gap: 8px; /* Add gap for both vertical and horizontal spacing */
+body {
+    width: 800px;
 }
 
+
+.row {
+    position: relative; 
+    top: 175px; 
+    width: auto;
+    display: flex;
+    margin: 0;
+    gap: 8px;
+    padding-left: 15px; /* Add left padding */
+    padding-right: 20px; /* Add right padding */
+}
 .take-out-count {
     color: var(--Typography-Secondary, #808080);
     width: 324px;
-/* P Tag */
-font-family: "TT Positive";
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 127%; /* 30.48px */
-text-transform: uppercase;
+    font-family: "TT Positive";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 127%;
+    text-transform: uppercase;
 }
 
 .column {
-    width: 356px; /* Adjusted width to accommodate the gap */
+    top: 50px;
+    width: 356px;
     box-sizing: border-box;
     cursor: pointer;
     gap: 8px;
-    margin: 0; /* Add this to remove any residual margins */
+    margin: 0;
 }
-.container {
-    width: 100%;
-    margin-top: 200px;
-    margin-right: 150px;
-    margin-left: 100px;
+.container-fluid {
     margin-bottom: 100px;
 }
 
@@ -74,7 +75,7 @@ text-transform: uppercase;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 127%; /* 30.48px */
+    line-height: 127%;
     text-transform: uppercase;
 }
 
@@ -132,8 +133,8 @@ text-transform: uppercase;
 
 
 .card-img {
-    object-fit: cover;
-    height: auto;
+    width: 338px;
+    height: 265.2px;
 }
 
 
@@ -152,13 +153,12 @@ text-transform: uppercase;
     overflow: hidden;
     color: var(--Typography-Primary, #1B1B1B);
     text-overflow: ellipsis;
-    /* P Accent */
     font-family: "TT Positive";
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
-    line-height: 140%; /* 44.8px */
-    padding-left: 40px; /* Add left padding */
+    line-height: 140%;
+    padding-left: 40px;
 }
 
 .logout-button {
@@ -183,7 +183,7 @@ text-transform: uppercase;
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%; /* 57.6px */
+    line-height: 160%; 
     text-transform: uppercase;
     margin: 0;
 }
@@ -219,10 +219,10 @@ text-transform: uppercase;
 
 
 .popup-container {
-    background-color: #ffffff; /* Background color */
-    border-radius: 10px; /* Border radius */
-    padding: 20px; /* Padding */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #popup1 {
@@ -245,8 +245,8 @@ text-transform: uppercase;
 
 
 .popup-image {
-    width: 100%; /* Set the width of the image to 100% of its container */
-    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    width: 640px; /* Set the width of the image to 100% of its container */
+    height: 502.15px; /* Automatically adjust the height to maintain aspect ratio */
     border-radius: 8px; /* Add rounded corners to the image */
 }
 
@@ -358,14 +358,20 @@ text-transform: uppercase;
 
 #popup1 #device-title {
     color: var(--Typography-Primary, #1B1B1B);
-text-align: center;
-/* P Regular */
-font-family: "TT Positive";
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 44.8px */
+    font-family: "TT Positive";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    position: absolute; /* Position the text absolutely */
+    top: 75%; /* Position it 50% from the top */
+    left: 45%; /* Position it 50% from the left */
+    transform: translate(-50%, -50%); /* Translate it back by 50% of its own width and height */
+    text-align: center; /* Center the text horizontally */
+    width: 100%; /* Ensure it takes up the full width */
 }
+
+
 
 #popup1 #popupMessage {
     position: absolute;
