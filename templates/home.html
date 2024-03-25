@@ -96,7 +96,7 @@
         <p id="device-title">{{ data.product_name }}</p>
         <p id="timer-text">Начальный экран откроется через:</p>
         <p id="timer">00:10</p>
-            <button type="submit" class="btn btn-dark finish-button" onclick="closePopup()">
+            <button type="submit" class="btn btn-dark finish-button" onclick="continuePopup()">
                 <p id="accept-text">я тут</p>
             </button>
         <button class="cancel-button" onclick="deniedButtonClick()">
@@ -109,6 +109,8 @@
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
 
     <script>
+var sessionCheckInterval;
+
 function checkSessionExpiration() {
     $.ajax({
         type: "GET",
@@ -117,13 +119,29 @@ function checkSessionExpiration() {
             console.log(response.status);
             if (response.status === 'half_expired') {
                 displayTimeoutPopup();
+                clearInterval(sessionCheckInterval); // Clear interval when popup displayed
             }
         }
     });
 }
 
+
+function resetSession () {
+    $.ajax({
+        type: "GET",
+        url: "{{ url_for('reset_session_timeout') }}",
+        success: function (response) {
+            console.log("Session timeout reset successfully.");
+            checkSession(); // Restart interval after popup is closed
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Error resetting session timeout:", errorThrown);
+        }
+    });
+}
+
 function checkSession() {
-    setInterval(checkSessionExpiration, 5000);
+    sessionCheckInterval = setInterval(checkSessionExpiration, 5000);
 }
 
 function displayTimeoutPopup() {
@@ -138,33 +156,20 @@ function loadTimerScript() {
     document.body.appendChild(script);
 }
 
-function closePopup() {
+function continuePopup() {
+    resetSession();
+    clearInterval(timerInterval);
     document.getElementById("overlay").style.display = "none";
     document.getElementById("timeout-popup").style.display = "none";
-    sessionExpired = false;
-    $.ajax({
-        type: "GET",
-        url: "{{ url_for('reset_session_timeout') }}",
-        success: function (response) {
-            console.log("Session timeout reset successfully.");
-            // After resetting the session timeout, check the session status again
-            // to determine whether to display the timeout popup
-            checkSessionExpiration();
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.error("Error resetting session timeout:", errorThrown);
-        }
-    });
+    document.getElementById("timer").innerText = "00:10";
+    
 }
-
-
 function deniedButtonClick() {
     cancelButtonClick();
 }
 
-
 function closePopupButton() {
-    PopUpHide()
+    PopUpHide();
 }
 
 

@@ -41,13 +41,14 @@ body {
 .column {
     top: 50px;
     width: 356px;
+    bottom: 30px;
     box-sizing: border-box;
     cursor: pointer;
     gap: 8px;
     margin: 0;
 }
 .container-fluid {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 
@@ -272,6 +273,9 @@ body {
 
 
 #popup1 #cancel-text {
+    position: absolute;
+    top: 25px;
+    left: 130px;
     color: var(--Typography-Primary, #1B1B1B);
     /* Button M */
     font-family: "TT Positive";
@@ -284,10 +288,13 @@ body {
 
 
 #popup1 #finish-text {
+    position: absolute;
     color: var(--white, #FFF);
     /* Button M */
     font-family: "TT Positive";
     font-size: 40px;
+    left: 140px;
+    top: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 64px */

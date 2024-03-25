@@ -39,9 +39,10 @@ function checkAndPopUpShow(cell) {
     console.log(cellNumber);
 
     var title = $(cell).find("#good-title").text().trim();
+    var type = $(cell).find('.good-type').text().trim();
 
     // Check if cellText is "Cell is Empty" or "Goods is None" or title is undefined
-    if (cellText === "Cell is Empty" || cellText === "Goods is None" || title === undefined || title.trim() === "") {
+    if (cellText === "Cell is Empty" || cellText === "Goods is None" || type === undefined || type.trim() === "Нет в наличии") {
         console.log('No goods or undefined title');
     } else {
         PopUpShow(snipe_id, title, imgSrc, cellNumber);

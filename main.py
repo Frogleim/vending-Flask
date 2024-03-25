@@ -66,6 +66,8 @@ def get_ipv4_address():
 @app.route('/reset_session_timeout')
 def reset_session_timeout():
     if 'last_activity' in session:
+        user_id = session['user_id']
+        session['user_id'] = user_id
         session['last_activity'] = time.time()
         logs_setting.system_log_logger.info('Pop up reseted')
         return jsonify({'status': 'success'})
@@ -83,12 +85,16 @@ def check_session_status():
         current_time = time.time()
         logs_setting.system_log_logger.info(f'Current time: {current_time}')
         print(current_time - last_activity_time)
+        experiation = current_time - last_activity_time
+        session['exp'] = experiation
+        print(session)
         print(f'Master expiration time: {ex_time}, type: {type(ex_time)}')
 
         midpoint = ex_time / 2
 
         if current_time - last_activity_time > midpoint:
-            print(f'Session expired: {current_time - last_activity_time}')
+            print(f'Current session: {current_time - last_activity_time}')
+            logs_setting.system_log_logger.info(f'Session: {session}')
             return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
@@ -108,7 +114,7 @@ def check_session_status_operator():
         midpoint = ex_time / 2
 
         if current_time - last_activity_time > midpoint:
-            print(f'Session expired: {current_time - last_activity_time}')
+            print(f'Current session: {current_time - last_activity_time}')
             return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})

@@ -33,7 +33,7 @@
         <p id="time-out-title"></p>
         <p id="timer-text">Начальный экран откроется через:</p>
         <p id="timer">00:10</p>
-            <button type="submit" class="btn btn-dark finish-button" onclick="closePopup()">
+            <button type="submit" class="btn btn-dark finish-button" onclick="continuePopup()">
                 <p id="accept-text">я тут</p>
             </button>
         <button class="cancel-button" onclick="deniedButtonClick()">
@@ -44,27 +44,39 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/close.js') }}"></script>
     <script>
-          var sessionExpired = false;
+          var sessionCheckInterval;
 
 function checkSessionExpiration() {
-    if (!sessionExpired) {
-        $.ajax({
-            type: "GET",
-            url: "{{ url_for('check_session_status') }}",
-            success: function (response) {
-                console.log(response.status);
-                if (response.status === 'expired') {
-                    window.location.href = "{{ url_for('home') }}";
-                } else if (response.status === 'half_expired') {
-                    displayTimeoutPopup();
-                    sessionExpired = true; // Set the flag to true when displaying the popup
-                }
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error("Error checking session status:", errorThrown);
+    $.ajax({
+        type: "GET",
+        url: "{{ url_for('check_session_status_operator') }}",
+        success: function (response) {
+            console.log(response.status);
+            if (response.status === 'half_expired') {
+                displayTimeoutPopup();
+                clearInterval(sessionCheckInterval); // Clear interval when popup displayed
             }
-        });
-    }
+        }
+    });
+}
+
+
+function resetSession () {
+    $.ajax({
+        type: "GET",
+        url: "{{ url_for('reset_session_timeout') }}",
+        success: function (response) {
+            console.log("Session timeout reset successfully.");
+            checkSession(); // Restart interval after popup is closed
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Error resetting session timeout:", errorThrown);
+        }
+    });
+}
+
+function checkSession() {
+    sessionCheckInterval = setInterval(checkSessionExpiration, 5000);
 }
 
 function displayTimeoutPopup() {
@@ -79,39 +91,35 @@ function loadTimerScript() {
     document.body.appendChild(script);
 }
 
-function closePopup() {
+function continuePopup() {
+    resetSession();
+    clearInterval(timerInterval);
     document.getElementById("overlay").style.display = "none";
     document.getElementById("timeout-popup").style.display = "none";
-    sessionExpired = false; // Reset the flag when closing the popup
-    $.ajax({
-        type: "GET",
-        url: "{{ url_for('reset_session_timeout') }}",
-        success: function (response) {
-            console.log("Session timeout reset successfully.");
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.error("Error resetting session timeout:", errorThrown);
-        }
-    });
+    document.getElementById("timer").innerText = "00:10";
+    
 }
-
 function deniedButtonClick() {
     cancelButtonClick();
 }
 
-setInterval(checkSessionExpiration, 5000);
+function closePopupButton() {
+    PopUpHide();
+}
+
+checkSession()
+
     function returnToWork() {
-            // Make an AJAX request to the server to change machine status
             $.ajax({
                 type: "GET",
                 url: "{{ url_for('change_machine_status') }}",
                 success: function (response) {
                     console.log(response.status);
-
                     if (response.status === 'success') {
-                        // Machine status changed successfully, redirect to home
-                        window.location.href = "{{ url_for('home') }}";
-                    } else {
+                        setTimeout(function() {
+                            window.location.href = "{{ url_for('home') }}";
+                        }, 2000); 
+                    }else {
                         // Handle failure (optional)
                         console.error("Error changing machine status:", response.message);
                     }
@@ -121,8 +129,6 @@ setInterval(checkSessionExpiration, 5000);
                 }
             });
         }
-
-    // Check session status immediately on page load
     $(document).ready(function () {
         $(".custom-button").on("click", function () {
             returnToWork();

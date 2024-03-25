@@ -2,24 +2,9 @@ var timeInSeconds = 10;
 var popupTimer = 5;
 
 
-function updatePopupTimer() {
-    var minutes = Math.floor(popupTimer / 60);
-    var seconds = popupTimer % 60;
-
-    var displayMinutes = String(minutes).padStart(2, '0');
-    var displaySeconds = String(seconds).padStart(2, '0');
-
-    document.getElementById('timer').textContent = displayMinutes + ':' + displaySeconds;
-
-    if (popupTimer <= 0) {
-        clearInterval(popupTimer); 
-        window.location.href = '/'; 
-    } else {
-        popupTimer--; 
-    }
-}
 
 function updateTimer() {
+    console.log(document.getElementById('timer').textContent);
     var minutes = Math.floor(timeInSeconds / 60);
     var seconds = timeInSeconds % 60;
 
@@ -35,5 +20,4 @@ function updateTimer() {
         timeInSeconds--; 
     }
 }
-updateTimer();
 var timerInterval = setInterval(updateTimer, 1000);
