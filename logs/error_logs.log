@@ -6,3 +6,6 @@ Error message: Expecting value: line 1 column 1 (char 0)
 Error message: Expecting value: line 1 column 1 (char 0)
 2024-03-27 10:40:13,141 - ERROR - Failed to checkout!
 Error message: Expecting value: line 1 column 1 (char 0)
+2024-03-27 12:24:31,382 - ERROR - HTTPConnectionPool(host='10.30.22.11.5340', port=80): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79c9a4b3c2e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2024-03-27 12:24:38,230 - ERROR - HTTPConnectionPool(host='10.30.22.11.5340', port=80): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79c9a4bb1c60>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2024-03-27 12:24:44,524 - ERROR - HTTPConnectionPool(host='10.30.22.11.5340', port=80): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79c9a4bb2dd0>: Failed to establish a new connection: [Errno -2] Name or service not known'))

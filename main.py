@@ -195,9 +195,9 @@ def takeout_goods():
         product_name = request.form.get('goods')
         cell_number = request.form.get('cell_number')
         print(cell_number)
-        status = True
+        # status = True
         try:
-            #    status = send_command(cell_number=cell_number)
+            status = send_command(cell_number=cell_number)
             if status:
                 master_system.checkout(user_id, snipe_id)
                 logs_setting.actions_logger.info(

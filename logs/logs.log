@@ -18022,3 +18022,35 @@ Error message: Expecting value: line 1 column 1 (char 0)
 2024-03-27 11:23:28,861 - INFO - 192.168.18.110 - - [27/Mar/2024 11:23:28] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
 2024-03-27 11:23:28,861 - INFO - 192.168.18.110 - - [27/Mar/2024 11:23:28] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
 2024-03-27 11:23:28,862 - INFO - 192.168.18.110 - - [27/Mar/2024 11:23:28] "[36mGET /static/images/Vector%203626.svg HTTP/1.1[0m" 304 -
+2024-03-27 12:24:29,335 - INFO -  * Detected change in '/home/frogleim/Desktop/vending-Flask/main.py', reloading
+2024-03-27 12:24:29,354 - INFO -  * Restarting with stat
+2024-03-27 12:24:29,475 - WARNING -  * Debugger is active!
+2024-03-27 12:24:29,476 - INFO -  * Debugger PIN: 786-609-080
+2024-03-27 12:24:30,404 - INFO - Trying to connect to master system....
+2024-03-27 12:24:30,404 - INFO - Trying to connect to master system....
+2024-03-27 12:24:31,382 - ERROR - HTTPConnectionPool(host='10.30.22.11.5340', port=80): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79c9a4b3c2e0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2024-03-27 12:24:31,386 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:31] "GET / HTTP/1.1" 200 -
+2024-03-27 12:24:31,417 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:31] "GET /static/css/service.css HTTP/1.1" 200 -
+2024-03-27 12:24:31,418 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:31] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-27 12:24:31,420 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:31] "GET /static/images/pt_logo.svg HTTP/1.1" 200 -
+2024-03-27 12:24:31,420 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:31] "GET /static/images/2NF%201.png HTTP/1.1" 200 -
+2024-03-27 12:24:31,421 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:31] "GET /static/images/Icons.svg HTTP/1.1" 200 -
+2024-03-27 12:24:31,442 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:31] "GET /static/fonts/web/biform_regular.woff2 HTTP/1.1" 200 -
+2024-03-27 12:24:36,538 - INFO - Trying to connect to master system....
+2024-03-27 12:24:36,538 - INFO - Trying to connect to master system....
+2024-03-27 12:24:38,230 - ERROR - HTTPConnectionPool(host='10.30.22.11.5340', port=80): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79c9a4bb1c60>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2024-03-27 12:24:38,230 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:38] "GET / HTTP/1.1" 200 -
+2024-03-27 12:24:38,241 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:38] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-27 12:24:38,242 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:38] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-27 12:24:38,244 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:38] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-27 12:24:38,244 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:38] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-27 12:24:38,244 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:38] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
+2024-03-27 12:24:43,449 - INFO - Trying to connect to master system....
+2024-03-27 12:24:43,449 - INFO - Trying to connect to master system....
+2024-03-27 12:24:44,524 - ERROR - HTTPConnectionPool(host='10.30.22.11.5340', port=80): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x79c9a4bb2dd0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2024-03-27 12:24:44,525 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:44] "GET / HTTP/1.1" 200 -
+2024-03-27 12:24:44,538 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:44] "[36mGET /static/css/service.css HTTP/1.1[0m" 304 -
+2024-03-27 12:24:44,539 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:44] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-03-27 12:24:44,541 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:44] "[36mGET /static/images/Icons.svg HTTP/1.1[0m" 304 -
+2024-03-27 12:24:44,541 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:44] "[36mGET /static/images/2NF%201.png HTTP/1.1[0m" 304 -
+2024-03-27 12:24:44,541 - INFO - 192.168.18.110 - - [27/Mar/2024 12:24:44] "[36mGET /static/images/pt_logo.svg HTTP/1.1[0m" 304 -
