@@ -43,7 +43,7 @@
     transform: translate(-50%, -50%);
     height: auto;
     width: 140.91px;
-height: 145.265px;
+    height: 145.265px;
 }
 
 .test-input {
@@ -61,7 +61,7 @@ height: 145.265px;
 .hello {
     position: absolute;
     top: 30%;
-    left: 9%;
+    left: 8%;
     color: black;
     color: var(--Typography-Primary, #1B1B1B);
     text-align: center;
@@ -78,7 +78,7 @@ height: 145.265px;
 .welcome-text {
     position: absolute;
     top: 40%;
-    left: 9%;
+    left: 8%;
     color: black;
     color: var(--Typography-Primary, #1B1B1B);
     text-align: center;
@@ -101,7 +101,7 @@ height: 145.265px;
 .badge-logo {
     position: absolute;
     top: 80%;
-    left: 45%;
+    left: 43.1%;
     stroke-width: 10px;
 stroke: #1B1B1B;
 }

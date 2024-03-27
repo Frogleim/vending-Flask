@@ -46,6 +46,7 @@
     <script>
           var sessionCheckInterval;
 
+
 function checkSessionExpiration() {
     $.ajax({
         type: "GET",
@@ -118,7 +119,7 @@ checkSession()
                     if (response.status === 'success') {
                         setTimeout(function() {
                             window.location.href = "{{ url_for('home') }}";
-                        }, 2000); 
+                        }, 8000); 
                     }else {
                         // Handle failure (optional)
                         console.error("Error changing machine status:", response.message);

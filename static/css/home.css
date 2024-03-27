@@ -26,6 +26,7 @@ body {
     gap: 8px;
     padding-left: 15px; /* Add left padding */
     padding-right: 20px; /* Add right padding */
+    padding-bottom: 26px;
 }
 .take-out-count {
     color: var(--Typography-Secondary, #808080);

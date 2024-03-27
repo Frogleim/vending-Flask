@@ -27,5 +27,25 @@
 </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script>
+
+(function() {
+window.onload = function() {
+location.reload();
+
+};
+window.onload = null;
+console.log("Realoaded");
+
+}
+
+
+)();
+
+
+</script>
+
 </body>
+
+
 </html>
