@@ -1,4 +1,6 @@
 {
-  "master_system_url": "http://10.30.22.11:5340",
+  "master_system_url": "http://192.168.18.110:8000",
   "controller_api_url": "http://10.13.69.14:8080"
 }
+
+

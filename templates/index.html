@@ -18,7 +18,7 @@
     <img class="badge-logo" src="{{ url_for('static', filename='images/Vector 3626.svg') }}" alt="pt-logo">
     <form action="{{ url_for('process_form') }}" method="post" id="myForm">
 
-        <input  name="user_id" id="user_id" class="test-input" placeholder="User ID" aria-label="User ID">
+        <input  name="user_id" id="user_id" class="test-input" placeholder="User ID" aria-label="User ID" autocomplete="off">
 
     <button type="submit" class="btn btn-primary" id="submitButton">Primary</button>
     </form>

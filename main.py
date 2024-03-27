@@ -50,11 +50,11 @@ def send_command(cell_number):
     except Exception as e:
         logs_setting.error_logs_logger.error(f'Controller connect error!\nError Message: {e}')
 
+
 def get_timeouts():
     ip = get_ipv4_address()
     timeouts = master_system.get_timeouts(ip)
     return timeouts
-
 
 
 def get_ipv4_address():
@@ -74,11 +74,12 @@ def reset_session_timeout():
     else:
         return jsonify({'status': 'error', 'message': 'Session does not exist or last activity not set'}), 400
 
-#67123663928
+
+# 67123663928
 @app.route('/check_session_status')
 def check_session_status():
-
     ex_time = get_timeouts()['users_timeout']
+
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
         logs_setting.system_log_logger.info(f'Last activity: {last_activity_time}')
@@ -90,9 +91,10 @@ def check_session_status():
         print(session)
         print(f'Master expiration time: {ex_time}, type: {type(ex_time)}')
 
-        midpoint = ex_time / 2
+        # Calculate the last 10 seconds
+        last_10_seconds = ex_time - 10
 
-        if current_time - last_activity_time > midpoint:
+        if current_time - last_activity_time > last_10_seconds:
             print(f'Current session: {current_time - last_activity_time}')
             logs_setting.system_log_logger.info(f'Session: {session}')
             return jsonify({'status': 'half_expired'})
@@ -193,9 +195,9 @@ def takeout_goods():
         product_name = request.form.get('goods')
         cell_number = request.form.get('cell_number')
         print(cell_number)
-#        status = True
+        status = True
         try:
-            status = send_command(cell_number=cell_number)
+            #    status = send_command(cell_number=cell_number)
             if status:
                 master_system.checkout(user_id, snipe_id)
                 logs_setting.actions_logger.info(
@@ -205,13 +207,13 @@ def takeout_goods():
                 success(success_data)
                 return render_template('success.html', data=success_data)
             else:
-                return render_template('takeout_error.html')  
+                return render_template('takeout_error.html')
         except Exception as e:
             logs_setting.error_logs_logger.error(f'Failed to checkout!\nError message: {e}')
-            return render_template('takeout_error.html')  
+            return render_template('takeout_error.html')
     except Exception as e:
         logs_setting.error_logs_logger.error(f"Error processing takeout request: {str(e)}")
-        return render_template('takeout_error.html')  
+        return render_template('takeout_error.html')
 
 
 @app.route('/success')
@@ -237,6 +239,7 @@ def change_machine_status():
         logs_setting.error_logs_logger.error(f"Error changing machine status: {str(e)}")
         return jsonify({'status': 'failed', 'message': str(e)})
 
+
 def open_browser(ip_address):
     try:
         subprocess.run(['./firefox_setup.sh', ip_address], check=True)
@@ -256,8 +259,9 @@ def open_browser(ip_address):
 if __name__ == '__main__':
     ip = get_ipv4_address()
     print(ip)
-    
+
     import threading
+
     browser_thread = threading.Thread(target=open_browser, args=(ip,))
     browser_thread.start()
 

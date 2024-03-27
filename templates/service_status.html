@@ -111,25 +111,27 @@ function closePopupButton() {
 checkSession()
 
     function returnToWork() {
-            $.ajax({
-                type: "GET",
-                url: "{{ url_for('change_machine_status') }}",
-                success: function (response) {
-                    console.log(response.status);
-                    if (response.status === 'success') {
-                        setTimeout(function() {
-                            window.location.href = "{{ url_for('home') }}";
-                        }, 8000); 
-                    }else {
-                        // Handle failure (optional)
-                        console.error("Error changing machine status:", response.message);
-                    }
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.error("Error changing machine status:", errorThrown);
-                }
-            });
+    $.ajax({
+        type: "GET",
+        url: "{{ url_for('change_machine_status') }}",
+        success: function (response) {
+            console.log(response.status);
+            if (response.status === 'success') {
+                // Redirect to home page
+                window.location.href = "{{ url_for('home') }}";
+
+                // Auto-refresh after 5 seconds
+
+            } else {
+                // Handle failure (optional)
+                console.error("Error changing machine status:", response.message);
+            }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Error changing machine status:", errorThrown);
         }
+    });
+}
     $(document).ready(function () {
         $(".custom-button").on("click", function () {
             returnToWork();

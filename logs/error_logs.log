@@ -1,0 +1,8 @@
+2024-03-26 09:12:59,053 - ERROR - HTTPConnectionPool(host='10.30.22.11', port=5340): Max retries exceeded with url: /vending_status/?ip_address=192.168.18.110 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x70437ca14df0>, 'Connection to 10.30.22.11 timed out. (connect timeout=None)'))
+2024-03-27 08:50:04,093 - ERROR - Failed to checkout!
+Error message: Expecting value: line 1 column 1 (char 0)
+2024-03-27 08:51:45,295 - ERROR - Exception: 'data'
+2024-03-27 09:02:28,651 - ERROR - Failed to checkout!
+Error message: Expecting value: line 1 column 1 (char 0)
+2024-03-27 10:40:13,141 - ERROR - Failed to checkout!
+Error message: Expecting value: line 1 column 1 (char 0)

@@ -1,0 +1,14 @@
+2024-03-27 10:41:34,942 - INFO - Processing takeout request for snipe_id: 236, user_id: 1234567891 user: Михаил Сапогов
+2024-03-27 10:41:34,942 - INFO - User: 1234567891, product id: 236
+2024-03-27 10:42:53,176 - INFO - Processing takeout request for snipe_id: 235, user_id: 1234567891 user: Михаил Сапогов
+2024-03-27 10:42:53,176 - INFO - User: 1234567891, product id: 235
+2024-03-27 10:45:05,366 - INFO - Processing takeout request for snipe_id: 238, user_id: 1234567891 user: Михаил Сапогов
+2024-03-27 10:45:05,366 - INFO - User: 1234567891, product id: 238
+2024-03-27 10:50:45,534 - INFO - Processing takeout request for snipe_id: 240, user_id: 1234567891 user: Михаил Сапогов
+2024-03-27 10:50:45,534 - INFO - User: 1234567891, product id: 240
+2024-03-27 10:52:59,160 - INFO - Processing takeout request for snipe_id: 241, user_id: 1234567891 user: Михаил Сапогов
+2024-03-27 10:52:59,160 - INFO - User: 1234567891, product id: 241
+2024-03-27 10:55:21,081 - INFO - Processing takeout request for snipe_id: 242, user_id: 1234567891 user: Михаил Сапогов
+2024-03-27 10:55:21,081 - INFO - User: 1234567891, product id: 242
+2024-03-27 11:23:26,384 - INFO - Processing takeout request for snipe_id: 243, user_id: 1234567891 user: Михаил Сапогов
+2024-03-27 11:23:26,384 - INFO - User: 1234567891, product id: 243
