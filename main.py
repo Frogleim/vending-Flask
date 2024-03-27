@@ -104,19 +104,24 @@ def check_session_status():
 
 @app.route('/check_session_status_operator')
 def check_session_status_operator():
-    ex_time = get_timeouts()['users_timeout']
+    ex_time = get_timeouts()['operator_timeout']
     if 'user_id' in session and 'last_activity' in session:
         last_activity_time = session['last_activity']
         logs_setting.system_log_logger.info(f'Last activity: {last_activity_time}')
         current_time = time.time()
         logs_setting.system_log_logger.info(f'Current time: {current_time}')
         print(current_time - last_activity_time)
+        experiation = current_time - last_activity_time
+        session['exp'] = experiation
+        print(session)
         print(f'Master expiration time: {ex_time}, type: {type(ex_time)}')
 
-        midpoint = ex_time / 2
+        # Calculate the last 10 seconds
+        last_10_seconds = ex_time - 10
 
-        if current_time - last_activity_time > midpoint:
+        if current_time - last_activity_time > last_10_seconds:
             print(f'Current session: {current_time - last_activity_time}')
+            logs_setting.system_log_logger.info(f'Session: {session}')
             return jsonify({'status': 'half_expired'})
 
     return jsonify({'status': 'active'})
